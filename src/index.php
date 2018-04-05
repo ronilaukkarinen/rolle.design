@@ -31,7 +31,7 @@
               <div class="feature">
                 <header class="heading">
                   <span class="label">Honesty</span>
-                  <span class="value">99%</span>
+                  <span class="value"><em class="counter" data-count="85" aria-hidden="true">0</em><span class="screen-reader-text">85</span>%</span>
                 </header>
 
                 <div class="bar bar-99"><i></i></div>
@@ -40,7 +40,7 @@
               <div class="feature">
                 <header class="heading">
                   <span class="label">Sense of humor</span>
-                  <span class="value">5%</span>
+                  <span class="value"><em class="counter" data-count="5" aria-hidden="true">0</em><span class="screen-reader-text">5</span>%</span>
                 </header>
 
                 <div class="bar bar-5"><i></i></div>
@@ -49,7 +49,7 @@
               <div class="feature">
                 <header class="heading">
                   <span class="label">Coding speed</span>
-                  <span class="value">98%</span>
+                  <span class="value"><em class="counter" data-count="98" aria-hidden="true">0</em><span class="screen-reader-text">98</span>%</span>
                 </header>
 
                 <div class="bar bar-77"><i></i></div>
@@ -58,7 +58,7 @@
               <div class="feature">
                 <header class="heading">
                   <span class="label">Reading speed</span>
-                  <span class="value">85%</span>
+                  <span class="value"><em class="counter" data-count="83" aria-hidden="true">0</em><span class="screen-reader-text">83</span>%</span>
                 </header>
 
                 <div class="bar bar-83"><i></i></div>
@@ -67,7 +67,7 @@
               <div class="feature">
                 <header class="heading">
                   <span class="label">Curiosity</span>
-                  <span class="value">89%</span>
+                  <span class="value"><em class="counter" data-count="89" aria-hidden="true">0</em><span class="screen-reader-text">89</span>%</span>
                 </header>
 
                 <div class="bar bar-85"><i></i></div>
@@ -76,7 +76,7 @@
               <div class="feature">
                 <header class="heading">
                   <span class="label">Calmness</span>
-                  <span class="value">82%</span>
+                  <span class="value"><em class="counter" data-count="82" aria-hidden="true">0</em><span class="screen-reader-text">82</span>%</span>
                 </header>
 
                 <div class="bar bar-82"><i></i></div>
@@ -85,7 +85,7 @@
               <div class="feature">
                 <header class="heading">
                   <span class="label">The meaning of life</span>
-                  <span class="value">42%</span>
+                  <span class="value"><em class="counter" data-count="42" aria-hidden="true">0</em><span class="screen-reader-text">42</span>%</span>
                 </header>
 
                 <div class="bar bar-42"><i></i></div>
@@ -94,7 +94,7 @@
               <div class="feature">
                 <header class="heading">
                   <span class="label">Perfectionism</span>
-                  <span class="value">100%</span>
+                  <span class="value"><em class="counter" data-count="100" aria-hidden="true">0</em><span class="screen-reader-text">100</span>%</span>
                 </header>
 
                 <div class="bar bar-100"><i></i></div>
@@ -103,7 +103,7 @@
               <div class="feature">
                 <header class="heading">
                   <span class="label">Humbleness</span>
-                  <span class="value">68%</span>
+                  <span class="value"><em class="counter" data-count="68" aria-hidden="true">0</em><span class="screen-reader-text">68</span>%</span>
                 </header>
 
                 <div class="bar bar-68"><i></i></div>
@@ -112,7 +112,7 @@
               <div class="feature">
                 <header class="heading">
                   <span class="label">Stupidity of all graphs like this</span>
-                  <span class="value">100%</span>
+                  <span class="value"><em class="counter" data-count="100" aria-hidden="true">0</em><span class="screen-reader-text">100</span>%</span>
                 </header>
 
                 <div class="bar bar-100"><i></i></div>
