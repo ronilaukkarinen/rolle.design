@@ -17,14 +17,20 @@
     </head>
     <body>
 
-        <header>
-          <h1>@rolle</h1>
-          <img src="images/avatar@2x.png" alt="Avatar of Roni Laukkarinen, a dude with long hair and a goatee, duotone red" />
+        <header class="header-main">
+          <div class="column column-avatar">
+            <h1>@rolle</h1>
+            <img src="images/avatar@2x.png" alt="Avatar of Roni Laukkarinen, a dude with long hair and a goatee, duotone red" />
+          </div>
+
+          <div class="column column-title">
+            <h1>A digital player card of <span>Roni Laukkarinen</span></h1>
+          </div>
         </header>
 
-        <section class="boxes boxes-features">
+        <section class="boxes boxes-sortable">
           <div class="box box-features">
-            <h2>Gamer features</h2>
+            <h2>Features</h2>
             
             <div class="features">
 
@@ -39,16 +45,7 @@
 
               <div class="feature">
                 <header class="heading">
-                  <span class="label">Sense of humor</span>
-                  <span class="value"><em class="counter" data-count="5" aria-hidden="true">0</em><span class="screen-reader-text">5</span>%</span>
-                </header>
-
-                <div class="bar bar-5"><i></i></div>
-              </div>
-
-              <div class="feature">
-                <header class="heading">
-                  <span class="label">Coding speed</span>
+                  <span class="label">Coding efficiency</span>
                   <span class="value"><em class="counter" data-count="98" aria-hidden="true">0</em><span class="screen-reader-text">98</span>%</span>
                 </header>
 
@@ -57,29 +54,11 @@
 
               <div class="feature">
                 <header class="heading">
-                  <span class="label">Reading speed</span>
-                  <span class="value"><em class="counter" data-count="83" aria-hidden="true">0</em><span class="screen-reader-text">83</span>%</span>
+                  <span class="label">Introvert</span>
+                  <span class="value"><em class="counter" data-count="70" aria-hidden="true">0</em><span class="screen-reader-text">70</span>%</span>
                 </header>
 
-                <div class="bar bar-83"><i></i></div>
-              </div>
-
-              <div class="feature">
-                <header class="heading">
-                  <span class="label">Curiosity</span>
-                  <span class="value"><em class="counter" data-count="89" aria-hidden="true">0</em><span class="screen-reader-text">89</span>%</span>
-                </header>
-
-                <div class="bar bar-85"><i></i></div>
-              </div>
-
-              <div class="feature">
-                <header class="heading">
-                  <span class="label">Calmness</span>
-                  <span class="value"><em class="counter" data-count="82" aria-hidden="true">0</em><span class="screen-reader-text">82</span>%</span>
-                </header>
-
-                <div class="bar bar-82"><i></i></div>
+                <div class="bar bar-70"><i></i></div>
               </div>
 
               <div class="feature">
@@ -102,15 +81,6 @@
 
               <div class="feature">
                 <header class="heading">
-                  <span class="label">Humbleness</span>
-                  <span class="value"><em class="counter" data-count="68" aria-hidden="true">0</em><span class="screen-reader-text">68</span>%</span>
-                </header>
-
-                <div class="bar bar-68"><i></i></div>
-              </div>
-
-              <div class="feature">
-                <header class="heading">
                   <span class="label">Stupidity of all graphs like this</span>
                   <span class="value"><em class="counter" data-count="100" aria-hidden="true">0</em><span class="screen-reader-text">100</span>%</span>
                 </header>
@@ -120,18 +90,75 @@
 
               <div class="feature">
                 <header class="heading">
-                  <span class="label">Value of any graphcs like this in CV</span>
+                  <span class="label">Value of graphs like this in CV</span>
                   <span class="value">0%</span>
                 </header>
 
-                <div class="bar bar-1"><i></i></div>
+                <div class="bar bar-0"><i></i></div>
               </div>
 
             </div>
           </div>
-        </section>
 
-        <section class="boxes boxes-activities">
+          <div class="box box-interests">
+            <h2>Current interests</h2>
+            <ul>
+              <li>Literature</li>
+              <li>Entrepreneurship</li>
+              <li>Retrogames</li>
+              <li>Listening versatile music</li>
+              <li>Making synthwave music</li>
+              <li>Craft beer</li>
+              <li>Homebrewing</li>
+              <li>WordPress</li>
+              <li>Jogging</li>
+              <li>Blogging</li>
+            </ul>
+          </div>
+
+          <div class="box box-past-interest">
+            <h2>Past interests</h2>
+            <ul>
+              <li>Snowboarding</li>
+              <li>Parkour</li>
+              <li>Poetry</li>
+              <li>Journalism</li>
+              <li>Classical piano</li>
+              <li>Playing guitar</li>
+            </ul>
+          </div>
+
+          <div class="box box-past-goals">
+            <h2>Goals</h2>
+            <ul>
+              <li>Travelling</li>
+              <li>Better financial situation</li>
+            </ul>
+          </div>
+
+          <div class="box box-bookmarks">
+            <h2>Latest bookmarks</h2>
+            <ul>
+              <li>Literature</li>
+              <li>Entrepreneurship</li>
+              <li>Retrogames</li>
+              <li>Listening versatile music</li>
+              <li>Making synthwave music</li>
+              <li>Craft beer</li>
+              <li>Homebrewing</li>
+              <li>WordPress</li>
+              <li>Jogging</li>
+              <li>Blogging</li>
+            </ul>
+          </div>
+
+          <div class="box box-past-interest">
+            <h2>Essential links</h2>
+            <ul>
+              <li>Professional WordPress profile</li>
+            </ul>
+          </div>
+
           <div class="box">
             <h2>Saying</h2>
             
@@ -173,11 +200,6 @@
           </div>
 
           <div class="box">
-            <h2>Playing</h2>
-            
-          </div>
-
-          <div class="box">
             <h2>Working</h2>
             
           </div>
@@ -186,26 +208,19 @@
             <h2>Coding</h2>
             
           </div>
-        </section>
 
-        <section class="boxes boxes-timeline">
+          <div class="box box--wide">
+            <p>Current GitHub projects</p>
+          </div>
+
           <div class="box box--wide">
             <p>Some kind of timeline here</p>
           </div>
-        </section>
 
-        <section class="boxes boxes-legacy">
           <div class="box box--wide">
-            <p>Some I don't use any more<br />
-            Older versions of this page,
-          other stuff</p>
+            <p>Social media</p>
           </div>
-        </section>
 
-        <section class="boxes boxes-contact">
-          <div class="box box--wide">
-            <p>Contact info</p>
-          </div>
         </section>
 
         <script src="js/all.js"></script>

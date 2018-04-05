@@ -22,6 +22,13 @@ body {
   font-family: $font-base;
 }
 
+ul,
+li,
+p {
+  @include responsive-font(3vw, $font-min-size, $font-max-size, $font-max-size);
+  line-height: $font-base-line-height;
+}
+
 p {
   @include responsive-font(3vw, $font-min-size, $font-max-size, $font-max-size);
   font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;

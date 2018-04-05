@@ -9,7 +9,7 @@ h4,
 h5,
 h6,
 p,
-header,
+.header-main,
 .boxes {
   max-width: $grid-base;
   margin-left: auto;
@@ -23,15 +23,25 @@ h3 {
   @extend %h4;
 }
 
-header {
+.header-main {
   margin-top: $default-padding;
+  margin-bottom: $default-padding;
   display: flex;
-  flex-wrap: wrap;
-  text-align: center;
+  justify-content: space-between;
+  text-align: left;
 
-  img {
-    margin-left: auto;
-    margin-right: auto;
+  .column {
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+    &.column-avatar {
+      flex-wrap: wrap;
+    }
+
+    &.column-avatar h1 {
+      margin-bottom: 0;
+    }
   }
 
   h1 {
@@ -44,7 +54,22 @@ header {
     margin-bottom: $default-padding;
   }
 
+  .column-title {
+    text-align: right;
+  }
+
+  .column-title h1 {
+    margin: 0;
+  }
+
+  h1 span {
+    @include responsive-font(5vw, 22px, 60px);
+    display: block;
+  }
+
   img {
+    margin-left: auto;
+    margin-right: auto;
     order: 1;
   }
 }
@@ -62,6 +87,53 @@ img {
 }
 
 .feature {
+
+  &:last-of-type .bar {
+    margin-bottom: 0;
+  }
+
+  &:nth-of-type(1) {
+    .bar i {
+      animation-delay: .1s;
+    }
+  }
+
+  &:nth-of-type(2) {
+    .bar i {
+      animation-delay: .2s;
+    }
+  }
+
+  &:nth-of-type(3) {
+    .bar i {
+      animation-delay: .3s;
+    }
+  }
+
+  &:nth-of-type(4) {
+    .bar i {
+      animation-delay: .4s;
+    }
+  }
+
+  &:nth-of-type(5) {
+    .bar i {
+      animation-delay: .5s;
+    }
+  }
+
+  &:nth-of-type(6) {
+    .bar i {
+      animation-delay: .6s;
+    }
+  }
+
+  &:nth-of-type(7) {
+    .bar i {
+      animation-delay: .7s;
+    }
+  }
+
   .heading {
     display: flex;
     margin: 0 0 1rem;
@@ -103,60 +175,79 @@ img {
 
   &.bar-5 i {
     animation: bar-5 1s normal forwards ease-in-out;
-    animation-delay: .1s;
   }
 
   &.bar-77 i {
     animation: bar-99 1s normal forwards ease-in-out;
-    animation-delay: .2s;
+  }
+
+  &.bar-70 i {
+    animation: bar-70 1s normal forwards ease-in-out;
   }
 
   &.bar-83 i {
     animation: bar-83 1s normal forwards ease-in-out;
-    animation-delay: .3s;
   }
 
   &.bar-85 i {
     animation: bar-85 1s normal forwards ease-in-out;
-    animation-delay: .4s;
   }
 
   &.bar-82 i {
     animation: bar-82 1s normal forwards ease-in-out;
-    animation-delay: .5s;
   }
 
   &.bar-42 i {
     animation: bar-42 1s normal forwards ease-in-out;
-    animation-delay: .6s;
   }
 
   &.bar-100 i {
     animation: bar-100 1s normal forwards ease-in-out;
-    animation-delay: .7s;
   }
 
   &.bar-68 i {
     animation: bar-68 1s normal forwards ease-in-out;
-    animation-delay: .8s;
   }
 
   &.bar-0 i {
-    animation: bar-0 1s normal forwards ease-in-out;
-    animation-delay: .9s;
+    animation: bar-0 1s normal forwards ease-in-out;    
   }
 }
 
 // Boxes
 .boxes {
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 2rem;
+  margin-bottom: 6rem;
 }
 
-.box {
-  @include column(1/4, $cycle: 4);
+li,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  background-image: url('../svg/hashtag.svg');
+  background-repeat: no-repeat;
+  background-position: 1px 4px;
+  padding-left: 2.3rem;
+  margin-bottom: .1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.box,
+.box-placeholder {
+  flex: 0 0 calc(25% - 2rem);
   margin-bottom: 2rem;
   border: 1px solid #e0e0e0;
   padding: 1.5rem;
+  position: relative;
 
   h2 {
     margin-top: 0;
@@ -164,18 +255,66 @@ img {
     padding-right: 0;
   }
 
-  &.box--wide {
-    @include stack();
+  &:after {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e0e0e0;
+    position: absolute;
+    content: '';
+    top: -1px;
+    left: -1px;
+    transition: all .88s;
+    opacity: 0;
+  }
+
+  &:before {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e0e0e0;
+    position: absolute;
+    content: '';
+    top: -1px;
+    left: -1px;
+    transition: all .88s;
+    opacity: 0;
   }
 }
 
-.box.box-features {
-  @include stack();
-  width: 100%;
-  max-width: 40rem;
-  margin-bottom: $default-padding;
-  margin-left: auto;
-  margin-right: auto;
+.box-placeholder {
+  border: 2px dashed #ddd;
+}
+
+// Sortable boxes
+.boxes.boxes-sortable .box.ui-sortable-helper {
+  &:after,
+  &:before {
+    display: none;
+  }
+}
+
+.boxes.boxes-sortable .box:hover {
+  cursor: move;
+  border-color: #ccc;
+
+  &:after {
+    width: 110%;
+    height: 110%;
+    transform: rotate(-5deg);
+    opacity: 1;
+    bottom: -10px;
+    left: -10px;
+    border-color: rgba($color-main, .3);
+  }
+
+  &:before {
+    width: 110%;
+    height: 110%;
+    transform: rotate(5deg);
+    opacity: 1;
+    top: -10px;
+    right: -10px;
+    border-color: rgba(#c0c0c0, .6);
+  }
 }
 
 // Chat stuff
