@@ -1,0 +1,175 @@
+// Variables
+$default-padding: 6rem;
+
+// Base
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+header,
+.boxes {
+  max-width: $grid-base;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+h2,
+h3 {
+  @extend %h4;
+}
+
+header {
+  margin-top: $default-padding;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+
+  h1 {
+    @extend %h5;
+    width: 100%;
+    order: 2;
+    color: #2f3060;
+    position: relative;
+    left: -2px;
+    margin-bottom: $default-padding;
+  }
+
+  img {
+    order: 1;
+  }
+}
+
+img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+// Features
+.features {
+  display: block;
+  overflow: hidden;
+}
+
+.feature {
+  .heading {
+    display: flex;
+    margin: 0 0 1rem;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .heading .label {
+    width: 80%;
+    text-align: left;
+    font-size: 16px;
+  }
+
+  .heading .value {
+    width: 20%;
+    font-size: 14px;
+    text-align: right;
+  }
+}
+
+.bar {
+  height: auto;
+  display: block;
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 1rem;
+
+  i {
+    background: $color-main;
+    height: 3px;
+    display: inline-block;
+    overflow: hidden;
+    float: left;
+  }
+
+  &.bar-99 i {
+    animation: bar-99 1s normal forwards ease-in-out;
+  }
+
+  &.bar-5 i {
+    animation: bar-5 1s normal forwards ease-in-out;
+    animation-delay: .1s;
+  }
+
+  &.bar-77 i {
+    animation: bar-99 1s normal forwards ease-in-out;
+    animation-delay: .2s;
+  }
+
+  &.bar-83 i {
+    animation: bar-83 1s normal forwards ease-in-out;
+    animation-delay: .3s;
+  }
+
+  &.bar-85 i {
+    animation: bar-85 1s normal forwards ease-in-out;
+    animation-delay: .4s;
+  }
+
+  &.bar-82 i {
+    animation: bar-82 1s normal forwards ease-in-out;
+    animation-delay: .5s;
+  }
+
+  &.bar-42 i {
+    animation: bar-42 1s normal forwards ease-in-out;
+    animation-delay: .6s;
+  }
+
+  &.bar-100 i {
+    animation: bar-100 1s normal forwards ease-in-out;
+    animation-delay: .7s;
+  }
+
+  &.bar-68 i {
+    animation: bar-68 1s normal forwards ease-in-out;
+    animation-delay: .8s;
+  }
+
+  &.bar-0 i {
+    animation: bar-0 1s normal forwards ease-in-out;
+    animation-delay: .9s;
+  }
+}
+
+// Boxes
+.boxes {
+  overflow: hidden;
+}
+
+.box {
+  @include column(1/4, $cycle: 4);
+  margin-bottom: 2rem;
+  border: 1px solid #e0e0e0;
+  padding: 1.5rem;
+
+  h2 {
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.box--wide {
+    @include stack();
+  }
+}
+
+.box.box-features {
+  @include stack();
+  width: 100%;
+  max-width: 40rem;
+  margin-bottom: $default-padding;
+  margin-left: auto;
+  margin-right: auto;
+}

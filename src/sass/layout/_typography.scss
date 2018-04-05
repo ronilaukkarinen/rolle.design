@@ -1,0 +1,104 @@
+// -----------------------------------------------------------
+// Typography
+//
+// Everything around fonts, font size definitions and typeset
+// presets. No modular scale, but a sophisticated viewport
+// based responsive mixin can be found in _helpers.scss
+// -----------------------------------------------------------
+
+// Set up self-hosted fonts here
+@include fontFace('Karla', '../fonts/karla-regular', 400);
+@include fontFace('Karla', '../fonts/karla-italic', 400, italic);
+@include fontFace('Karla', '../fonts/karla-bold', 700);
+@include fontFace('Karla', '../fonts/karla-bolditalic', 700, italic);
+
+:root {
+  font-size: 62.5%;
+}
+
+// Start typography settings
+body {
+  font-size: 1.7rem;
+  font-family: $font-base;
+}
+
+p {
+  @include responsive-font(3vw, $font-min-size, $font-max-size, $font-max-size);
+  font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  letter-spacing: -.003em;
+  margin-top: 2.9rem;
+  margin-bottom: 2.9rem;
+  line-height: $font-base-line-height;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Heading defaults
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  color: $color-headings;
+  font-family: $font-headings;
+  font-weight: $headings-weight;
+}
+
+h1,
+%h1 {
+  @include responsive-font(3.2vw, 32px, 68px);
+}
+
+h2,
+%h2 {
+  @include responsive-font(2.4vw, 24px, 46px);
+}
+
+h3,
+%h3 {
+  @include responsive-font(1.6vw, 21px, 34px);
+}
+
+h4,
+%h4 {
+  @include responsive-font(1.4vw, 18px, 21px);
+}
+
+h5,
+%h5 {
+  @include responsive-font(1.2vw, 14px, 18px);
+}
+
+h6,
+%h6 {
+  @include responsive-font(1.2vw, 14px, 18px);
+}
+
+// Text font stack
+p,
+ul,
+ol,
+dl,
+small,
+blockquote {
+  font-family: $font-base;
+  color: $color-body;
+}
+
+// Font smoothing options
+body,
+html * {
+  font-smoothing: antialiased;
+  text-size-adjust: none;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
