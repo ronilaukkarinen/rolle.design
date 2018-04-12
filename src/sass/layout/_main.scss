@@ -117,6 +117,47 @@ h3 {
   }
 }
 
+// Show more element
+.show-more {
+  color: #4b6584;
+  font-size: 15px;
+
+  &:hover {
+    color: #111;
+    cursor: pointer;
+
+    svg,
+    path {
+      fill: #111;
+    }
+  }
+
+  svg {
+    position: relative;
+    top: 1.5px;
+    margin-left: 2px;
+  }
+
+  &.open svg {
+    display: none;
+  }
+
+  &.open {
+    font-size: 1.7rem;
+    color: #222;
+  }
+}
+
+.show-more-content {
+  display: none;
+  color: #4b6584;
+  font-style: italic;
+
+  &.open {
+    display: inline;
+  }
+}
+
 // Chat stuff
 .keyreply-brand {
   display: none;
