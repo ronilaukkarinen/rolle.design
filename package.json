@@ -27,6 +27,7 @@
     "jeet": "^7.1.0",
     "jquery": "~3.3.1",
     "normalize.css": "^8.0.0",
-    "what-input": "^5.0.4"
+    "what-input": "^5.0.4",
+    "moment": "^2.18.1"
   }
 }

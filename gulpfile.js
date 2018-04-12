@@ -146,8 +146,10 @@ gulp.task('js', function() {
         [
           'node_modules/jquery/dist/jquery.js',
           'node_modules/what-input/dist/what-input.js',
+          '/node_modules/moment/min/moment-with-locales.min.js',
           jsSrc + '/jquery-ui.js',
           jsSrc + '/jquery-cookie.js',
+          jsSrc + '/jquery-rss.js',
           jsSrc + '/scripts.js',
         ])
         .pipe(concat('all.js'))
