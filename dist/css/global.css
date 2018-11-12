@@ -1135,6 +1135,13 @@ p {
   margin-bottom: 8rem;
 }
 
+@media (max-width: 768px) {
+  .entry-content .comment-on-twitter a,
+  .entry-content.single p.comment-on-twitter a:nth-child(1) {
+    font-size: 2.4rem;
+  }
+}
+
 .entry-content .comment-on-twitter a:hover,
 .entry-content.single p.comment-on-twitter a:nth-child(1):hover {
   color: #65bff6;
@@ -1158,6 +1165,14 @@ p {
   width: 5rem;
   height: 50px;
   height: 5rem;
+}
+
+@media (max-width: 768px) {
+  .entry-content .comment-on-twitter a svg,
+  .entry-content.single p.comment-on-twitter a:nth-child(1) svg {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 .block.block-hero.block-hero-wordpress h1 svg {

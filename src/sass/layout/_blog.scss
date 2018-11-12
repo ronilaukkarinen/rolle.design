@@ -156,6 +156,10 @@
   display: block;
   margin-bottom: 8rem;
 
+  @media (max-width: $container-ipad) {
+    font-size: 2.4rem;
+  }
+
   &:hover {
     color: lighten(#1da1f2, 15%);
 
@@ -172,5 +176,10 @@
     stroke-width: 2px;
     width: 5rem;
     height: 5rem;
+
+    @media (max-width: $container-ipad) {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 }
