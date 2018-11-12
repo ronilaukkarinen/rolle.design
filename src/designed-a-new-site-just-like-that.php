@@ -54,7 +54,7 @@
 
           <p>In fact, this is not just a blog... this is my personal ego booster, portfolio, a showcase of what I can do, what I'm best in, what makes me happy.</p>
 
-          <h3>Not just a hobby, a way of life</h3>
+          <h3>Not just a job or hobby, a way of life</h3>
 
           <p>This is the showcase of who I am and what I do. For years and years, I have been trying to build a "simple site" that is all about me. My paradise, place that no-one can touch. A place full of design ideas, minimalism, writings about creative things, code, WordPress, job, ethics, apps, analytics, numbers, psychology, books I read and other things I find interesting.</p>
 
