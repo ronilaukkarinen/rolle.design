@@ -1,0 +1,112 @@
+.main-menu {
+  display: block;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.main-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: block;
+}
+
+.main-menu ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  &:nth-child(1) svg {
+    top: 2px;
+  }
+
+  &:nth-child(1) a:hover {
+    color: $color-synthwavesunsetred;
+
+    svg {
+      stroke: $color-synthwavesunsetred;
+    }
+  }
+
+  &:nth-child(2) a:hover {
+    color: $color-synthwavesunsetorange;
+
+    svg {
+      stroke: $color-synthwavesunsetorange;
+    }
+  }
+
+  &:nth-child(3) a:hover {
+    color: $color-synthwavesunsetpink;
+
+    svg {
+      fill: $color-synthwavesunsetpink;
+    }
+  }
+
+  &:nth-child(4) a:hover {
+    color: $color-synthwaveblue;
+
+    svg {
+      fill: $color-synthwaveblue;
+    }
+  }
+
+  &:nth-child(5) a:hover {
+    color: $color-synthwaveteal;
+
+    svg {
+      fill: $color-synthwaveteal;
+    }
+  }
+}
+
+.main-menu ul li a {
+  font-size: 1.5rem;
+  color: $color-body;
+  font-family: $font-alt;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 2rem;
+  display: block;
+  text-align: center;
+  opacity: .5;
+  transition: all 1s;
+  position: relative;
+  z-index: 2;
+
+  svg {
+    position: relative;
+    top: 3px;
+    left: -10px;
+    transition: all 1s;
+  }
+
+  @media (max-width: 620px) {
+    padding: 2rem 1rem;
+
+    span {
+      display: none;
+    }
+
+    svg {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  &.active,
+  &:hover {
+    opacity: 1;
+  }
+}

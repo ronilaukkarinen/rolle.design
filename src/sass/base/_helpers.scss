@@ -4,117 +4,6 @@
 // Mixins and other essentials for global theme development.
 // ---------------------------------------------------------
 
-// Animations
-@keyframes bar-99 {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 99%;
-  }
-}
-
-@keyframes bar-70 {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 70%;
-  }
-}
-
-@keyframes bar-5 {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 5%;
-  }
-}
-
-@keyframes bar-77 {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 77%;
-  }
-}
-
-@keyframes bar-83 {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 83%;
-  }
-}
-
-@keyframes bar-85 {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 85%;
-  }
-}
-
-@keyframes bar-82 {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 82%;
-  }
-}
-
-@keyframes bar-42 {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 42%;
-  }
-}
-
-@keyframes bar-100 {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes bar-68 {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 68%;
-  }
-}
-
-@keyframes bar-0 {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 1%;
-  }
-}
-
 // Backgrounds
 @mixin background-cover() {
   background: {
@@ -146,12 +35,8 @@
 @mixin fontFace($family, $src, $weight: normal, $style: normal) {
   @font-face {
     font-family: $family;
-      src: url('#{$src}.eot');
-      src: url('#{$src}.eot?#iefix') format('embedded-opentype'),
-        url('#{$src}.woff') format('woff'),
-        url('#{$src}.woff2') format('woff2'),
-        url('#{$src}.ttf') format('truetype'),
-        url('#{$src}.svg##{$family}') format('svg');
+    src: url('#{$src}.eot');
+    src: url('#{$src}.eot?#iefix') format('embedded-opentype'), url('#{$src}.woff') format('woff'), url('#{$src}.woff2') format('woff2'), url('#{$src}.ttf') format('truetype');
     font-style: $style;
     font-weight: $weight;
   }

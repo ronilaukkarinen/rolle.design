@@ -1,5 +1,5 @@
 // Settings and helpers
-@import 'normalize.css/normalize';
+@import 'normalize';
 @import 'jeet/scss/index';
 @import 'config';
 @import 'helpers';
@@ -10,3 +10,8 @@
 
 // Layout
 @import '../layout/main';
+@import '../layout/nav';
+@import '../layout/blog';
+@import '../layout/wordpress';
+@import '../layout/projects';
+@import '../layout/contact';

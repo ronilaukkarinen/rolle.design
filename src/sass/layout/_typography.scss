@@ -7,10 +7,14 @@
 // -----------------------------------------------------------
 
 // Set up self-hosted fonts here
-@include fontFace('Karla', '../fonts/karla-regular', 400);
-@include fontFace('Karla', '../fonts/karla-italic', 400, italic);
-@include fontFace('Karla', '../fonts/karla-bold', 700);
-@include fontFace('Karla', '../fonts/karla-bolditalic', 700, italic);
+@include fontFace('Futura PT', '../fonts/futurapt-book', 400);
+@include fontFace('Futura PT', '../fonts/futurapt-demi', 500);
+@include fontFace('Futura PT', '../fonts/futurapt-bold', 600);
+@include fontFace('Spectral', '../fonts/spectral-regular', 400);
+@include fontFace('Spectral', '../fonts/spectral-semibold', 500);
+@include fontFace('Spectral', '../fonts/spectral-bold', 600);
+@include fontFace('Sofia Pro', '../fonts/sofiaproregular', 400);
+@include fontFace('Sofia Pro', '../fonts/sofiaprobold', 600);
 
 :root {
   font-size: 62.5%;
@@ -20,13 +24,6 @@
 body {
   font-size: 1.7rem;
   font-family: $font-base;
-}
-
-ul,
-li,
-p {
-  @include responsive-font(3vw, $font-min-size, $font-max-size, $font-max-size);
-  line-height: $font-base-line-height;
 }
 
 p {

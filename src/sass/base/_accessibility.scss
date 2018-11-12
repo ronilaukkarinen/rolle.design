@@ -87,6 +87,6 @@ $focus-text-color: #000;
 
 // Links within content must be underlined
 // @link https://make.wordpress.org/themes/handbook/review/accessibility/required/#content-links
-p a {
+.entry-content p a {
   text-decoration: underline;
 }

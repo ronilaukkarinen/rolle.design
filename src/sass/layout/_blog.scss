@@ -1,0 +1,176 @@
+.block-blog {
+  margin-top: 4rem;
+}
+
+.entry-header h2:before {
+  background: #767676;
+  content: '\020';
+  display: block;
+  height: 2px;
+  margin: 1rem 0;
+  width: 1em;
+}
+
+.entry-header h2 {
+  @include responsive-font(4vw, 32px, 50px);
+  font-family: -apple-system, BlinkMacSystemFont, 'Sofia Pro', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 0 2rem;
+
+  a {
+    color: #111;
+    text-decoration: none;
+    transition: all .33s;
+  }
+
+  a:hover {
+    color: #555;
+  }
+}
+
+.entry-header h3 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Sofia Pro', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  margin: .5rem 0 3rem;
+  opacity: .8;
+}
+
+.entry-content h3 {
+  @include responsive-font(2vw, 24px, 42px);
+  font-family: -apple-system, BlinkMacSystemFont, 'Sofia Pro', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  margin: .5rem 0 3rem;
+  color: #111;
+}
+
+.entry-content p {
+  line-height: 1.55;
+}
+
+// Links
+.entry-content.single p a:nth-child(1) {
+  color: $color-synthwaveteal;
+
+  &:hover {
+    color: $color-synthwaveblue;
+  }
+}
+
+.entry-content.single p a:nth-child(2) {
+  color: $color-synthwavesunsetpink;
+
+  &:hover {
+    color: $color-synthwaveteal;
+  }
+}
+
+.entry-content.single p a:nth-child(3) {
+  color: $color-synthwaveblue;
+
+  &:hover {
+    color: $color-synthwavesunsetorange;
+  }
+}
+
+.entry-content.single p a:nth-child(4) {
+  color: $color-synthwavesunsetorange;
+
+  &:hover {
+    color: $color-synthwavesunsetred;
+  }
+}
+
+.entry-content.single p a:nth-child(5) {
+  color: $color-synthwavesunsetred;
+
+  &:hover {
+    color: $color-synthwavesunsetorange;
+  }
+}
+
+.entry-content.single p a:nth-child(6) {
+  color: $color-synthwavesunsetyellow;
+
+  &:hover {
+    color: $color-synthwavesunsetred;
+  }
+}
+
+.button-wrapper {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.button-wrapper .button {
+  border: 2px solid $color-body;
+  padding: 1.2rem 3rem;
+  color: $color-body;
+  font-size: 1.8rem;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $color-body;
+    color: #fff;
+  }
+}
+
+.entry-footer {
+  margin-top: 4rem;
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  a {
+    color: #666;
+    text-decoration: none;
+    margin-right: 2.5rem;
+  }
+
+  svg {
+    stroke: #666;
+    position: relative;
+    top: 2px;
+    margin-right: .5rem;
+  }
+}
+
+.entry-content .comment-on-twitter a,
+.entry-content.single p.comment-on-twitter a:nth-child(1) {
+  color: #1da1f2;
+  text-decoration: none;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-top: 8rem;
+  display: block;
+  margin-bottom: 8rem;
+
+  &:hover {
+    color: lighten(#1da1f2, 15%);
+
+    svg {
+      stroke: lighten(#1da1f2, 15%);
+    }
+  }
+
+  svg {
+    position: relative;
+    margin-left: 1rem;
+    top: .5rem;
+    stroke: #1da1f2;
+    stroke-width: 2px;
+    width: 5rem;
+    height: 5rem;
+  }
+}

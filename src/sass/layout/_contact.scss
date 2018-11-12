@@ -1,0 +1,35 @@
+.block.block-hero.block-hero-contact {
+  h1 {
+    @include responsive-font(6vw, 75px, 140px);
+    margin-bottom: 4rem;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:nth-child(1) {
+    color: $color-synthwavesunsetred;
+
+    &:hover {
+      color: $color-synthwavesunsetpink;
+    }
+  }
+
+  a:nth-child(2) {
+    color: $color-synthwavesunsetorange;
+
+    &:hover {
+      color: $color-synthwavesunsetyellow;
+    }
+  }
+
+  a:hover {
+    color: #333;
+  }
+}
