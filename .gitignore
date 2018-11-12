@@ -4,3 +4,5 @@ access.log
 error.log
 node_modules/
 fonts/
+src/.DS_Store
+dist/.DS_Store
