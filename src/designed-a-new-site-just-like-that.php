@@ -98,6 +98,11 @@
                 <time class="entry-date published" datetime="2018-11-12T23:36:00">November 12, 2018</time></a>
             </span>
 
+            <span class="category">
+              <?php echo file_get_contents( '../dist/svg/archive.svg' ); ?>
+                <a href="/web-development">Web development</a>
+            </span>
+
           </p>
 
           </footer><!-- .entry-footer -->

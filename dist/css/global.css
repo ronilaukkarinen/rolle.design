@@ -1180,6 +1180,56 @@ p {
   }
 }
 
+.tags ul {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.tags ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.page-header {
+  padding-top: 100px;
+  padding-top: 10rem;
+  padding-bottom: 0;
+}
+
+.page-header .category-description {
+  font-size: 20px;
+  font-size: 2rem;
+  display: block;
+  opacity: .6;
+  margin-bottom: 0;
+}
+
+.page-header .page-title {
+  font-size: 2vw;
+  font-family: -apple-system, BlinkMacSystemFont, 'Sofia Pro', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  margin: 5px 0 30px;
+  margin: .5rem 0 3rem;
+  color: #111;
+}
+
+@media (max-width: 1200px) {
+  .page-header .page-title {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 2100px) {
+  .page-header .page-title {
+    font-size: 42px;
+  }
+}
+
 .block.block-hero.block-hero-wordpress h1 svg {
   width: 80px;
   width: 8rem;

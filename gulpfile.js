@@ -24,6 +24,7 @@ var scsslint    = require('gulp-scss-lint');
 var php2html    = require('gulp-php2html');
 var htmlmin     = require('gulp-htmlmin');
 var phpcs       = require('gulp-phpcs');
+var cache       = require('gulp-cached');
 
 /*
 
@@ -80,7 +81,7 @@ gulp.task('browsersync', function() {
 
     browsersync.init(files, {
         proxy: "rolle.design.test",
-        browser: "Not existing",
+        browser: "Google Chrome",
         notify: true,
         open: "external",
         reloadDelay: 1000
@@ -110,11 +111,8 @@ var helpers = function( file ) {
 gulp.task('scss-lint', function() {
 
   gulp.src([sassSrc, '!sass/navigation/_burger.scss', '!sass/base/_normalize.scss'])
+    .pipe(cache('scsslint'))
     .pipe(scsslint());
-
-  setTimeout(function() {
-    util.log('scss-lint task executed.');
-  }, 3000);
 
 });
 

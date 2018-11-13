@@ -24,6 +24,10 @@
     </ul>
   </nav>
 
+  <header class="page-header container">
+    <h1 class="page-title"><span class="category-description">Writings about</span> <span class="page-description">Web development</span></h1>
+  </header>
+
   <div class="block block-blog">
 
     <article class="container article">

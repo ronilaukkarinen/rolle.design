@@ -183,3 +183,38 @@
     }
   }
 }
+
+.tags ul {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.page-header {
+  padding-top: 10rem;
+  padding-bottom: 0;
+
+  .category-description {
+    font-size: 2rem;
+    display: block;
+    opacity: .6;
+    margin-bottom: 0;
+  }
+
+  .page-title {
+    @include responsive-font(2vw, 24px, 42px);
+    font-family: -apple-system, BlinkMacSystemFont, 'Sofia Pro', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    margin: .5rem 0 3rem;
+    color: #111;
+  }
+}
