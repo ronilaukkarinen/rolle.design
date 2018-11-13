@@ -22,7 +22,7 @@
     </ul>
   </nav>
 
-  <header class="block block-hero">
+  <header class="block block-hero" id="hero">
     <div class="content">
       <h1><span>Ron</span> <span>the</span> <span>don.</span></h1>
       <p>Just say <span>Rolle</span>. My full name is Roni Laukkarinen and I'm a web designer and developer from Finland.</p>

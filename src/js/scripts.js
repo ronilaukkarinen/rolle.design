@@ -1,13 +1,11 @@
-$( document ).ready(function() {
-  var x;
+if( document.getElementById('hero') ) {
 
-  $(window).scroll(function(){
+  window.onscroll = function() {
+    var scrollposition = window.pageYOffset | document.body.scrollTop;
+    var hero = document.getElementById('hero'), css = hero.style;
 
-    $('.block.block-hero')
-    .css('opacity', 1 - $(window).scrollTop() / 450)
-    .css('background-size', (150 + 50 * $(window).scrollTop() / 250) + '%');
+    css.opacity = 1 - scrollposition / 450;
+    css.backgroundSize = (150 + 50 * scrollposition / 250) + '%';
+  };
 
-  });
-
-});
-
+}
