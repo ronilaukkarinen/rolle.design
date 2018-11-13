@@ -8,8 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="css/global.css">
-
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="icon" href="images/favicon.png">
 </head>
 <body>

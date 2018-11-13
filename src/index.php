@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head lang="en">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Web designer, web developer – @rolle from Finland</title>
@@ -8,15 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="css/global.css">
-
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="icon" href="images/favicon.png">
 </head>
 <body>
 
   <nav class="main-menu">
     <ul>
-      <li><a href="/" class="active"><?php echo file_get_contents( '../dist/svg/home.svg' ); ?><span>Home</span></a></li>
+      <li><a href="/home" class="active"><?php echo file_get_contents( '../dist/svg/home.svg' ); ?><span>Home</span></a></li>
       <li><a href="/blog"><?php echo file_get_contents( '../dist/svg/blog.svg' ); ?><span>Blog</span></a></li>
       <li><a href="/wordpress"><?php echo file_get_contents( '../dist/svg/wordpress.svg' ); ?><span>WordPress</span></a></li>
       <li><a href="/projects"><?php echo file_get_contents( '../dist/svg/projects.svg' ); ?><span>Projects</span></a></li>

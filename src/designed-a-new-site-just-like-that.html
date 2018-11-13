@@ -22,8 +22,6 @@
   <meta name="twitter:image:alt" content="Mountains">
 
   <link rel="stylesheet" href="css/global.css">
-
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="icon" href="images/favicon.png">
 </head>
 <body>

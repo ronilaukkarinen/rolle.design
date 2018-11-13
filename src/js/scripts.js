@@ -8,4 +8,6 @@ $( document ).ready(function() {
     .css('background-size', (150 + 50 * $(window).scrollTop() / 250) + '%');
 
   });
+
 });
+

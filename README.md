@@ -21,9 +21,8 @@ More documentation coming soon.
 - [ ] Stats: Completed todoist tasks today or this week
 - [ ] Lines of code today (GitHub, Bitbucket or WakaTime)
 - [ ] Events today in calendar (Google Calendar API)
-- [ ] Livechat to the test, tawk.to possibly
+- [x] Livechat to the test
 - [x] Blog
-- [ ] Vanilla JS single page app
 - [ ] Free time projects I'm currently working on
 - [ ] Customer references I'm proud of lately (dude.fi)
 - [ ] My values (aim minimal, analyze everything, more about design principles, ideas, visual stuff, accessibility, etc.)
