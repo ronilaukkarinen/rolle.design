@@ -813,6 +813,11 @@ p {
   width: 100%;
 }
 
+.block.block-my-things .head svg {
+  position: relative;
+  top: 2px;
+}
+
 .main-menu {
   display: block;
   text-align: center;
