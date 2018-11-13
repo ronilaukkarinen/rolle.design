@@ -37,7 +37,7 @@
   <div class="block block-doing-stuff">
     <div class="head">
       <p>I like to do things like</p>
-      <h2><span>Design,</span> <span>code,</span> <span>automate,</span> <span>analyze.</span></h2>
+      <h2><span>Design,</span> <span>code,</span> <span>automation,</span> <span>analysis.</span></h2>
     </div>
   </div>
 
