@@ -66,6 +66,7 @@
         <exclude name="WordPress.WP.I18n.MissingTranslatorsComment" />
         <exclude name="WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet" />
         <exclude name="Squiz.Commenting.FileComment.WrongStyle" />
+        <exclude name="Generic.Files.EndFileNewline.NotFound" />
     </rule>
 
     <!-- Verify that the text_domain is set to the desired text-domain.

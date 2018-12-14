@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Designed a new site &ndash; just like that</title>
   <meta name="description" content="Well, releasing websites is what brings food to the table. But not just that, for me designing and coding websites have been more than a day job for eternity for me.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -115,5 +115,7 @@
     </div>
   </div>
 
-  <?php
-  include( 'footer.php' );
+  <script src="js/all.js"></script>
+
+</body>
+</html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Blog of a web designer and developer – @rolle from Finland</title>
   <meta name="description" content="I like to do stuff like design, code, automate, analyze. On top of that I do side projects, read books, watch movies, play retro games. Read my blog!">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,5 +76,7 @@
     </div>
   </div>
 
-  <?php
-  include( 'footer.php' );
+  <script src="js/all.js"></script>
+
+</body>
+</html>

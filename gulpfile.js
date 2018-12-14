@@ -243,7 +243,7 @@ PHP
 
 gulp.task('php', function() {
 
-  gulp.src(markupSrc)
+  gulp.src([markupSrc])
 
     // Validate files using PHP Code Sniffer
     .pipe(phpcs({
@@ -285,7 +285,7 @@ VALIDATE HTML
 
 // Validator for: https://validator.w3.org/
 gulp.task('validatehtml', function() {
-  return gulp.src([htmlSrc])
+  return gulp.src([htmlSrc, '!node_modules/**/*'])
     .pipe(validatehtml({
         generateReport: false,
         useTimeStamp: false,
@@ -303,7 +303,7 @@ ACCESSIBILITY
 */
 
 gulp.task('a11y', function() {
-  return gulp.src([htmlSrc])
+  return gulp.src([htmlSrc, '!node_modules/**/*'])
     .pipe(a11y({
       accessibilityLevel: 'WCAG2A',
       verbose: true,
