@@ -25,7 +25,6 @@
      <!-- Include the WordPress ruleset, with exclusions. -->
      <rule ref="WordPress">
 
-        <!-- Nazi-strict intendation rules we want to exclude -->
         <exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact" />
         <exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect" />
         <exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed" />
@@ -35,8 +34,6 @@
         <exclude name="WordPress.WhiteSpace.DisallowInlineTabs.NonIndentTabsUsed" />
         <exclude name="WordPress.Arrays.ArrayIndentation.CloseBraceNotAligned" />
         <exclude name="PEAR.Functions.FunctionCallSignature.OpeningIndent" />
-
-        <!-- Don't require too strict inline commenting, it's a good thing to documentate, let's not make it frustrating -->
         <exclude name="Squiz.Commenting.FunctionComment.WrongStyle" />
         <exclude name="Squiz.Commenting.ClassComment.WrongStyle" />
         <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar" />
@@ -45,8 +42,6 @@
         <exclude name="Squiz.Commenting.InlineComment.SpacingAfter" />
         <exclude name="Squiz.Commenting.FileComment.Missing" />
         <exclude name="Squiz.Commenting.LongConditionClosingComment.Missing" />
-
-        <!-- General code style related excludes -->
         <exclude name="Squiz.PHP.DisallowMultipleAssignments.Found" />
         <exclude name="Squiz.PHP.EmbeddedPhp.MultipleStatements" />
         <exclude name="Squiz.PHP.EmbeddedPhp.ContentAfterOpen" />
@@ -56,11 +51,7 @@
         <exclude name="WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound" />
         <exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace" />
         <exclude name="PHPCompatibility.PHP.NewFunctionArrayDereferencing.Found" />
-
-        <!-- General WordPress stuff we like to overrule -->
         <exclude name="WordPress.Files.FileName.InvalidClassFileName" />
-
-        <!-- Very strict VIP/discouraged rules that are not needed -->
         <exclude name="WordPress.VIP.RestrictedFunctions" />
         <exclude name="WordPress.VIP.AdminBarRemoval.RemovalDetected" />
         <exclude name="WordPress.VIP.OrderByRand" />
@@ -72,9 +63,9 @@
         <exclude name="Generic.Commenting.DocComment.MissingShort" />
         <exclude name="WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet" />
         <exclude name="WordPress.WP.EnqueuedResources.NonEnqueuedScript" />
-
-        <!-- Translations related, not always necessary, too strict -->
         <exclude name="WordPress.WP.I18n.MissingTranslatorsComment" />
+        <exclude name="WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet" />
+        <exclude name="Squiz.Commenting.FileComment.WrongStyle" />
     </rule>
 
     <!-- Verify that the text_domain is set to the desired text-domain.

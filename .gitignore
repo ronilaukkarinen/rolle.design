@@ -6,3 +6,4 @@ node_modules/
 fonts/
 src/.DS_Store
 dist/.DS_Store
+w3cErrors/
