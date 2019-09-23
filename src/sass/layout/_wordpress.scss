@@ -21,3 +21,227 @@
     color: #21252b;
   }
 }
+
+// Official WordPress badge styles
+.badge {
+  margin: 4px;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #f7f7f7;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  padding: 2px;
+}
+
+.badge-themes {
+  background: transparent;
+  box-shadow: 0 0 0 4px rgb(78, 50, 136);
+  fill: rgb(78, 50, 136);
+}
+
+.badge-translation-contributor {
+  background: transparent;
+  box-shadow: 0 0 0 4px rgb(195, 34, 131);
+  fill: rgb(195, 34, 131);
+}
+
+.badge-translation-editor {
+  background: rgba(195, 34, 131, .25);
+  box-shadow: 0 0 0 4px rgb(195, 34, 131);
+  fill: rgb(195, 34, 131);
+}
+
+.badge-speaker {
+  background: transparent;
+  box-shadow: 0 0 0 4px rgb(247, 173, 67);
+  fill: rgb(247, 173, 67);
+}
+
+.badge-plugins {
+  background: transparent;
+  box-shadow: 0 0 0 4px rgb(240, 103, 35);
+  fill: rgb(240, 103, 35);
+}
+
+.badge-community-contributor {
+  background: transparent;
+  box-shadow: 0 0 0 4px rgb(17, 121, 157);
+  fill: rgb(17, 121, 157);
+}
+
+.badge-community {
+  background: rgba(17, 121, 157, .25);
+  box-shadow: 0 0 0 4px rgb(17, 121, 157);
+  fill: rgb(17, 121, 157);
+}
+
+.badge-code {
+  background: transparent;
+  box-shadow: 0 0 0 4px rgb(205, 0, 0);
+  fill: rgb(205, 0, 0);
+}
+
+.badge-meta-contributor {
+  background: transparent;
+  box-shadow: 0 0 0 4px rgb(174, 173, 173);
+  fill: rgb(174, 173, 173);
+}
+
+.badge-organizer {
+  background: transparent;
+  box-shadow: 0 0 0 4px rgb(247, 173, 67);
+  fill: rgb(247, 173, 67);
+}
+
+.item-list {
+  list-style: none;
+  max-width: $grid-base;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+.item-list li {
+  @include column(1/3, $cycle: 3);
+  border-bottom: 0;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 17px;
+  padding: 16px 0 16px 55px;
+  position: relative;
+  color: #444;
+
+  @media (max-width: 800px) {
+    @include column(1/2, $cycle: 2);
+  }
+
+  @media (max-width: 535px) {
+    @include stack();
+  }
+}
+
+.open-source {
+  margin-top: 6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  // Pinned GitHub items
+  .repos {
+    @include grid(3, $gutter_x: 3rem);
+    max-width: $grid-base;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 900px) {
+      width: 100%;
+      max-width: 100rem;
+    }
+
+    @media (max-width: 1000px) {
+      @include grid(2, $gutter_x: 3rem, $gutter_y: 3rem);
+    }
+
+    @media (max-width: 600px) {
+      display: block;
+    }
+  }
+
+  .repo {
+    border: 1px solid #d1d5da;
+    background: #fff;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 42rem;
+    padding: 2rem;
+
+    @media (max-width: 1200px) {
+      max-width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      margin-bottom: 3rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h3,
+    p {
+      @extend %default;
+      margin: 0;
+    }
+
+    h3 {
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 svg {
+      margin-right: 1rem;
+    }
+
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 1.5rem;
+    }
+
+    ul li {
+      font-size: 16px;
+      margin-right: 2.5rem;
+
+      &:nth-child(3) svg {
+        margin-right: .6rem;
+      }
+    }
+
+    li svg {
+      margin-right: .5rem;
+    }
+
+    ul li,
+    p,
+    h3 {
+      @include responsive-font(16px, 18px);
+    }
+
+    ul li,
+    h3 a {
+      display: flex;
+      align-items: center;
+    }
+
+    .circle {
+      border-radius: 50%;
+      display: inline-block;
+      height: 12px;
+      width: 12px;
+      position: relative;
+      margin-right: .8rem;
+    }
+
+    .css {
+      background-color: #563d7c;
+    }
+
+    .php {
+      background-color: #4f5d95;
+    }
+  }
+}

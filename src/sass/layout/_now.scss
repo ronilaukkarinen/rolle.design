@@ -28,7 +28,8 @@
   display: none;
 }
 
-.block.block-hero.block-hero-now {
+.block.block-hero.block-hero-now,
+body .block.block-hero-bg-static {
   background-position: center 10rem;
   padding-bottom: 30rem;
   min-height: 100vh;

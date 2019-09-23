@@ -4,6 +4,68 @@
 // Mixins and other essentials for global theme development.
 // ---------------------------------------------------------
 
+
+// CSS Grid mixin with flexbox fallback for IE and Edge
+@mixin grid($columns, $fr: 1, $min_height: 0, $max_height: auto, $gutter_x: 16px, $gutter_y: 16px) {
+  display: grid;
+  grid-template-columns: repeat($columns, #{$fr}fr);
+  grid-auto-rows: minmax($min_height, $max_height);
+  grid-column-gap: $gutter_x;
+  grid-row-gap: $gutter_y;
+
+  // For browser versions that do not support CSS grid
+  @supports not (display: grid) {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    > div {
+      $grid_width: 100% / $columns;
+      $offset: $gutter_x / 2;
+      width: calc(#{$grid_width} - #{$offset});
+      margin-right: $gutter_x;
+      margin-bottom: $gutter_y;
+    }
+  }
+
+  // Internet Explorer
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    > div {
+      $grid_width: 100% / $columns;
+      $offset: $gutter_x / 2;
+      width: calc(#{$grid_width} - #{$offset});
+      margin-right: $offset;
+      margin-bottom: $gutter_y;
+
+      @media (max-width: 870px) {
+        width: 100%;
+      }
+    }
+  }
+
+  // Edge
+  @supports (-ms-ime-align: auto) {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    > div {
+      $grid_width: 100% / $columns;
+      width: calc(#{$grid_width} - #{$gutter_x});
+      margin-right: $gutter_x;
+      margin-bottom: $gutter_y;
+
+      @media (max-width: 870px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
 // Backgrounds
 @mixin background-cover() {
   background: {

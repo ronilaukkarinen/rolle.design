@@ -26,7 +26,8 @@ body {
   font-family: $font-base;
 }
 
-p {
+p,
+%default {
   @include responsive-font(3vw, $font-min-size, $font-max-size, $font-max-size);
   font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   letter-spacing: -.003em;
