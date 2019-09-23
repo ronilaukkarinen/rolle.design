@@ -10,21 +10,23 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="icon" href="images/favicon.png">
 </head>
-<body>
+<body class="blog">
 
   <nav class="main-menu">
-    <ul>
-      <li><a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg><span>Home</span></a></li>
-      <li><a href="/blog" class="active"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bookmark"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+  <ul>
+    <li><a class="home" href="/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg><span>Home</span></a></li>
+    <li><a class="blog" href="/blog"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bookmark"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
 <span>Blog</span></a></li>
-      <li><a href="/wordpress"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M3.42 12c0-1.24.27-2.42.74-3.5l4.1 11.22A8.563 8.563 0 0 1 3.42 12m14.37-.43c0 .73-.29 1.58-.65 2.77l-.86 2.86-3.1-9.2.98-.1c.47-.06.41-.74-.05-.71 0 0-1.39.11-2.29.11l-2.26-.11c-.46-.03-.51.68-.06.71l.91.1 1.34 3.64-1.88 5.63L6.74 8l.99-.1c.46-.06.4-.74-.06-.71 0 0-1.39.11-2.29.11l-.55-.01C6.37 4.96 9 3.42 12 3.42c2.23 0 4.27.86 5.79 2.25h-.11c-.84 0-1.44.73-1.44 1.52 0 .71.41 1.31.84 2.01.33.57.71 1.3.71 2.37m-5.64 1.18l2.64 7.22.06.12c-.89.32-1.85.49-2.85.49-.84 0-1.65-.12-2.42-.35l2.57-7.48m7.38-4.87A8.548 8.548 0 0 1 20.58 12c0 3.16-1.72 5.93-4.27 7.41l2.62-7.57c.49-1.22.66-2.2.66-3.07l-.06-.89M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2m0 19.54c5.26 0 9.54-4.28 9.54-9.54 0-5.26-4.28-9.54-9.54-9.54-5.26 0-9.54 4.28-9.54 9.54 0 5.26 4.28 9.54 9.54 9.54z"/></svg>
+    <li><a class="wordpress" href="/wordpress"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M3.42 12c0-1.24.27-2.42.74-3.5l4.1 11.22A8.563 8.563 0 0 1 3.42 12m14.37-.43c0 .73-.29 1.58-.65 2.77l-.86 2.86-3.1-9.2.98-.1c.47-.06.41-.74-.05-.71 0 0-1.39.11-2.29.11l-2.26-.11c-.46-.03-.51.68-.06.71l.91.1 1.34 3.64-1.88 5.63L6.74 8l.99-.1c.46-.06.4-.74-.06-.71 0 0-1.39.11-2.29.11l-.55-.01C6.37 4.96 9 3.42 12 3.42c2.23 0 4.27.86 5.79 2.25h-.11c-.84 0-1.44.73-1.44 1.52 0 .71.41 1.31.84 2.01.33.57.71 1.3.71 2.37m-5.64 1.18l2.64 7.22.06.12c-.89.32-1.85.49-2.85.49-.84 0-1.65-.12-2.42-.35l2.57-7.48m7.38-4.87A8.548 8.548 0 0 1 20.58 12c0 3.16-1.72 5.93-4.27 7.41l2.62-7.57c.49-1.22.66-2.2.66-3.07l-.06-.89M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2m0 19.54c5.26 0 9.54-4.28 9.54-9.54 0-5.26-4.28-9.54-9.54-9.54-5.26 0-9.54 4.28-9.54 9.54 0 5.26 4.28 9.54 9.54 9.54z"/></svg>
 <span>WordPress</span></a></li>
-      <li><a href="/projects"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M8 3c-1.1 0-2 .9-2 2v4c0 1.1-.9 2-2 2H3v2h1c1.1 0 2 .9 2 2v4c0 1.1.9 2 2 2h2v-2H8v-5c0-1.1-.9-2-2-2 1.1 0 2-.9 2-2V5h2V3m6 0c1.1 0 2 .9 2 2v4c0 1.1.9 2 2 2h1v2h-1c-1.1 0-2 .9-2 2v4c0 1.1-.9 2-2 2h-2v-2h2v-5c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V5h-2V3h2z"/></svg>
+    <li><a class="projects" href="/projects"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M8 3c-1.1 0-2 .9-2 2v4c0 1.1-.9 2-2 2H3v2h1c1.1 0 2 .9 2 2v4c0 1.1.9 2 2 2h2v-2H8v-5c0-1.1-.9-2-2-2 1.1 0 2-.9 2-2V5h2V3m6 0c1.1 0 2 .9 2 2v4c0 1.1.9 2 2 2h1v2h-1c-1.1 0-2 .9-2 2v4c0 1.1-.9 2-2 2h-2v-2h2v-5c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V5h-2V3h2z"/></svg>
 <span>Projects</span></a></li>
-      <li><a href="/contact"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M12 15.36l-8-5V18h16v-7.64l-8 5M4 8l8 5 8-5-8-5-8 5m18 0v10c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V8c0-.73.39-1.36.97-1.71L12 .64l9.03 5.65c.58.35.97.98.97 1.71z"/></svg>
+    <li><a class="contact" href="/contact"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M12 15.36l-8-5V18h16v-7.64l-8 5M4 8l8 5 8-5-8-5-8 5m18 0v10c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V8c0-.73.39-1.36.97-1.71L12 .64l9.03 5.65c.58.35.97.98.97 1.71z"/></svg>
 <span>Contact</span></a></li>
-    </ul>
-  </nav>
+    <li><a class="now" href="/now"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play-circle"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z"/></svg>
+<span>Now</span></a></li>
+  </ul>
+</nav>
 
   <div class="block block-blog">
 

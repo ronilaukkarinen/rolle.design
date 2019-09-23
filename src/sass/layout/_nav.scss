@@ -83,7 +83,7 @@
     top: 3px;
     transition: all 1s;
 
-    @media(min-width: 621px) {
+    @media (min-width: 621px) {
       left: -10px;
     }
   }
@@ -112,4 +112,14 @@
   &:hover {
     opacity: 1;
   }
+}
+
+// Nav active links
+.home .home,
+.blog .blog,
+.wordpress .wordpress,
+.projects .projects,
+.contact .contact,
+.now .now {
+  opacity: 1;
 }

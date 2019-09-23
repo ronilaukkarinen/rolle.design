@@ -1,0 +1,11 @@
+.block.block-hero.block-hero-contact.block-hero-now {
+  ul {
+    @include responsive-font(4vw, 22px, 25px);
+    max-width: 65rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+    margin-top: 8rem;
+    text-align: left;
+  }
+}
