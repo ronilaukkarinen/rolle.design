@@ -2,6 +2,14 @@
   margin-top: 4rem;
 }
 
+.article.article-blog {
+  margin-bottom: 10rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .entry-header h2:before {
   background: #767676;
   content: '\020';

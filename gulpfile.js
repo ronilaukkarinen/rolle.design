@@ -110,7 +110,7 @@ var stylefmtfile = function( file ) {
         .pipe(cache('stylefmtrunning'))
 
         // Run current file through stylefmt
-        .pipe(stylefmt({ configFile: themeDir + '/.stylelintrc' }))
+        .pipe(stylefmt({ configFile: '.stylelintrc' }))
 
         // Overwrite
         .pipe(gulp.dest(correctdir))
