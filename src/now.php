@@ -35,7 +35,7 @@
   <header class="block block-hero block-hero-contact block-hero-now has-static-hero">
     <div class="content">
       <h1>Now</h1>
-      <p>Now page is a place to tell you about the things I focus in <i><u>right now</u></i>. I'll try to keep this up to date best I can. Inspired by the <a href="https://nownownow.com/">nownownow project</a>.</p>
+      <p>Now page is a place to tell you about the things I focus on <i><u>right now</u></i>. I'll try to keep this up to date best I can. Inspired by the <a href="https://nownownow.com/">nownownow project</a>.</p>
 
       <ul>
         <li>Working at <a href="https://www.dude.fi">Dude</a> as a founder and a full-time full stack developer, my tasks consists of back-end, front-end, UI and servers. My code and configs are up to date on <a href="https://github.com/ronilaukkarinen">GitHub</a>.</li>
