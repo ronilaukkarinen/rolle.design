@@ -27,3 +27,26 @@
 .now .block-my-things {
   display: none;
 }
+
+.block.block-hero.block-hero-now {
+  background-position: center 10rem;
+  padding-bottom: 30rem;
+  min-height: 100vh;
+  height: auto;
+
+  @media (min-width: 2900px) {
+    background-position: center -50rem;
+  }
+
+  @media (max-width: 1650px) {
+    background-position: center 60rem;
+  }
+
+  @media (max-width: 900px) {
+    background-position: center 70rem;
+  }
+
+  @media (max-width: 500px) {
+    background-position: center 120rem;
+  }
+}

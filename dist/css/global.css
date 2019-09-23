@@ -537,41 +537,6 @@ p {
   padding-right: 2rem;
 }
 
-.block.block-hero.has-static-hero {
-  background-position: center -100px;
-  background-position: center -10rem;
-}
-
-@media (max-width: 1650px) {
-  .block.block-hero.has-static-hero {
-    background-position: center 10rem;
-  }
-}
-
-@media (max-width: 1400px) {
-  .block.block-hero.has-static-hero {
-    background-position: center 40rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .block.block-hero.has-static-hero {
-    background-position: center 60rem;
-  }
-}
-
-@media (max-width: 460px) {
-  .block.block-hero.has-static-hero {
-    background-position: center 70rem;
-  }
-}
-
-@media (max-width: 420px) {
-  .block.block-hero.has-static-hero {
-    background-position: center 100rem;
-  }
-}
-
 .block.block-hero {
   background-image: url('../images/mountains.jpg');
   background-repeat: no-repeat;
@@ -1473,4 +1438,37 @@ p {
 
 .now .block-my-things {
   display: none;
+}
+
+.block.block-hero.block-hero-now {
+  background-position: center 100px;
+  background-position: center 10rem;
+  padding-bottom: 300px;
+  padding-bottom: 30rem;
+  min-height: 100vh;
+  height: auto;
+}
+
+@media (min-width: 2900px) {
+  .block.block-hero.block-hero-now {
+    background-position: center -50rem;
+  }
+}
+
+@media (max-width: 1650px) {
+  .block.block-hero.block-hero-now {
+    background-position: center 60rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .block.block-hero.block-hero-now {
+    background-position: center 70rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .block.block-hero.block-hero-now {
+    background-position: center 120rem;
+  }
 }

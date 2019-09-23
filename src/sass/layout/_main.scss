@@ -28,30 +28,6 @@ p {
   padding-right: 2rem;
 }
 
-.block.block-hero.has-static-hero {
-  background-position: center -10rem;
-
-  @media (max-width: 1650px) {
-    background-position: center 10rem;
-  }
-
-  @media (max-width: 1400px) {
-    background-position: center 40rem;
-  }
-
-  @media (max-width: 600px) {
-    background-position: center 60rem;
-  }
-
-  @media (max-width: 460px) {
-    background-position: center 70rem;
-  }
-
-  @media (max-width: 420px) {
-    background-position: center 100rem;
-  }
-}
-
 .block.block-hero {
   background-image: url('../images/mountains.jpg');
   background-repeat: no-repeat;
