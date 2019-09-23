@@ -102,7 +102,7 @@
 
       </div>
 
-  <?php include '../partials/nav.php'; ?>
+  <?php include '../partials/footer.php'; ?>
 
   <script src="js/all.js"></script>
 
