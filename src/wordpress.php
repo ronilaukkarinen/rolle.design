@@ -14,7 +14,7 @@
 
   <?php include '../partials/nav.php'; ?>
 
-  <header class="block block-hero block-hero-wordpress">
+  <header class="block block-hero block-hero-wordpress" id="hero">
     <div class="content">
       <h1><?php echo file_get_contents( '../dist/svg/wordpress.svg' ); ?><span class="screen-reader-text">WordPress</span></h1>
       <p>Nothing much yet. Go to <a href="https://profiles.wordpress.org/rolle">profiles.wordpress.org/rolle</a> in the meantime.</p>

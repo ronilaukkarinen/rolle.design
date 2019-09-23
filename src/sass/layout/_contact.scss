@@ -29,6 +29,38 @@
     }
   }
 
+  a:nth-child(3) {
+    color: $color-synthwaveblue;
+
+    &:hover {
+      color: $color-synthwavesunsetorange;
+    }
+  }
+
+  a:nth-child(4) {
+    color: $color-synthwavesunsetorange;
+
+    &:hover {
+      color: $color-synthwavesunsetred;
+    }
+  }
+
+  a:nth-child(5) {
+    color: $color-synthwavesunsetred;
+
+    &:hover {
+      color: $color-synthwavesunsetorange;
+    }
+  }
+
+  a:nth-child(6) {
+    color: $color-synthwaveblue;
+
+    &:hover {
+      color: $color-synthwavesunsetorange;
+    }
+  }
+
   a:hover {
     color: #333;
   }

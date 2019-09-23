@@ -14,7 +14,7 @@
 
   <?php include '../partials/nav.php'; ?>
 
-  <header class="block block-hero block-hero-projects">
+  <header class="block block-hero block-hero-projects" id="hero">
     <div class="content">
       <h1><?php echo file_get_contents( '../dist/svg/github.svg' ); ?><span class="screen-reader-text">Projects</span></h1>
       <p>Nothing yet. Go to <a href="https://github.com/ronilaukkarinen">github.com/ronilaukkarinen</a> in the meantime.</p>
