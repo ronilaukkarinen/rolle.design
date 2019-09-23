@@ -52,7 +52,7 @@
 
           <p>Maybe we'll see something here as well. Before the end of year 2019, that is.</p>
 
-          <p class="comment-on-twitter"><a href="https://twitter.com/rolle/status/999">Comment on Twitter <?php echo file_get_contents( '../dist/svg/twitter.svg' ); ?></a>
+          <p class="comment-on-twitter"><a href="https://twitter.com/rolle/status/1176075153240920064">Comment on Twitter <?php echo file_get_contents( '../dist/svg/twitter.svg' ); ?></a>
 
         </div>
 
@@ -64,7 +64,7 @@
             </span>
 
             <span class="posted-on">
-              <?php echo file_get_contents( '../dist/svg/time.svg' ); ?><a href="/designed-a-new-site-just-like-that" rel="bookmark">
+              <?php echo file_get_contents( '../dist/svg/time.svg' ); ?><a href="/the-web-world-of-mine-shattered" rel="bookmark">
                 <time class="entry-date published" datetime="2019-09-23T11:37:00">September 23, 2019</time></a>
             </span>
 
