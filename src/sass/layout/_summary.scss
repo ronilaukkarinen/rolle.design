@@ -1,0 +1,22 @@
+.block.block-hero.block-hero-summary {
+  background: none;
+  height: auto;
+  min-height: 0;
+
+  .content {
+    margin-top: 6.4rem;
+    display: none;
+  }
+
+  h1 {
+    font-size: 60px;
+
+    @media (max-width: $container-ipad) {
+      font-size: 30px;
+    }
+  }
+}
+
+// .block.block-list {
+
+// }

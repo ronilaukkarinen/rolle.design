@@ -39,6 +39,22 @@ p {
   overflow: hidden;
   padding-top: 0;
 
+  .instagram-link {
+    color: #405de6;
+    text-decoration: none;
+
+    svg {
+      position: relative;
+      top: 3px;
+      margin-right: 1px;
+      margin-left: 3px;
+    }
+  }
+
+  .instagram-link:hover {
+    color: lighten(#405de6, 15%);
+  }
+
   @media (max-width: 1500px) {
     background-position: center -20rem;
   }
@@ -85,7 +101,7 @@ p {
     text-align: center;
     position: relative;
 
-    svg {
+    .arrow {
       width: 6rem;
       height: 6rem;
       position: absolute;
