@@ -923,13 +923,13 @@ p {
   transition: all 1s;
 }
 
-@media (min-width: 621px) {
+@media (min-width: 840px) {
   .main-menu ul li a svg {
     left: -10px;
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 840px) {
   .main-menu ul li a {
     padding: 2rem 1rem;
   }
@@ -944,7 +944,7 @@ p {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 840px) {
   .main-menu ul li a svg {
     width: 2.4rem;
     height: 2.4rem;

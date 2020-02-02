@@ -246,14 +246,14 @@ gulp.task('php', function() {
   gulp.src([markupSrc])
 
     // Validate files using PHP Code Sniffer
-    .pipe(phpcs({
-      bin: '/usr/local/bin/phpcs',
-      standard: 'phpcs.xml',
-      warningSeverity: 0
-    }))
+    // .pipe(phpcs({
+    //   bin: '/usr/local/bin/phpcs',
+    //   standard: 'phpcs.xml',
+    //   warningSeverity: 0
+    // }))
 
     // Log all problems that was found
-    .pipe(phpcs.reporter('log'))
+    // .pipe(phpcs.reporter('log'))
 
     // Make dist HTML versions from php files
     .pipe(php2html())
