@@ -630,6 +630,8 @@ p {
   margin: 0;
   padding: 0;
   text-align: center; }
+  .main-menu ul li a.about {
+    display: none !important; }
   .main-menu ul li:nth-child(1) svg {
     top: 2px; }
   .main-menu ul li:nth-child(1) a:hover {

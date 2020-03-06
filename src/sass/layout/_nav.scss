@@ -18,6 +18,10 @@
   padding: 0;
   text-align: center;
 
+  a.about {
+    display: none !important;
+  }
+
   &:nth-child(1) svg {
     top: 2px;
   }
