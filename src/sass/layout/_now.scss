@@ -30,7 +30,7 @@
 
 .block.block-hero.block-hero-now,
 body .block.block-hero-bg-static {
-  background-position: center 10rem;
+  background-position: center 40rem;
   padding-bottom: 30rem;
   min-height: 100vh;
   height: auto;
@@ -40,14 +40,14 @@ body .block.block-hero-bg-static {
   }
 
   @media (max-width: 1650px) {
-    background-position: center 60rem;
+    background-position: center 90rem;
   }
 
   @media (max-width: 900px) {
-    background-position: center 70rem;
+    background-position: center 130rem;
   }
 
   @media (max-width: 500px) {
-    background-position: center 120rem;
+    background-position: center 140rem;
   }
 }
