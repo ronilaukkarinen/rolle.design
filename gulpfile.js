@@ -344,6 +344,15 @@ gulp.task('watch', ['browsersync'], function() {
 
 });
 
+gulp.task('build', function() {
+
+  gulp.start('styles');
+  gulp.start('js');
+  gulp.start('php');
+  gulp.start('html');
+
+});
+
 /*
 
 DEFAULT

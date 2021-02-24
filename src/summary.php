@@ -39,7 +39,7 @@
     </div>
   </div>
 
-  <?php include '../partials/footer.php'; ?>
+  <?php include '../src/partials/footer.php'; ?>
 
   <script src="js/all.js"></script>
 

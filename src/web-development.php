@@ -12,7 +12,7 @@
 </head>
 <body class="blog">
 
-  <?php include '../partials/nav.php'; ?>
+  <?php include '../src/partials/nav.php'; ?>
 
   <header class="page-header container">
     <h1 class="page-title"><span class="category-description">Writings about</span> <span class="page-description">Web development</span></h1>
@@ -61,7 +61,7 @@
 
       </div>
 
-  <?php include '../partials/footer.php'; ?>
+  <?php include '../src/partials/footer.php'; ?>
 
   <script src="js/all.js"></script>
 

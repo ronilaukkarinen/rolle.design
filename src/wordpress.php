@@ -30,7 +30,7 @@
 </head>
 <body class="wordpress">
 
-  <?php include '../partials/nav.php'; ?>
+  <?php include '../src/partials/nav.php'; ?>
 
   <header class="block block-hero block-hero-wordpress block-hero-bg-static">
     <div class="content">

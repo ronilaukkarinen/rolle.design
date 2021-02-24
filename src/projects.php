@@ -12,7 +12,7 @@
 </head>
 <body class="projects">
 
-  <?php include '../partials/nav.php'; ?>
+  <?php include '../src/partials/nav.php'; ?>
 
   <header class="block block-hero block-hero-projects" id="hero">
     <div class="content">
@@ -21,7 +21,7 @@
     </div>
   </header>
 
-  <?php include '../partials/footer.php'; ?>
+  <?php include '../src/partials/footer.php'; ?>
 
   <script src="js/all.js"></script>
 

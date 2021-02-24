@@ -12,7 +12,7 @@
 </head>
 <body class="home">
 
-  <?php include '../partials/nav.php'; ?>
+  <?php include '../src/partials/nav.php'; ?>
 
   <header class="block block-hero" id="hero">
     <div class="content">
@@ -33,7 +33,7 @@
     </div>
   </div>
 
-  <?php include '../partials/footer.php'; ?>
+  <?php include '../src/partials/footer.php'; ?>
 
   <script src="js/all.js"></script>
 

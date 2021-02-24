@@ -26,7 +26,7 @@
 </head>
 <body class="blog">
 
-  <?php include '../partials/nav.php'; ?>
+  <?php include '../src/partials/nav.php'; ?>
 
   <div class="block block-blog">
 
@@ -100,7 +100,7 @@
 
       </div>
 
-  <?php include '../partials/footer.php'; ?>
+  <?php include '../src/partials/footer.php'; ?>
 
   <script src="js/all.js"></script>
 

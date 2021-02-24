@@ -2,9 +2,14 @@
 
 Rolle.design is my personal website. You can read all about the born of it in blog post [Designed a new site – just like that](https://rolle.design/designed-a-new-site-just-like-that).
 
-More documentation coming soon.
-
 ![Screenshot](https://i.imgur.com/kSgRFIr.png "Screenshot")
+
+### Needed for this project
+
+- [php2html](https://github.com/bezoerb/php2html)
+- `brew install php@7.3`
+- `sudo ln -s /usr/local/Cellar/php@7.3/7.3.21/bin/php /usr/local/bin/php`
+- `sudo ln -s /usr/local/Cellar/php@7.3/7.3.21/bin/php-cgi /usr/local/bin/php-cgi`
 
 ### To do list
 
