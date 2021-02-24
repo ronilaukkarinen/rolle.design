@@ -1,31 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <?php
-    // Variables
-    $title = 'Deploying static site via Dandelion';
-    $slug = 'deploying-static-site-via-dandelion';
-    $article_image = 'https://rolle.design/images/mountains.jpg';
-  ?>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><?php echo $title; ?></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
+  $title = 'Deploying static site via Dandelion';
+  $slug = 'deploying-static-site-via-dandelion';
+  $article_image = 'https://rolle.design/images/mountains.jpg';
+  $description = '';
 
-  <meta property="og:title" content="<?php echo $title; ?>">
-  <meta property="og:site_name" content="rolle.design">
-  <meta property="og:url" content="https://rolle.design/<?php echo $slug; ?>">
-  <meta property="og:type" content="article">
-  <meta property="og:image" content="<?php echo $article_image; ?>">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@rolle">
-  <meta name="twitter:title" content="<?php echo $title; ?>">
-  <meta name="twitter:image" content="<?php echo $article_image; ?>">
-
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="icon" href="images/favicon.png">
-</head>
+  include '../src/partials/head.php';
+?>
 <body class="blog">
 
   <?php include '../src/partials/nav.php'; ?>
@@ -103,8 +83,6 @@
       </div>
 
   <?php include '../src/partials/footer.php'; ?>
-
-  <script src="js/all.js"></script>
 
 </body>
 </html>

@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Contact Roni Laukkarinen – @rolle</title>
-  <meta name="description" content="I like to do stuff like wordpress, design, code, automate, analyze. On top of that I do side projects, read books, watch movies, play retro games. Get in touch!">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
+  $title = 'Contact Roni Laukkarinen – @rolle';
+  $description = '';
 
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="icon" href="images/favicon.png">
-</head>
+  include '../src/partials/head.php';
+?>
 <body class="contact">
 
   <?php include '../src/partials/nav.php'; ?>
@@ -22,8 +16,6 @@
   </header>
 
   <?php include '../src/partials/footer.php'; ?>
-
-  <script src="js/all.js"></script>
 
 </body>
 </html>

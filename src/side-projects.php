@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Side projects – @rolle from Finland</title>
-  <meta name="description" content="I like to do stuff like design, code, automate, analyze. On top of that I do side projects, read books, watch movies, play retro games. Read my blog!">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
+  $title = 'Side projects';
+  $slug = 'side-projects';
+  $article_image = 'https://rolle.design/images/mountains.jpg';
+  $description = '';
 
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="icon" href="images/favicon.png">
-</head>
+  include '../src/partials/head.php';
+?>
 <body class="blog">
 
   <?php include '../src/partials/nav.php'; ?>
@@ -61,8 +57,6 @@
       </div>
 
   <?php include '../src/partials/footer.php'; ?>
-
-  <script src="js/all.js"></script>
 
 </body>
 </html>

@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Web designer, web developer – @rolle's Projects</title>
-  <meta name="description" content="I like to do stuff like wordpress, design, code, automate, analyze. On top of that I do side projects, read books, watch movies, play retro games. Get to know my projects!">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
+  $title = 'Web designer, web developer – @rolle\'s Projects';
+  $slug = 'projects';
+  $article_image = 'https://rolle.design/images/mountains.jpg';
+  $description = '';
 
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="icon" href="images/favicon.png">
-</head>
+  include '../src/partials/head.php';
+?>
 <body class="projects">
 
   <?php include '../src/partials/nav.php'; ?>
@@ -22,8 +18,6 @@
   </header>
 
   <?php include '../src/partials/footer.php'; ?>
-
-  <script src="js/all.js"></script>
 
 </body>
 </html>

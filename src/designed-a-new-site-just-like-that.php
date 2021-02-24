@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Designed a new site &ndash; just like that</title>
-  <meta name="description" content="Well, releasing websites is what brings food to the table. But not just that, for me designing and coding websites have been more than a day job for eternity for me.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
+  $title = 'Designed a new site &ndash; just like that';
+  $slug = 'designed-a-new-site-just-like-that';
+  $article_image = 'https://rolle.design/images/mountains.jpg';
+  $description = 'Well, releasing websites is what brings food to the table. But not just that, for me designing and coding websites have been more than a day job for eternity for me.';
 
-  <meta property="og:title" content="Designed a new site &ndash; just like that">
-  <meta property="og:site_name" content="rolle.design">
-  <meta property="og:url" content="https://rolle.design/designed-a-new-site-just-like-that">
-  <meta property="og:description" content="Well, releasing websites is what brings food to the table. But not just that, for me designing and coding websites have been more than a day job for eternity for me.">
-  <meta property="og:type" content="article">
-  <meta property="og:image" content="https://rolle.design/images/mountains.jpg">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@rolle">
-  <meta name="twitter:title" content="Designed a new site - just like that - rolle.design">
-  <meta name="twitter:description" content="Well, releasing websites is what brings food to the table. But not just that, for me designing and coding websites have been more than a day job for eternity for me.">
-  <meta name="twitter:image" content="https://rolle.design/images/mountains.jpg">
-  <meta name="twitter:image:alt" content="Mountains">
-
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="icon" href="images/favicon.png">
-</head>
+  include '../src/partials/head.php';
+?>
 <body class="blog">
 
   <?php include '../src/partials/nav.php'; ?>
@@ -101,8 +83,6 @@
       </div>
 
   <?php include '../src/partials/footer.php'; ?>
-
-  <script src="js/all.js"></script>
 
 </body>
 </html>

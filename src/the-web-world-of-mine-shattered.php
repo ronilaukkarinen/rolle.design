@@ -1,33 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <?php
-    $title = 'The web world of mine, shattered - Roni Laukkarinen';
-    $description = '';
-  ?>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><?php echo $title; ?></title>
-  <meta name="description" content="<?php echo $description; ?>">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
+  $title = 'The web world of mine, shattered - Roni Laukkarinen';
+  $slug = 'the-web-world-of-mine-shattered';
+  $article_image = 'https://rolle.design/images/mountains.jpg';
+  $description = '';
 
-  <meta property="og:title" content="<?php echo $title; ?>">
-  <meta property="og:site_name" content="rolle.design">
-  <meta property="og:url" content="https://rolle.design/the-web-world-of-mine-shattered">
-  <meta property="og:description" content="<?php echo $description; ?>">
-  <meta property="og:type" content="article">
-  <meta property="og:image" content="https://rolle.design/images/mountains.jpg">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@rolle">
-  <meta name="twitter:title" content="<?php echo $title; ?>">
-  <meta name="twitter:description" content="<?php echo $description; ?>">
-  <meta name="twitter:image" content="https://rolle.design/images/mountains.jpg">
-  <meta name="twitter:image:alt" content="Mountains">
-
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="icon" href="images/favicon.png">
-</head>
+  include '../src/partials/head.php';
+?>
 <body class="blog">
 
   <?php include '../src/partials/nav.php'; ?>
@@ -81,8 +59,6 @@
       </div>
 
   <?php include '../src/partials/footer.php'; ?>
-
-  <script src="js/all.js"></script>
 
 </body>
 </html>

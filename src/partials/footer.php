@@ -4,3 +4,5 @@
     <h2><a href="https://github.com/ronilaukkarinen">Follow my progress on GitHub. <?php echo file_get_contents( '../dist/svg/github.svg' ); ?></a></h2>
   </div>
 </footer>
+
+<script src="js/all.js"></script>
