@@ -11,6 +11,15 @@ Rolle.design is my personal website. You can read all about the born of it in bl
 - `sudo ln -s /usr/local/Cellar/php@7.3/7.3.21/bin/php /usr/local/bin/php`
 - `sudo ln -s /usr/local/Cellar/php@7.3/7.3.21/bin/php-cgi /usr/local/bin/php-cgi`
 
+### Building
+
+- Run `gulp` when doing layout changes
+- Run `gulp build` to build
+
+### Releasing
+
+1. Before committing, see `git status`
+2. Run `scp -r dist/changed-files* rolle@xxx.xx.xxx.xxx:/var/www/rolle.wtf/deploy/dist/` to release
 ### To do list
 
 - [ ] Some sort of personal stats section
