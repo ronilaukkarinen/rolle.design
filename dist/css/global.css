@@ -430,6 +430,10 @@ p {
   padding-right: 20px;
   padding-right: 2rem; }
 
+.content ul {
+  padding-left: 25px;
+  padding-left: 2.5rem; }
+
 .block.block-hero {
   background-image: url("../images/mountains.jpg");
   background-repeat: no-repeat;
