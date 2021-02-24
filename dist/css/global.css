@@ -1426,7 +1426,7 @@ body .block.block-hero-bg-static {
   @media (max-width: 500px) {
     .block.block-hero.block-hero-now,
     body .block.block-hero-bg-static {
-      background-position: center 140rem; } }
+      background-position: center 160rem; } }
 
 .block.block-hero.block-hero-summary {
   background: none;
