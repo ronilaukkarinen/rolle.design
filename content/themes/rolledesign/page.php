@@ -9,7 +9,7 @@
  *
  * @Date:   2019-10-15 12:30:02
  * @Last Modified by: Roni Laukkarinen
- * @Last Modified time: 2021-04-01 18:33:45
+ * @Last Modified time: 2021-04-01 19:46:53
  * @package rolle
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
@@ -20,13 +20,10 @@ the_post();
 get_header(); ?>
 
 <main class="site-main">
-  <section class="block block-page has-light-bg" id="content">
-      <?php the_content(); ?>
-      <?php if ( get_edit_post_link() ) {
-        edit_post_link( sprintf( wp_kses( __( 'Edit <span class="screen-reader-text">%s</span>', 'rolle' ), [ 'span' => [ 'class' => [] ] ] ), get_the_title() ), '<p class="edit-link">', '</p>' );
-      } ?>
-  </section>
-
+  <?php the_content(); ?>
+  <?php if ( get_edit_post_link() ) {
+    edit_post_link( sprintf( wp_kses( __( 'Edit <span class="screen-reader-text">%s</span>', 'rolle' ), [ 'span' => [ 'class' => [] ] ] ), get_the_title() ), '<p class="edit-link">', '</p>' );
+  } ?>
 </main>
 
 <?php get_footer();

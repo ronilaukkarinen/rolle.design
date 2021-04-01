@@ -7,7 +7,7 @@
  *
  * @Date:   2019-10-15 12:30:02
  * @Last Modified by: Roni Laukkarinen
- * @Last Modified time: 2021-04-01 18:17:33
+ * @Last Modified time: 2021-04-01 19:45:34
  * @package rolle
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
@@ -16,9 +16,9 @@ namespace Air_Light;
 
 get_header(); ?>
 <main class="site-main">
-  <section class="block block-hero block-has-space" id="hero">
+  <section class="block block-hero block-hero-front block-has-space" id="hero">
     <div class="content">
-      <h1><span>Ron</span> <span>the</span> <span>don.</span></h1>
+      <h1 id="content"><span>Ron</span> <span>the</span> <span>don.</span></h1>
       <p>Just say <span>Rolle</span>. My full name is Roni Laukkarinen and I'm a web designer and developer from Finland.</p>
 
       <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/gravatar.jpg" alt="Facial image of me, Roni Laukkarinen aka rolle from Twitter" class="gravatar" />

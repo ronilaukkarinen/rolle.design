@@ -5,12 +5,15 @@
   background-repeat: no-repeat;
   background-size: 150% auto;
   display: block;
-  height: 100vh;
-  min-height: 125rem;
   overflow: hidden;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 0;
+
+  &.block-hero-front {
+    height: 100vh;
+    min-height: 125rem;
+  }
 
   .instagram-link {
     color: $color-instagram;
@@ -61,7 +64,7 @@
   }
 
   .content {
-    margin-top: 19rem;
+    margin-top: 15rem;
     text-align: center;
 
     @media (max-width: 500px) {
