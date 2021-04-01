@@ -18,7 +18,7 @@
 }
 
 .main-menu ul li a {
-  color: $color-body;
+  color: var(--color-body);
   display: block;
   font-family: $font-alt;
   font-size: 1.5rem;
@@ -84,31 +84,31 @@
 
   &:nth-child(1) a:hover,
   &:nth-child(1) a:focus {
-    color: $color-synthwavesunsetred;
+    color: var(--color-synthwavesunsetred);
   }
 
   &:nth-child(2) a:hover,
   &:nth-child(2) a:focus {
-    color: $color-synthwavesunsetorange;
+    color: var(--color-synthwavesunsetorange);
   }
 
   &:nth-child(4) a:hover,
   &:nth-child(4) a:focus {
-    color: $color-synthwaveblue;
+    color: var(--color-synthwaveblue);
   }
 
   &:nth-child(5) a:hover,
   &:nth-child(5) a:focus {
-    color: $color-synthwaveteal;
+    color: var(--color-synthwaveteal);
   }
 
   &:nth-child(6) a:hover,
   &:nth-child(6) a:focus {
-    color: $color-synthwavesunsetpink;
+    color: var(--color-synthwavesunsetpink);
   }
 
   &.menu-item-29 a:hover,
   &.menu-item-29 a:focus {
-    color: $color-wordpress;
+    color: var(--color-wordpress);
   }
 }

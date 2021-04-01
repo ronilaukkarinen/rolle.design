@@ -7,13 +7,17 @@
 /* stylelint-disable property-disallowed-list, sh-waqar/declaration-use-variable, a11y/no-outline-none, a11y/no-display-none */
 // Default structural element
 .block {
-  background-color: $color-white;
+  background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
   max-width: $width-max-layout;
   position: relative;
+}
+
+body {
+  background-color: var(--color-white);
 }
 
 // Rolle.wtf specific
@@ -32,7 +36,7 @@
 
 // Default shade on top of blocks
 .shade {
-  background-color: $color-main;
+  background-color: var(--color-main);
   height: 100%;
   left: 0;
   opacity: .35;
@@ -111,7 +115,7 @@
 
   a {
     align-items: center;
-    color: $color-white;
+    color: var(--color-white);
     display: inline-flex;
     font-family: $font-accent;
     font-size: 18px;
@@ -125,12 +129,12 @@
 
   a:hover,
   a:focus {
-    color: $color-white;
+    color: var(--color-white);
   }
 }
 
 .shadow {
-  background: #ccc;
+  background: var(--color-light-grey-alt);
   border-radius: 12px;
   height: 100%;
   left: 0;
@@ -155,7 +159,7 @@
 .front {
   background: hsl(345deg, 100%, 47%);
   border-radius: 12px;
-  color: white;
+  color: var(--color-white);
   display: block;
   font-size: 1.25rem;
   padding: 12px 42px;

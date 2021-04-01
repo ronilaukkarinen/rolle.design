@@ -13,7 +13,7 @@
 
 // Start typography settings
 body {
-  color: $color-paragraphs;
+  color: var(--color-paragraphs);
   font-family: $font-paragraphs;
   font-size: var(--font-size-medium);
   -moz-osx-font-smoothing: grayscale;
@@ -25,12 +25,12 @@ body {
 
 // Links
 a {
-  color: $color-links;
+  color: var(--color-links);
   text-decoration: none;
 
   &:hover,
   &:focus {
-    color: $color-hover;
+    color: var(--color-hover);
   }
 }
 
@@ -69,7 +69,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $color-headings;
+  color: var(--color-headings);
   font-family: $font-headings;
   font-weight: $font-weight-headings;
   margin-bottom: 2.7rem;
@@ -171,7 +171,7 @@ blockquote {
   position: relative;
 
   p {
-    color: $color-blockquotes;
+    color: var(--color-blockquotes);
     font-style: italic;
     margin-bottom: 0;
     overflow: visible;
@@ -245,9 +245,9 @@ samp {
 
 // Code block.
 code {
-  background-color: $color-code-blocks-background;
+  background-color: var(--color-code-blocks-background);
   border-radius: .3rem;
-  color: $color-code-blocks;
+  color: var(--color-code-blocks);
   font-family: $font-monospace;
   font-size: inherit; // normalize.css sets this as 1em by default
   padding: .37rem .5rem;

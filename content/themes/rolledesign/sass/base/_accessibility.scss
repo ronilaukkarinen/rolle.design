@@ -23,15 +23,15 @@
     margin: 5px;
 
     &:focus {
-      background-color: $color-main;
-      color: choose-contrast-color($color-main);
+      background-color: var(--color-main);
+      color: var(--color-white);
     }
   }
 
   &:focus {
-    background-color: $color-lightgrey;
+    background-color: var(--color-lightgrey);
     border-radius: 0;
-    box-shadow: 0 0 2px 2px rgba($color-black, .6);
+    box-shadow: 0 0 2px 2px rgba(var(--color-black-rgb), .6);
     clip: auto;
     clip-path: none;
     display: block;
@@ -73,7 +73,7 @@
 
   // A bit better focus for large elements
   a.global-link:focus {
-    outline-color: $color-outline-overlay-items;
+    outline-color: var(--color-outline-overlay-items);
     outline-offset: -1px;
     outline-style: solid;
     outline-width: 4px;

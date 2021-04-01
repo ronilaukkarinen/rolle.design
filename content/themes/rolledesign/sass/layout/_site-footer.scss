@@ -34,7 +34,7 @@
 
   h2 {
     @include responsive-font(18px, 22px);
-    color: $color-alt-grey;
+    color: var(--color-alt-grey);
     margin-bottom: 0;
     margin-top: 1rem;
     width: 100%;
@@ -42,7 +42,7 @@
 
   h2 a {
     align-items: flex-end;
-    color: $color-blue-faded;
+    color: var(--color-blue-faded);
     display: inline-flex;
     line-height: 1;
     text-decoration: none;
@@ -55,7 +55,7 @@
 
   h2 a:hover,
   h2 a:focus {
-    color: $color-alt-grey;
+    color: var(--color-alt-grey);
   }
 
   .head p {

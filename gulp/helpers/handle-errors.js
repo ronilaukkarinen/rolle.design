@@ -20,9 +20,9 @@ const errorOfGlupPluginsPrintingConfigurations = {
 // General error handling
 const handleError = function (task) {
   return function (err) {
-    notify.onError({
-      message: task + ' failed, check the logs...'
-    })(err);
+    // notify.onError({
+    //   message: task + ' failed, check the logs...'
+    // })(err);
 
     printGulpPluginErrorBeautifully(
       err,

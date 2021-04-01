@@ -1,6 +1,70 @@
 /* stylelint-disable declaration-property-unit-allowed-list */
 /* stylelint-enable declaration-property-unit-allowed-list */
 :root {
+  --color-white: #fff;
+  --color-black: #222;
+  --color-black-rgb: 22, 22, 22;
+  --color-shadows: #b8bbb3;
+  --color-darkgrey: #545773;
+  --color-lightgrey: #f5f5f5;
+  --color-body: #20202f;
+  --color-headings: #20202f;
+  --color-headings-rgb: 32, 32, 47;
+  --color-paragraphs: darken(#545773, 18%);
+  --color-main: #2a2d3e;
+  --color-dark: #2a2d3e;
+  --color-shade: #03061b;
+  --color-faded: #757684;
+  --color-alt-grey: #333;
+  --color-toggled: #fff;
+  --color-fuchsia: #e2127a;
+  --color-synthwavesunsetpink: #eb21f8;
+  --color-synthwavesunsetred: #f82872;
+  --color-synthwavesunsetorange: #f88d1e;
+  --color-synthwavesunsetyellow: #f8ce18;
+  --color-synthwavedarkblue: #045ee2;
+  --color-synthwaveblue: #4285f4;
+  --color-synthwavered: #f80296;
+  --color-synthwavepurple: #9603e2;
+  --color-synthwaveteal: #02ebf8;
+  --color-wordpress: #0073aa;
+  --color-instagram: #405de6;
+  --color-instagram-hover: lighten(--color-instagram, 15%);
+  --color-bright: #737fbf;
+  --color-blue-faded: #4078c0;
+  --color-blue-alt: #0173aa;
+  --color-blue-alt-midnight: #21252b;
+  --color-github-link: #0366d6;
+  --color-github-text: #586069;
+  --color-twitter: #1da1f2;
+  --color-links: --color-main;
+  --color-hover: --color-dark;
+  --color-blockquotes: #666;
+  --color-code-blocks: #c7254e;
+  --color-code-blocks-background: #f9f2f4;
+  --color-border-forms: #d9d9d9;
+  --color-code-background: #2b303c;
+  --color-comments-link: #555;
+  --color-edit-link: #999;
+  --color-background-edit-link: #fafafa;
+  --color-background-hover-edit-link: #efefef;
+  --color-background-default: #f0f0f0;
+  --color-success: lighten(#2d6426, 40%);
+  --color-warning: lighten(#8e440b, 40%);
+  --color-error: lighten(#903a37, 40%);
+  --color-disabled: #bbb;
+  --color-captions: rgba(#4b4b5a, .9);
+  --color-buttons: --color-darkgrey;
+  --color-buttons-hover: --color-main;
+  --color-background-toggle-slider: #ccc;
+  --color-light-grey-alt: #ccc;
+  --color-grey-mid: #444;
+  --color-almostwhite: #f7f7f7;
+  --color-repo-border: #d1d5da;
+  --color-outline-overlay-items: #ff848a;
+}
+
+:root {
   --padding-container-horizontal: 2rem;
   --padding-container-vertical: 6.4rem;
   --padding-site-header-vertical: 2rem;
@@ -130,24 +194,6 @@
   src: url("../../../content/themes/rolledesign/fonts/sofiaprobold.woff") format("woff"), url("../../../content/themes/rolledesign/fonts/sofiaprobold.woff2") format("woff2"), url("../../../content/themes/rolledesign/fonts/sofiaprobold.ttf") format("truetype");
 }
 
-.wp-block.is-style-boxed,
-.is-style-boxed {
-  border: 2px solid #2d2f3e;
-  color: #2d2f3e;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.77;
-  padding: 2rem;
-  width: calc(100% - 4rem);
-}
-
-@media (min-width: 760px) {
-  .gutenberg-content .is-style-boxed {
-    transform: translate(2rem, 0);
-  }
-}
-
 .gutenberg-content p.is-style-ingress,
 .wp-block.is-style-ingress,
 .is-style-ingress {
@@ -159,49 +205,7 @@
   opacity: .8;
 }
 
-.wp-block-button__link {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: #545773;
-  border: 0;
-  border-radius: 3px;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Inter", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
-  font-size: var(--font-size-small);
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 0;
-  padding-bottom: 12px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 12px;
-  position: relative;
-  text-decoration: none;
-  transition: all 0.08s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  width: auto;
-  /* stylelint-disable a11y/no-display-none */
-  /* stylelint-enable */
-}
-
-.wp-block-button__link.is-external-link::after {
-  display: none;
-}
-
-.wp-block-button__link:hover, .wp-block-button__link:focus {
-  background-color: #2a2d3e;
-  border-color: #2a2d3e;
-  color: choose-contrast-color(#2a2d3e);
-}
-
 .wp-block-file .wp-block-file__button {
-  font-size: var(--font-size-small);
-  padding-bottom: 8px;
-  padding-left: 17px;
-  padding-right: 17px;
-  padding-top: 8px;
   font-size: .8em;
   padding: .3em .8em;
 }

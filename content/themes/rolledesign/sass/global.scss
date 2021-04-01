@@ -2,6 +2,7 @@
 
 // Reset & grid
 @import 'base/normalize';
+@import 'variables/colors';
 
 // Helpers
 @import 'helpers/auto-color';
@@ -12,7 +13,6 @@
 @import 'helpers/grid';
 
 // Variables
-@import 'variables/colors';
 @import 'variables/breakpoints';
 @import 'variables/spacings';
 @import 'variables/fonts';
@@ -47,6 +47,7 @@
 @import 'features/lazyload';
 @import 'features/pagination';
 @import 'features/gravity-forms';
+@import 'features/dark-mode';
 
 // Views
 @import 'views/front-page';

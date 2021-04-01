@@ -1,7 +1,7 @@
 /* stylelint-disable no-descending-specificity, a11y/no-display-none, sh-waqar/declaration-use-variable */
 .block.block-hero.block-hero-wordpress {
   h1 {
-    color: $color-blue-alt;
+    color: var(--color-blue-alt);
   }
 
   h1 svg {
@@ -17,7 +17,7 @@
   }
 
   a {
-    color: $color-blue-alt;
+    color: var(--color-blue-alt);
     text-decoration: none;
   }
 
@@ -27,13 +27,13 @@
 
   a:hover,
   a:focus {
-    color: $color-blue-alt-midnight;
+    color: var(--color-blue-alt-midnight);
   }
 }
 
 // Official WordPress badge styles
 .badge {
-  border: 2px solid #f7f7f7;
+  border: 2px solid var(--color-almostwhite);
   border-radius: 50%;
   box-sizing: border-box;
   height: 32px;
@@ -121,7 +121,7 @@
 .item-list li {
   align-items: center;
   border-bottom: 0;
-  color: #444;
+  color: var(--color-grey-mid);
   display: inline-flex;
   font-family: $font-accent;
   font-size: 17px;
@@ -161,9 +161,10 @@
   }
 
   .repo {
-    background-color: $color-white;
-    border: 1px solid #d1d5da;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-repo-border);
     border-radius: 3px;
+    color: var(--color-github-text);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -191,7 +192,7 @@
 
     h3 a,
     a.github-link {
-      color: $color-github-link;
+      color: var(--color-github-link);
     }
 
     h3 {
@@ -204,12 +205,12 @@
     }
 
     h3 svg {
-      fill: $color-github-text;
+      fill: var(--color-github-text);
       margin-right: 1rem;
     }
 
     ul li svg {
-      fill: $color-github-text;
+      fill: var(--color-github-text);
     }
 
     a::after {

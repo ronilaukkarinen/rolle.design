@@ -3,7 +3,7 @@
     height: 8rem;
     margin-bottom: 2rem;
     margin-top: 0;
-    stroke: #333;
+    stroke: var(--color-alt-grey);
     width: 8rem;
   }
 
@@ -13,7 +13,7 @@
   }
 
   a {
-    color: $color-blue-faded;
+    color: var(--color-blue-faded);
     text-decoration: none;
   }
 
@@ -24,6 +24,6 @@
 
   a:hover,
   a:focus {
-    color: $color-alt-grey;
+    color: var(--color-alt-grey);
   }
 }

@@ -19,62 +19,62 @@ h1.big-title {
   }
 
   a:nth-child(1) {
-    color: $color-synthwavesunsetred;
+    color: var(--color-synthwavesunsetred);
 
     &:hover,
     &:focus {
-      color: $color-synthwavesunsetpink;
+      color: var(--color-synthwavesunsetpink);
     }
   }
 
   a:nth-child(2) {
-    color: $color-twitter;
+    color: var(--color-twitter);
 
     &:hover,
     &:focus {
-      color: $color-synthwaveblue;
+      color: var(--color-synthwaveblue);
     }
   }
 
   a:nth-child(3) {
-    color: $color-synthwaveblue;
+    color: var(--color-synthwaveblue);
 
     &:hover,
     &:focus {
-      color: $color-synthwavesunsetorange;
+      color: var(--color-synthwavesunsetorange);
     }
   }
 
   a:nth-child(4) {
-    color: $color-synthwavesunsetorange;
+    color: var(--color-synthwavesunsetorange);
 
     &:hover,
     &:focus {
-      color: $color-synthwavesunsetred;
+      color: var(--color-synthwavesunsetred);
     }
   }
 
   a:nth-child(5) {
-    color: $color-synthwavesunsetred;
+    color: var(--color-synthwavesunsetred);
 
     &:hover,
     &:focus {
-      color: $color-synthwavesunsetorange;
+      color: var(--color-synthwavesunsetorange);
     }
   }
 
   a:nth-child(6) {
-    color: $color-synthwaveblue;
+    color: var(--color-synthwaveblue);
 
     &:hover,
     &:focus {
-      color: $color-synthwavesunsetorange;
+      color: var(--color-synthwavesunsetorange);
     }
   }
 
   a:hover,
   a:focus {
-    color: #333;
+    color: var(--color-alt-grey);
   }
 
   a::after {

@@ -4,6 +4,9 @@
 // The styles for most of the TinyMCE produced
 // classes and WordPress Gutenberg editor formatting.
 
+// Vars
+$color-twitter: #1da1f2;
+
 /* stylelint-disable no-descending-specificity */
 .block-blog-post-list {
   .listing {
@@ -37,7 +40,7 @@
   }
 
   li a {
-    border-bottom: 2px solid rgba($color-headings, .1);
+    border-bottom: 2px solid rgba(var(--color-headings-rgb), .1);
     font-weight: 500;
     padding-bottom: .2rem;
     padding-top: .2rem;
@@ -46,7 +49,7 @@
 
   li a:hover,
   li a:focus {
-    border-color: $color-synthwavesunsetred;
+    border-color: var(--color-synthwavesunsetred);
   }
 
   .date {
@@ -68,12 +71,12 @@
 
     &:hover,
     &:focus {
-      color: $color-synthwavesunsetred;
+      color: var(--color-synthwavesunsetred);
     }
 
     &:hover img,
     &:focus img {
-      border-color: $color-synthwavesunsetred;
+      border-color: var(--color-synthwavesunsetred);
     }
   }
 
@@ -83,7 +86,7 @@
 
   .gravatar-small {
     backface-visibility: hidden;
-    border: 2px solid $color-black;
+    border: 2px solid var(--color-black);
     border-radius: 50%;
     height: 22px;
     margin-right: 1rem;
@@ -166,7 +169,7 @@
   opacity: .8;
 
   a {
-    color: $color-headings;
+    color: var(--color-headings);
   }
 }
 
@@ -174,33 +177,6 @@
   max-width: $width-max-article;
   padding-bottom: var(--padding-block);
   padding-top: var(--padding-block);
-}
-
-// Blog post category styles
-.cat {
-  margin-bottom: .5rem;
-  margin-top: 4rem;
-
-  a {
-    background-color: transparent;
-    border-color: $color-cat-borders;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px 1px 2px;
-    box-shadow: none;
-    color: $color-black;
-    display: inline-block;
-    font-size: var(--font-size-small);
-    margin-bottom: .5rem;
-    margin-right: .5em;
-    padding: .2em .6em;
-    transition: all $transition-duration;
-  }
-
-  a:hover,
-  a:focus {
-    border-color: rgba($color-blog-tags, .4);
-  }
 }
 
 .gutenberg-content {
@@ -212,8 +188,8 @@
 
   // Links within content
   p:not([class]) > a {
-    border-bottom: 1px solid $color-fuchsia;
-    color: $color-fuchsia;
+    border-bottom: 1px solid var(--color-fuchsia);
+    color: var(--color-fuchsia);
     line-height: 1.2;
     text-decoration: none;
     transition: border-color .33s cubic-bezier(.19, 1, .22, 1), color .2s cubic-bezier(.19, 1, .22, 1);
@@ -223,8 +199,8 @@
     }
 
     &:focus {
-      border-color: $color-black;
-      color: $color-black;
+      border-color: var(--color-black);
+      color: var(--color-black);
       text-decoration: none;
 
       &::after {
@@ -295,12 +271,12 @@
   }
 
   del {
-    color: $color-blockquotes;
+    color: var(--color-blockquotes);
     text-decoration: line-through;
   }
 
   p {
-    color: $color-paragraphs;
+    color: var(--color-paragraphs);
     font-weight: 400;
     line-height: $line-height-blog;
   }
@@ -360,7 +336,7 @@
   cite,
   small {
     border: 0;
-    color: $color-captions;
+    color: var(--color-captions);
     font-size: 15px;
     font-style: normal;
     margin-bottom: 6rem;
@@ -378,11 +354,11 @@
   }
 
   &.wp-block-gallery {
-    color: $color-white;
+    color: var(--color-white);
     overflow: hidden;
 
     figcaption {
-      color: $color-white;
+      color: var(--color-white);
       font-size: var(--font-size-small);
       line-height: 1.55;
       margin-bottom: var(--margin-between-text-elements);
@@ -466,7 +442,7 @@
 
   > blockquote,
   > blockquote.wp-block-quote {
-    border-left: 2px solid $color-links;
+    border-left: 2px solid var(--color-links);
     line-height: $line-height-blog;
     margin-bottom: 4rem;
     margin-left: auto;
@@ -485,7 +461,7 @@
     }
 
     > p {
-      color: $color-links;
+      color: var(--color-links);
       line-height: $line-height-blog;
     }
   }
@@ -662,26 +638,25 @@ dfn {
 }
 
 kbd {
-  background-color: $color-tags-and-search-items;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-light-grey-alt);
   border-radius: 4px;
-  box-shadow: 0 1px 0 rgba(#000, .2), 0 0 0 2px $color-white inset;
-  color: $color-paragraphs;
+  box-shadow: 0 1px 0 rgba(#000, .2), 0 0 0 2px var(--color-white) inset;
+  color: var(--color-paragraphs);
   display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
   padding: 0 .5rem;
-  text-shadow: 0 1px 0 $color-white;
+  text-shadow: 0 1px 0 var(--color-white);
   white-space: nowrap;
 }
 
 // Preformatted text.
 // CSS Simple Pre Code
 pre {
-  background-color: $color-code-background;
-  border: 1px solid $color-code-background;
+  background-color: var(--color-code-background);
+  border: 1px solid var(--color-code-background);
   border-radius: 4px;
-  color: $color-lightgrey;
+  color: var(--color-lightgrey);
   display: block;
   font-family: $font-monospace;
   font-size: var(--font-size-small);
@@ -695,56 +670,5 @@ pre {
 
   code {
     border-radius: 4px;
-  }
-}
-
-// Next/Previous single post navigation
-.post-navigation .nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-// Blog post tag styles
-/* stylelint-disable no-descending-specificity */
-ul.tags {
-  list-style: none;
-  margin-bottom: var(--margin-between-text-elements);
-  margin-top: 0;
-  overflow: hidden;
-
-  @media (min-width: $width-max-article + 40px) {
-    padding: 0;
-  }
-
-  li {
-    float: left;
-    margin-bottom: 10px;
-    margin-left: 0;
-    margin-right: 10px;
-    margin-top: 0;
-    padding-left: 0;
-
-    a:not(.button):not(.no-text-link) {
-      background-color: transparent;
-      border-color: $color-tag-borders;
-      border-radius: 5px;
-      border-style: solid;
-      border-width: 1px 1px 2px;
-      box-shadow: none;
-      color: $color-black;
-      display: inline-block;
-      font-size: $font-size-tiny;
-      margin-right: .4em;
-      padding: .2em .6em;
-      transition: all $transition-duration;
-    }
-
-    /* stylelint-disable selector-max-compound-selectors, selector-max-pseudo-class */
-    a:not(.button):not(.no-text-link):hover,
-    a:not(.button):not(.no-text-link):focus {
-      border-color: $color-tag-borders-hover;
-    }
-    /* stylelint-enable selector-max-compound-selectors, selector-max-pseudo-class */
   }
 }
