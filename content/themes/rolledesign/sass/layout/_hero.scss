@@ -5,9 +5,9 @@
 
 .block-hero {
   background-image: url('../../images/mountains.jpg');
-  background-position: center -25rem;
+  background-position: center 25%;
   background-repeat: no-repeat;
-  background-size: 150% auto;
+  background-size: 100% auto;
   display: block;
   overflow: hidden;
   padding-left: 2rem;
@@ -41,22 +41,6 @@
   .instagram-link:hover,
   .instagram-link:focus {
     color: var(--color-instagram-hover);
-  }
-
-  @media (max-width: 1500px) {
-    background-position: center -20rem;
-  }
-
-  @media (max-width: 1200px) {
-    background-position: center -10rem;
-  }
-
-  @media (max-width: 1100px) {
-    background-position: center 0;
-  }
-
-  @media (max-width: 950px) {
-    background-position: center 20rem;
   }
 
   @media (max-width: 750px) {

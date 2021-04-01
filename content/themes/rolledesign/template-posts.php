@@ -21,7 +21,7 @@ get_header(); ?>
 
       if ( false === $years_result ) {
         global $wpdb;
-      	$years_result = $wpdb->get_col( $wpdb->prepare( "SELECT DISTINCT YEAR(post_date) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'post' ORDER BY post_date ASC" ) ); // phpcs:ignore
+      	$years_result = $wpdb->get_col( $wpdb->prepare( "SELECT DISTINCT YEAR(post_date) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'post' ORDER BY post_date DESC" ) ); // phpcs:ignore
 
         wp_cache_set( $cache_key, $years_result );
       }
@@ -31,11 +31,11 @@ get_header(); ?>
         <div class="listing">
         <h2><?php echo esc_html( $year ); ?></h2>
           <?php
-          $months = $wpdb->get_col( $wpdb->prepare( "SELECT DISTINCT MONTH(post_date) FROM $wpdb->posts WHERE post_status = 'publish' AND YEAR(post_date) = '" . $year . "' ORDER BY post_date ASC" ) ); // phpcs:ignore
+          $months = $wpdb->get_col( $wpdb->prepare( "SELECT DISTINCT MONTH(post_date) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'post' AND YEAR(post_date) = '" . $year . "' ORDER BY post_date DESC" ) ); // phpcs:ignore
           foreach ( $months as $month ) : ?>
             <ul>
               <?php
-              $theids = $wpdb->get_results( $wpdb->prepare( "SELECT ID, post_title FROM $wpdb->posts WHERE post_status = 'publish' AND YEAR(post_date) = '" . $year . "' ORDER BY post_date ASC" ) ); // phpcs:ignore
+              $theids = $wpdb->get_results( $wpdb->prepare( "SELECT ID, post_title FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'post' AND YEAR(post_date) = '" . $year . "' ORDER BY post_date DESC" ) ); // phpcs:ignore
               foreach ( $theids as $theid ) : ?>
                 <li>
                   <a href="<?php echo esc_url( get_the_permalink( $theid->ID ) ); ?>">

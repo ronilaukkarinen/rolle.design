@@ -2238,9 +2238,9 @@ pre code {
 
 .block-hero {
   background-image: url("../../images/mountains.jpg");
-  background-position: center -25rem;
+  background-position: center 25%;
   background-repeat: no-repeat;
-  background-size: 150% auto;
+  background-size: 100% auto;
   display: block;
   overflow: hidden;
   padding-left: 2rem;
@@ -2275,30 +2275,6 @@ pre code {
 .block-hero .instagram-link:hover,
 .block-hero .instagram-link:focus {
   color: var(--color-instagram-hover);
-}
-
-@media (max-width: 1500px) {
-  .block-hero {
-    background-position: center -20rem;
-  }
-}
-
-@media (max-width: 1200px) {
-  .block-hero {
-    background-position: center -10rem;
-  }
-}
-
-@media (max-width: 1100px) {
-  .block-hero {
-    background-position: center 0;
-  }
-}
-
-@media (max-width: 950px) {
-  .block-hero {
-    background-position: center 20rem;
-  }
 }
 
 @media (max-width: 750px) {
@@ -2663,7 +2639,7 @@ div.lazy {
 
 [data-theme="dark"] .block-hero,
 [data-theme="dark"] .block-hero-dont-fade .content {
-  background-image: none;
+  background-image: url("../../images/mountains-dark.jpg");
 }
 
 .theme-switch-wrapper {

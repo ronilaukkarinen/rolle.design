@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var hero = heros[i], css = hero.style;
 
         css.opacity = 1 - scrollposition / 450;
-        css.backgroundSize = (150 + 50 * scrollposition / 250) + '%';
+        css.backgroundSize = (100 + 50 * scrollposition / 250) + '%';
       }
     };
   }
