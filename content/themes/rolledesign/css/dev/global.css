@@ -685,6 +685,12 @@ a.is-external-link.no-external-link-indicator::after {
   padding-top: var(--padding-block);
 }
 
+/* stylelint-disable declaration-no-important */
+.block-no-triggers {
+  background-image: none !important;
+  opacity: 1 !important;
+}
+
 .shade {
   background-color: #2a2d3e;
   height: 100%;
@@ -751,11 +757,11 @@ a.is-external-link.no-external-link-indicator::after {
 
 .edit-link a {
   background-color: #fafafa;
-  border: 2px dashed #999;
+  border: 2px solid rgba(170, 170, 170, 0.2);
   clear: both;
   color: #999;
   display: block;
-  margin: 0;
+  margin: 2rem;
   padding: 2rem;
   text-align: center;
   text-decoration: none;
@@ -768,44 +774,6 @@ a.is-external-link.no-external-link-indicator::after {
   color: #999;
 }
 
-@media (min-width: 480px) {
-  .hide-on-desktop {
-    /* stylelint-disable declaration-no-important */
-    display: none !important;
-    /* stylelint-enable */
-  }
-}
-
-/* stylelint-disable declaration-no-important, a11y/no-display-none */
-@media (max-width: 480px) {
-  .hide-on-mobile {
-    display: none !important;
-  }
-}
-
-/* stylelint-enable */
-/* stylelint-disable declaration-no-important, a11y/no-display-none */
-@media (max-width: 840px) {
-  .hide-on-mobile-nav-view {
-    display: none !important;
-  }
-}
-
-/* stylelint-enable */
-/* stylelint-disable declaration-no-important, a11y/no-display-none */
-@media (min-width: 840px) {
-  .hide-on-desktop-nav-view {
-    display: none !important;
-  }
-}
-
-/* stylelint-enable */
-/* stylelint-disable declaration-no-important, a11y/no-display-none */
-.hide-completely {
-  display: none !important;
-}
-
-/* stylelint-enable */
 /* stylelint-disable a11y/no-display-none */
 @media print {
   .nav-container,
@@ -3114,7 +3082,7 @@ body *[aria-invalid="true"] {
   width: 8rem;
 }
 
-.block.block-hero.block-hero-wordpress p {
+.block.block-hero.block-hero-wordpress h1 + p {
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -3485,6 +3453,9 @@ body *[aria-invalid="true"] {
   background-color: #fff;
   border: 1px solid #d1d5da;
   border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   font-family: "Sofia Pro", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
   padding: 2rem;
 }
@@ -3506,6 +3477,7 @@ body *[aria-invalid="true"] {
 
 .open-source .repo h3,
 .open-source .repo p {
+  height: auto;
   margin: 0;
 }
 
@@ -3517,6 +3489,10 @@ body *[aria-invalid="true"] {
 .open-source .repo h3 {
   font-weight: 600;
   margin-bottom: 1.5rem;
+}
+
+.open-source .repo p {
+  flex: 1 0 auto;
 }
 
 .open-source .repo h3 svg {
@@ -3542,6 +3518,7 @@ body *[aria-invalid="true"] {
 .open-source .repo ul {
   display: flex;
   justify-content: flex-start;
+  justify-self: flex-end;
   line-height: 1;
   margin-top: 1.5rem;
   padding: 0;
@@ -3588,8 +3565,47 @@ body *[aria-invalid="true"] {
   background-color: #563d7c;
 }
 
+.open-source .repo .circle.scss {
+  background-color: #c6538c;
+}
+
 .open-source .repo .circle.php {
   background-color: #4f5d95;
+}
+
+.open-source .repo .circle.javascript {
+  background-color: #f1e05a;
+}
+
+.open-source .repo .circle.typescript {
+  background-color: #2b7489;
+}
+
+.open-source .repo .circle.shell {
+  background-color: #89e051;
+}
+
+.block.block-hero.block-hero-projects h1 svg {
+  height: 8rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  stroke: #333;
+  width: 8rem;
+}
+
+.block.block-hero.block-hero-projects h1 + p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.block.block-hero.block-hero-projects a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.block.block-hero.block-hero-projects a:hover,
+.block.block-hero.block-hero-projects a:focus {
+  color: #333;
 }
 
 .wp-block.is-style-boxed,

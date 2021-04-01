@@ -1,0 +1,24 @@
+.block.block-hero.block-hero-projects {
+  h1 svg {
+    height: 8rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    stroke: #333;
+    width: 8rem;
+  }
+
+  h1 + p {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  a {
+    color: $color-blue-faded;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    color: $color-alt-grey;
+  }
+}

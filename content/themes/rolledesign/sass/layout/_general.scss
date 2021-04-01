@@ -23,6 +23,12 @@
   padding-top: var(--padding-block);
 }
 
+/* stylelint-disable declaration-no-important */
+.block-no-triggers {
+  background-image: none !important;
+  opacity: 1 !important;
+}
+
 // Default shade on top of blocks
 .shade {
   background-color: $color-main;
@@ -97,11 +103,11 @@
 
   a {
     background-color: $color-background-edit-link;
-    border: 2px dashed $color-edit-link;
+    border: 2px solid rgba(#aaa, .2);
     clear: both;
     color: $color-edit-link;
     display: block;
-    margin: 0;
+    margin: 2rem;
     padding: 2rem;
     text-align: center;
     text-decoration: none;
@@ -114,47 +120,3 @@
     color: $color-edit-link;
   }
 }
-
-// Hide/show helpers
-.hide-on-desktop {
-  @media (min-width: $container-mobile) {
-    // Forced to use important here, because makes no sense to write too specific selectors here
-    /* stylelint-disable declaration-no-important */
-    display: none !important;
-    /* stylelint-enable */
-  }
-}
-
-// Forced to use important here, because makes no sense to write too specific selectors here
-/* stylelint-disable declaration-no-important, a11y/no-display-none */
-.hide-on-mobile {
-  @media (max-width: $container-mobile) {
-    display: none !important;
-  }
-}
-/* stylelint-enable */
-
-// Only function of these is to force hide content based on the view
-// Forced to use important here, because makes no sense to write too specific selectors here
-/* stylelint-disable declaration-no-important, a11y/no-display-none */
-.hide-on-mobile-nav-view {
-  @media (max-width: $width-max-mobile) {
-    display: none !important;
-  }
-}
-/* stylelint-enable */
-// Forced to use important here, because makes no sense to write too specific selectors here
-/* stylelint-disable declaration-no-important, a11y/no-display-none */
-.hide-on-desktop-nav-view {
-  @media (min-width: $width-max-mobile) {
-    display: none !important;
-  }
-}
-/* stylelint-enable */
-
-// Forced to use important here, because makes no sense to write too specific selectors here
-/* stylelint-disable declaration-no-important, a11y/no-display-none */
-.hide-completely {
-  display: none !important;
-}
-/* stylelint-enable */

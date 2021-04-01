@@ -106,13 +106,18 @@ rolle_LazyLoad.update();
 })(jQuery);
 
 document.addEventListener('DOMContentLoaded', function () {
-  if( document.getElementById('hero') ) {
-    window.onscroll = function() {
-      var scrollposition = window.pageYOffset | document.body.scrollTop;
-      var hero = document.getElementById('hero'), css = hero.style;
 
-      css.opacity = 1 - scrollposition / 450;
-      css.backgroundSize = (150 + 50 * scrollposition / 250) + '%';
+  const heros = document.getElementsByClassName('block-hero');
+  if( heros ) {
+    window.onscroll = function() {
+      for (var i = 0; i < heros.length; i++) {
+
+        var scrollposition = window.pageYOffset | document.body.scrollTop;
+        var hero = heros[i], css = hero.style;
+
+        css.opacity = 1 - scrollposition / 450;
+        css.backgroundSize = (150 + 50 * scrollposition / 250) + '%';
+      }
     };
   }
 

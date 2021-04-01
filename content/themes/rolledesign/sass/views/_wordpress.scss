@@ -11,7 +11,7 @@
     width: 8rem;
   }
 
-  p {
+  h1 + p {
     margin-bottom: 0;
     margin-top: 0;
   }
@@ -160,6 +160,9 @@
     background-color: $color-white;
     border: 1px solid #d1d5da;
     border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     font-family: $font-accent;
     padding: 2rem;
 
@@ -178,6 +181,7 @@
     h3,
     p {
       @extend %default;
+      height: auto;
       margin: 0;
     }
 
@@ -189,6 +193,10 @@
     h3 {
       font-weight: 600;
       margin-bottom: 1.5rem;
+    }
+
+    p {
+      flex: 1 0 auto;
     }
 
     h3 svg {
@@ -214,6 +222,7 @@
     ul {
       display: flex;
       justify-content: flex-start;
+      justify-self: flex-end;
       line-height: 1;
       margin-top: 1.5rem;
       padding: 0;
@@ -260,8 +269,24 @@
       background-color: #563d7c;
     }
 
+    .circle.scss {
+      background-color: #c6538c;
+    }
+
     .circle.php {
       background-color: #4f5d95;
+    }
+
+    .circle.javascript {
+      background-color: #f1e05a;
+    }
+
+    .circle.typescript {
+      background-color: #2b7489;
+    }
+
+    .circle.shell {
+      background-color: #89e051;
     }
   }
 }
