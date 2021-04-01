@@ -4,12 +4,13 @@
 
 // Import modules (comment to disable)
 import MoveTo from 'moveto';
+import Swup from 'swup';
+import SwupScriptsPlugin from '@swup/scripts-plugin';
+import SwupBodyClassPlugin from '@swup/body-class-plugin';
 import LazyLoad from 'vanilla-lazyload';
 import getLocalization from './modules/localization';
 import styleExternalLinks from './modules/external-link';
 import './modules/gutenberg-helpers';
-// import './modules/sticky-nav.js'
-// import slick from 'slick-carousel';
 import 'what-input';
 
 // Define Javascript is active by changing the body class
@@ -18,6 +19,17 @@ document.body.classList.add('js');
 
 // Style external links
 styleExternalLinks();
+
+// Initiate Swup transitions
+const swup = new Swup({
+  plugins: [
+    new SwupScriptsPlugin({
+      head: true,
+      body: true
+    }),
+    new SwupBodyClassPlugin()
+  ]
+});
 
 // Init lazyload
 // Usage example on template side when air-helper enabled:

@@ -10,7 +10,7 @@ namespace Air_Light;
 
 get_header(); ?>
 
-<main class="site-main">
+<main class="site-main transition-fade">
   <section class="block block-blog block-blog-post-list has-light-bg">
     <div class="container">
 

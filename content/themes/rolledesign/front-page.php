@@ -15,7 +15,7 @@
 namespace Air_Light;
 
 get_header(); ?>
-<main class="site-main">
+<main class="site-main transition-fade">
   <section class="block block-hero block-hero-front block-has-space" id="hero">
     <div class="content">
       <h1 id="content"><span>Ron</span> <span>the</span> <span>don.</span></h1>

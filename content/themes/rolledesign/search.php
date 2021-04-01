@@ -35,7 +35,7 @@ foreach ( $results as $slug => $post_type ) {
 
 get_header(); ?>
 
-<main class="site-main">
+<main class="site-main transition-fade">
   <section class="block block-search">
     <div class="container">
       <h1><?php echo esc_html( get_default_localization( 'Search' ) ); ?></h1>

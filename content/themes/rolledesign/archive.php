@@ -13,7 +13,7 @@ namespace Air_Light;
 
 get_header(); ?>
 
-<main class="site-main">
+<main class="site-main transition-fade">
   <div class="container">
 
     <?php get_template_part( 'template-parts/hero', get_post_type() );

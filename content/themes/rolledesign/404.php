@@ -3,8 +3,8 @@
  * The template for displaying 404 pages (not found)
  *
  * @Date:   2019-10-15 12:30:02
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-01-12 15:13:28
+ * @Last Modified by: Roni Laukkarinen
+ * @Last Modified time: 2021-04-01 23:19:18
  * @package rolle
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  */
@@ -13,7 +13,7 @@ namespace Air_Light;
 
 get_header(); ?>
 
-<main class="site-main">
+<main class="site-main transition-fade">
 
   <section class="block block-error-404">
     <div class="container">

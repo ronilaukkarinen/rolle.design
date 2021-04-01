@@ -1,5 +1,24 @@
+/* stylelint-disable property-disallowed-list */
 // Transition duration and animations
 $transition-duration: .22s;
 
-// Possible keyframes here
-// @keyframes
+.transition-fade {
+  animation: slideUp .2s cubic-bezier(.075, .82, .165, 1) forwards;
+  opacity: 1;
+  transform: translate3d(0, 2vh, 0);
+  transition: .2s;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translate3d(0, 2vh, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}

@@ -4,6 +4,7 @@
 // that apply everywhere throughout the website. Add more
 // always repeating elements right below.
 
+/* stylelint-disable property-disallowed-list, sh-waqar/declaration-use-variable, a11y/no-outline-none, a11y/no-display-none */
 // Default structural element
 .block {
   background-color: $color-white;
@@ -91,33 +92,106 @@
 
 // Better edit link
 .edit-link {
-  clear: both;
-  display: block;
-  margin-bottom: 0;
-  margin-top: 2rem;
-  max-width: 100%;
-  min-width: 0;
-  overflow: hidden;
-  text-align: left;
-  transition: all $transition-duration;
-  width: 100%;
+  overflow: visible;
+  padding-bottom: 6rem;
+  padding-top: 6rem;
+  text-align: center;
+}
+
+.pushable {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 auto;
+  outline-offset: 4px;
+  padding: 0;
+  position: relative;
+  transition: filter 250ms;
 
   a {
-    background-color: $color-background-edit-link;
-    border: 2px solid rgba(#aaa, .2);
-    clear: both;
-    color: $color-edit-link;
-    display: block;
-    margin: 2rem;
-    padding: 2rem;
-    text-align: center;
-    text-decoration: none;
-    transition: all $transition-duration;
+    align-items: center;
+    color: $color-white;
+    display: inline-flex;
+    font-family: $font-accent;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+
+    span {
+      display: none;
+    }
   }
 
-  &:focus,
-  a:hover {
-    background-color: $color-background-hover-edit-link;
-    color: $color-edit-link;
+  a:hover,
+  a:focus {
+    color: $color-white;
   }
+}
+
+.shadow {
+  background: #ccc;
+  border-radius: 12px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  width: 100%;
+  will-change: transform;
+}
+
+.edge {
+  background: linear-gradient(to left, hsl(340deg, 100%, 16%) 0%, hsl(340deg, 100%, 32%) 8%, hsl(340deg, 100%, 32%) 92%, hsl(340deg, 100%, 16%) 100%);
+  border-radius: 12px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.front {
+  background: hsl(345deg, 100%, 47%);
+  border-radius: 12px;
+  color: white;
+  display: block;
+  font-size: 1.25rem;
+  padding: 12px 42px;
+  position: relative;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  will-change: transform;
+}
+
+.pushable:hover,
+.pushable:focus {
+  filter: brightness(110%);
+}
+
+.pushable:hover .front,
+.pushable:focus .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.pushable:hover .shadow,
+.pushable:focus .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.pushable:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
 }
