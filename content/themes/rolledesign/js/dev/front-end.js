@@ -105,7 +105,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var move
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./content/themes/rolledesign/js/src/modules/dark-mode.js?");
+eval("var toggleSwitch = document.querySelector('.theme-switch input[type=\"checkbox\"]');\nvar currentTheme = localStorage.getItem('theme');\n\nif (currentTheme) {\n  document.documentElement.setAttribute('data-theme', currentTheme);\n\n  if (currentTheme === 'dark') {\n    toggleSwitch.checked = true;\n  }\n}\n\nfunction switchTheme(e) {\n  if (e.target.checked) {\n    document.documentElement.setAttribute('data-theme', 'dark');\n    localStorage.setItem('theme', 'dark');\n  } else {\n    document.documentElement.setAttribute('data-theme', 'light');\n    localStorage.setItem('theme', 'light');\n  }\n}\n\ntoggleSwitch.addEventListener('change', switchTheme, false);\n\n//# sourceURL=webpack:///./content/themes/rolledesign/js/src/modules/dark-mode.js?");
 
 /***/ }),
 
