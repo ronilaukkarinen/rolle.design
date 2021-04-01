@@ -67,7 +67,7 @@
 }
 
 @font-face {
-  font-display: optional;
+  font-display: fallback;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -75,7 +75,7 @@
 }
 
 @font-face {
-  font-display: optional;
+  font-display: fallback;
   font-family: "Inter";
   font-style: italic;
   font-weight: 400;
@@ -83,7 +83,7 @@
 }
 
 @font-face {
-  font-display: optional;
+  font-display: fallback;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -91,7 +91,7 @@
 }
 
 @font-face {
-  font-display: optional;
+  font-display: fallback;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -99,7 +99,7 @@
 }
 
 @font-face {
-  font-display: optional;
+  font-display: fallback;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
@@ -107,7 +107,7 @@
 }
 
 @font-face {
-  font-display: optional;
+  font-display: fallback;
   font-family: "Futura PT";
   font-style: normal;
   font-weight: 600;

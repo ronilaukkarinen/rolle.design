@@ -366,7 +366,7 @@ template {
 }
 
 @font-face {
-  font-display: optional;
+  font-display: fallback;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -374,7 +374,7 @@ template {
 }
 
 @font-face {
-  font-display: optional;
+  font-display: fallback;
   font-family: "Inter";
   font-style: italic;
   font-weight: 400;
@@ -382,7 +382,7 @@ template {
 }
 
 @font-face {
-  font-display: optional;
+  font-display: fallback;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
@@ -390,7 +390,7 @@ template {
 }
 
 @font-face {
-  font-display: optional;
+  font-display: fallback;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -398,7 +398,7 @@ template {
 }
 
 @font-face {
-  font-display: optional;
+  font-display: fallback;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -406,7 +406,7 @@ template {
 }
 
 @font-face {
-  font-display: optional;
+  font-display: fallback;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
@@ -414,7 +414,7 @@ template {
 }
 
 @font-face {
-  font-display: optional;
+  font-display: fallback;
   font-family: "Futura PT";
   font-style: normal;
   font-weight: 600;
@@ -537,6 +537,7 @@ a.is-external-link.no-external-link-indicator::after {
 }
 
 /* stylelint-enable a11y/no-display-none */
+/* stylelint-disable a11y/no-display-none */
 .main-menu {
   display: block;
   margin-top: 4rem;
@@ -610,7 +611,7 @@ a.is-external-link.no-external-link-indicator::after {
 }
 
 .main-menu ul li a.about {
-  display: none !important;
+  display: none;
 }
 
 .main-menu ul li:nth-child(1) svg {
@@ -1936,8 +1937,8 @@ input[type="checkbox"]:not(:checked):not(:focus) + label:hover::before {
   margin-bottom: 0;
 }
 
-.gutenberg-content blockquote + p > cite,
-.gutenberg-content blockquote + cite {
+.gutenberg-content blockquote + cite,
+.gutenberg-content blockquote + p > cite {
   margin-bottom: 4rem;
 }
 
@@ -1959,11 +1960,6 @@ input[type="checkbox"]:not(:checked):not(:focus) + label:hover::before {
     padding: 3.5rem 2rem;
     width: calc(100% - 4rem);
   }
-}
-
-.gutenberg-content > blockquote cite,
-.gutenberg-content > blockquote.wp-block-quote cite {
-  text-align: left;
 }
 
 @media (max-width: 480px) {

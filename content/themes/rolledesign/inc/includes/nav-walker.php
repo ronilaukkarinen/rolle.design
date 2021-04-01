@@ -9,8 +9,8 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  *
  * @Date:   2019-10-15 12:30:02
- * @Last Modified by: Niku Hietanen
- * @Last Modified time: 2021-01-12 15:58:30
+ * @Last Modified by: Roni Laukkarinen
+ * @Last Modified time: 2021-04-01 16:53:37
  *
  * @package rolle
  */
@@ -104,11 +104,17 @@ class Nav_Walker extends \Walker_Nav_Menu {
       }
 
       $item_output = $args->before;
-
       $item_output .= '<a role="menuitem"' . $attributes . '>';
+      $sanitized_title = sanitize_title( $item->title );
+
+      if ( empty( $sanitized_title ) ) {
+        $item_output .= file_get_contents( get_theme_file_path( 'svg/home.svg' ) ) . '<span>'; // phpcs:ignore
+      } else {
+        $item_output .= file_get_contents( get_theme_file_path( "svg/{$sanitized_title}.svg" ) ) . '<span>'; // phpcs:ignore
+      }
 
       $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-      $item_output .= ( $args->has_children && 0 === $depth ) ? ' </a>' : '</a>';
+      $item_output .= ( $args->has_children && 0 === $depth ) ? ' </span></a>' : '</span></a>';
       $item_output .= $args->after;
 
       $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );

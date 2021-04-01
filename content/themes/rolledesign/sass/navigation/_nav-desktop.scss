@@ -1,3 +1,4 @@
+/* stylelint-disable a11y/no-display-none */
 .main-menu {
   display: block;
   margin-top: 4rem;
@@ -70,7 +71,7 @@
   text-align: center;
 
   a.about {
-    display: none !important;
+    display: none;
   }
 
   &:nth-child(1) svg {

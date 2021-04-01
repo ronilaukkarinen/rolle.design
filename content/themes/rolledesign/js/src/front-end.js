@@ -12,9 +12,6 @@ import './modules/gutenberg-helpers';
 // import slick from 'slick-carousel';
 import 'what-input';
 
-// Navigation
-import './modules/navigation.js';
-
 // Define Javascript is active by changing the body class
 document.body.classList.remove('no-js');
 document.body.classList.add('js');
