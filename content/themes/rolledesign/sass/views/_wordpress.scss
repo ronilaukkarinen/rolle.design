@@ -21,6 +21,10 @@
     text-decoration: none;
   }
 
+  a::after {
+    display: none;
+  }
+
   a:hover,
   a:focus {
     color: $color-blue-alt-midnight;

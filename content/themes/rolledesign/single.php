@@ -5,12 +5,15 @@
  *
  * @Date:   2019-10-15 12:30:02
  * @Last Modified by: Roni Laukkarinen
- * @Last Modified time: 2021-04-01 18:23:38
+ * @Last Modified time: 2021-04-01 21:14:17
  * @package rolle
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  */
 
 namespace Air_Light;
+
+// Fields
+$url_to_tweet = get_field( 'url_to_tweet' );
 
 the_post();
 get_header(); ?>
@@ -21,23 +24,17 @@ get_header(); ?>
 
       <h1><?php the_title(); ?></h1>
 
-      <?php the_content();
+      <?php the_content(); ?>
 
-      // Required by WordPress Theme Check, feel free to remove as it's rarely used in starter themes
-      wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rolle' ), 'after' => '</div>' ) );
+      <?php if ( ! empty( $url_to_tweet ) ) : ?>
+        <p class="comment-on-twitter"><a href="<?php echo esc_url( $url_to_tweet ); ?>">Comment on Twitter <?php include get_theme_file_path( '/svg/twitter.svg' ); ?></a></p>
+      <?php endif; ?>
 
-      entry_footer();
-
+      <?php entry_footer();
       if ( get_edit_post_link() ) {
         edit_post_link( sprintf( wp_kses( __( 'Edit <span class="screen-reader-text">%s</span>', 'rolle' ), [ 'span' => [ 'class' => [] ] ] ), get_the_title() ), '<p class="edit-link">', '</p>' );
       }
-
-      the_post_navigation();
-
-  		// If comments are open or we have at least one comment, load up the comment template.
-      if ( comments_open() || get_comments_number() ) {
-        comments_template();
-      } ?>
+      ?>
 
     </div>
   </section>

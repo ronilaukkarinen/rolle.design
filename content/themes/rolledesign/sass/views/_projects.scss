@@ -17,6 +17,11 @@
     text-decoration: none;
   }
 
+  /* stylelint-disable a11y/no-display-none */
+  a::after {
+    display: none;
+  }
+
   a:hover,
   a:focus {
     color: $color-alt-grey;

@@ -77,6 +77,10 @@ h1.big-title {
     color: #333;
   }
 
+  a::after {
+    display: none;
+  }
+
   ul {
     @include responsive-font(22px, 25px);
     font-weight: 400;

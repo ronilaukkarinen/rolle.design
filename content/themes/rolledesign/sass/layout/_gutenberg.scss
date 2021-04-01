@@ -4,6 +4,106 @@
 // The styles for most of the TinyMCE produced
 // classes and WordPress Gutenberg editor formatting.
 
+.block-blog-post-list {
+  .listing {
+    margin-bottom: 6rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h2 {
+    @include responsive-font(42px, 62px);
+    font-family: $font-accent;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 0 0 1rem;
+    padding: 0;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+
+  li a {
+    border-bottom: 2px solid rgba($color-headings, .1);
+    font-weight: 500;
+    padding-bottom: .2rem;
+    padding-top: .2rem;
+    transition: color .55s cubic-bezier(.19, 1, .22, 1), background-color .2s cubic-bezier(.19, 1, .22, 1);
+  }
+
+  li a:hover,
+  li a:focus {
+    border-color: $color-synthwavesunsetred;
+  }
+
+  .date {
+    font-size: var(--font-size-tiny);
+    margin-left: .5rem;
+  }
+}
+
+.comment-on-twitter {
+  line-height: 1;
+}
+
+.comment-on-twitter a {
+  align-items: baseline;
+  color: $color-twitter;
+  display: inline-flex;
+  font-family: $font-accent;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 8rem;
+  margin-top: 8rem;
+  text-decoration: none;
+
+  /* stylelint-disable a11y/no-display-none */
+  &::after {
+    display: none;
+  }
+
+  @media (max-width: $container-ipad) {
+    font-size: 2.4rem;
+  }
+
+  &:hover,
+  &:focus {
+    color: lighten($color-twitter, 15%);
+
+    svg {
+      stroke: lighten($color-twitter, 15%);
+    }
+  }
+
+  svg {
+    height: 5rem;
+    margin-left: 2rem;
+    position: relative;
+    stroke: $color-twitter;
+    stroke-width: 2px;
+    top: 1rem;
+    width: 5rem;
+
+    @media (max-width: $container-ipad) {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+}
+
 .block-blog article > h2:first-child::before,
 .gutenberg-content h1::before {
   background-color: #767676;
