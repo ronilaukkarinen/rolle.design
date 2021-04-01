@@ -1,0 +1,76 @@
+/* stylelint-disable a11y/no-display-none */
+.block-doing-stuff {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+  text-align: center;
+
+  p {
+    font-family: $font-accent;
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+
+  h2 {
+    @include responsive-font(32px, 65px);
+    font-family: $font-accent;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .head {
+    margin-bottom: 12rem;
+  }
+}
+
+.block-my-things {
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+  text-align: center;
+
+  h2,
+  p {
+    font-family: $font-accent;
+    line-height: 1.7;
+  }
+
+  h2 {
+    @include responsive-font(18px, 22px);
+    color: $color-alt-grey;
+    margin-bottom: 0;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  h2 a {
+    align-items: flex-end;
+    color: $color-blue-faded;
+    display: inline-flex;
+    line-height: 1;
+    text-decoration: none;
+    transition: transform .2s cubic-bezier(.19, 1, .22, 1), background-color .2s cubic-bezier(.19, 1, .22, 1);
+
+    &::after {
+      display: none;
+    }
+  }
+
+  h2 a:hover,
+  h2 a:focus {
+    color: $color-alt-grey;
+  }
+
+  .head p {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .head svg {
+    bottom: 2px;
+    margin-left: 5px;
+    position: relative;
+  }
+}

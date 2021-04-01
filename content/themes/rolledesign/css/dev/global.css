@@ -1260,6 +1260,107 @@ pre {
   z-index: 10;
 }
 
+/* stylelint-disable a11y/no-display-none */
+.block-doing-stuff {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+  text-align: center;
+}
+
+.block-doing-stuff p {
+  font-family: "Sofia Pro", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.block-doing-stuff h2 {
+  font-size: 32px;
+  font-family: "Sofia Pro", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 320px) {
+  .block-doing-stuff h2 {
+    font-size: calc(32px + 33 * ((100vw - 320px) / 1600));
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .block-doing-stuff h2 {
+    font-size: 65px;
+  }
+}
+
+.block-doing-stuff .head {
+  margin-bottom: 12rem;
+}
+
+.block-my-things {
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+  text-align: center;
+}
+
+.block-my-things h2,
+.block-my-things p {
+  font-family: "Sofia Pro", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  line-height: 1.7;
+}
+
+.block-my-things h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 0;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 320px) {
+  .block-my-things h2 {
+    font-size: calc(18px + 4 * ((100vw - 320px) / 1600));
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .block-my-things h2 {
+    font-size: 22px;
+  }
+}
+
+.block-my-things h2 a {
+  align-items: flex-end;
+  color: #4078c0;
+  display: inline-flex;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 0.2s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.block-my-things h2 a::after {
+  display: none;
+}
+
+.block-my-things h2 a:hover,
+.block-my-things h2 a:focus {
+  color: #333;
+}
+
+.block-my-things .head p {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 100%;
+}
+
+.block-my-things .head svg {
+  bottom: 2px;
+  margin-left: 5px;
+  position: relative;
+}
+
 :root {
   --checkbox-radio-size: 16px;
   --checkbox-radio-gap: 10px;
@@ -2490,76 +2591,6 @@ ul.tags li a:not(.button):not(.no-text-link):focus {
 
 .block-doing-stuff .head span:nth-child(4) {
   color: #eb21f8;
-}
-
-.block.block-doing-stuff {
-  display: block;
-  overflow: hidden;
-  padding-bottom: 8rem;
-  padding-top: 8rem;
-  text-align: center;
-}
-
-.block.block-doing-stuff p {
-  margin-bottom: 1rem;
-  margin-top: 0;
-}
-
-.block.block-doing-stuff h2 {
-  font-size: 32px;
-  font-family: "Sofia Pro", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-@media screen and (min-width: 320px) {
-  .block.block-doing-stuff h2 {
-    font-size: calc(32px + 33 * ((100vw - 320px) / 1600));
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .block.block-doing-stuff h2 {
-    font-size: 65px;
-  }
-}
-
-.block.block-doing-stuff .head {
-  margin-bottom: 12rem;
-}
-
-.block.block-my-things {
-  text-align: center;
-}
-
-.block.block-my-things h2 {
-  color: #333;
-  margin-bottom: 0;
-  margin-top: 0;
-  width: 100%;
-}
-
-.block.block-my-things h2 a {
-  color: #4078c0;
-  text-decoration: none;
-  transition: all 1s;
-}
-
-.block.block-my-things h2 a:hover,
-.block.block-my-things h2 a:focus {
-  color: #333;
-}
-
-.block.block-my-things .head p {
-  font-size: 1.4rem;
-  margin-bottom: 0;
-  margin-top: 0;
-  width: 100%;
-}
-
-.block.block-my-things .head svg {
-  position: relative;
-  top: 2px;
 }
 
 .site-footer .top {
