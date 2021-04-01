@@ -1,5 +1,5 @@
 set :application, "rolledesign"
-set :repo_url,  "git@github.com:digitoimistodude/rolledesign.git"
+set :repo_url,  "git@github.com:ronilaukkarinen/rolle.design.git"
 set :branch, :master
 set :log_level, :debug
 set :linked_files, %w{.env}
