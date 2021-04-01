@@ -14,7 +14,7 @@
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 840px) {
   :root {
     --padding-site-header-vertical: 2rem;
   }
@@ -164,9 +164,9 @@
 }
 
 .wp-block-button__link:hover, .wp-block-button__link:focus {
-  background-color: #2a2d3e;
-  border-color: #2a2d3e;
-  color: choose-contrast-color(#2a2d3e);
+  background-color: #045ee2;
+  border-color: #045ee2;
+  color: choose-contrast-color(#045ee2);
 }
 
 .wp-block-file .wp-block-file__button {

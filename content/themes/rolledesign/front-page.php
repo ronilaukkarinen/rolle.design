@@ -6,22 +6,34 @@
  * Initial styles for front page template.
  *
  * @Date:   2019-10-15 12:30:02
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-03-03 14:38:06
+ * @Last Modified by: Roni Laukkarinen
+ * @Last Modified time: 2021-04-01 17:58:23
  * @package rolle
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
 namespace Air_Light;
 
-// Featured image for Theme Checker (it's a requirement for theme to pass in official Theme directory)
-// NB! Our dev version uses newtheme.sh build script which cleans ups things including this next line
-$thumbnail = wp_get_attachment_url( get_post_thumbnail_id() ) ?: THEME_SETTINGS['default_featured_image'];
-
 get_header(); ?>
-
 <main class="site-main">
-  
+  <section class="block block-hero" id="hero">
+    <div class="content">
+      <h1><span>Ron</span> <span>the</span> <span>don.</span></h1>
+      <p>Just say <span>Rolle</span>. My full name is Roni Laukkarinen and I'm a web designer and developer from Finland.</p>
+
+      <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/gravatar.jpg" alt="Facial image of me, Roni Laukkarinen aka rolle from Twitter" class="gravatar" />
+      <p class="gravatar-description">Yep, that's me in 2010. Still the best photo of me in my opinion. More recent photos at <a class="instagram-link" href="https://www.instagram.com/rolle_/" aria-label="Instagram"><?php include get_theme_file_path( '/svg/instagram.svg' ); ?> Instagram</a>.
+        <?php include get_theme_file_path( '/svg/arrow-drawing.svg' ); ?>
+      </p>
+    </div>
+  </section>
+
+  <secton class="block block-doing-stuff">
+    <div class="head">
+      <p>I like to create things like</p>
+      <h2><span>Design,</span> <span>code,</span> <span>servers,</span> <span>articles.</span></h2>
+    </div>
+  </secton>
 </main>
 
 <?php get_footer();

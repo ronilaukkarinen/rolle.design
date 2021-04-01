@@ -6,8 +6,8 @@
  * 'block'. Strictly air specific.
  *
  * @Date:   2019-10-15 12:30:02
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-02-23 13:59:45
+ * @Last Modified by: Roni Laukkarinen
+ * @Last Modified time: 2021-04-01 17:57:09
  * @package rolle
  */
 
@@ -23,8 +23,4 @@ $featured_image = has_post_thumbnail() ? wp_get_attachment_url( get_post_thumbna
     style="background-image: url('<?php echo esc_url( $featured_image ); ?>');"
   <?php endif; ?>
 >
-  <div class="shade" aria-hidden="true"></div>
-
-  <!-- <div class="container">
-  </div> -->
 </section>

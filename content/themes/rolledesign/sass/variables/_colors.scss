@@ -4,6 +4,13 @@ $color-black: #222;
 $color-shadows: #b8bbb3;
 $color-darkgrey: #545773;
 $color-lightgrey: #f5f5f5;
+$color-body: #20202f;
+$color-headings: #20202f;
+$color-main: #2a2d3e;
+$color-dark: #2a2d3e;
+$color-shade: #03061b;
+$color-faded: #757684;
+$color-alt-grey: #333;
 
 // Required brand colors
 $color-synthwavesunsetpink: #eb21f8;
@@ -17,14 +24,10 @@ $color-synthwavepurple: #9603e2;
 $color-synthwaveteal: #02ebf8;
 $color-main: $color-synthwavedarkblue;
 $color-wordpress: #0073aa;
-$color-body: #20202f;
-$color-headings: #20202f;
-$color-main: #2a2d3e;
-$color-dark: #2a2d3e;
-$color-shade: #03061b;
-
-// Official brand colors
+$color-instagram: #405de6;
+$color-instagram-hover: lighten($color-instagram, 15%);
 $color-bright: #737fbf;
+$color-blue-faded: #4078c0;
 
 // Element text and background colors
 $color-links: $color-main;

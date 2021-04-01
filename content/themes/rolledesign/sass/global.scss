@@ -23,7 +23,6 @@
 @import 'components/button-size-medium';
 @import 'components/button-size-large';
 @import 'components/button-style-ghost';
-// @import 'components/box-with-shadow';
 
 // Accessibility
 @import 'base/accessibility';
@@ -33,7 +32,6 @@
 @import 'navigation/nav-mobile';
 
 // Structure
-
 @import 'layout/general';
 @import 'layout/print';
 @import 'layout/typography';
@@ -41,6 +39,7 @@
 @import 'layout/site-footer';
 @import 'layout/forms';
 @import 'layout/gutenberg';
+@import 'layout/hero';
 
 // Global features
 @import 'features/top';
