@@ -337,6 +337,7 @@ template {
   --color-grey-mid: #444;
   --color-almostwhite: #f7f7f7;
   --color-repo-border: #d1d5da;
+  --color-arrow: #231f20;
   --color-outline-overlay-items: #ff848a;
 }
 
@@ -2207,6 +2208,10 @@ pre code {
 }
 
 /* stylelint-disable no-descending-specificity, a11y/no-display-none */
+.arrow {
+  color: var(--color-arrow);
+}
+
 .block-hero {
   background-image: url("../../images/mountains.jpg");
   background-position: center -25rem;
@@ -2628,6 +2633,7 @@ div.lazy {
   --color-grey-mid: rgba(255, 255, 255, .6);
   --color-almostwhite: rgba(44, 44, 44, .5);
   --color-repo-border: #30363c;
+  --color-arrow: rgba(255, 255, 255, .8);
   --color-outline-overlay-items: #ff848a;
 }
 

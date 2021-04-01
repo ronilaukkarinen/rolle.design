@@ -7,7 +7,7 @@
  *
  * @Date:   2019-10-15 12:30:02
  * @Last Modified by: Roni Laukkarinen
- * @Last Modified time: 2021-04-01 19:45:34
+ * @Last Modified time: 2021-04-02 00:36:47
  * @package rolle
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
@@ -23,7 +23,7 @@ get_header(); ?>
 
       <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/gravatar.jpg" alt="Facial image of me, Roni Laukkarinen aka rolle from Twitter" class="gravatar" />
       <p class="gravatar-description">Yep, that's me in 2010. Still the best photo of me in my opinion. More recent photos at <a class="instagram-link" href="https://www.instagram.com/rolle_/" aria-label="Instagram"><?php include get_theme_file_path( '/svg/instagram.svg' ); ?> Instagram</a>.
-        <?php include get_theme_file_path( '/svg/arrow-drawing.svg' ); ?>
+        <span class="arrow"><?php include get_theme_file_path( '/svg/arrow-drawing.svg' ); ?></span>
       </p>
     </div>
   </section>

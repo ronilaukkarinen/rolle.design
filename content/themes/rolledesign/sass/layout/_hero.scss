@@ -1,4 +1,8 @@
 /* stylelint-disable no-descending-specificity, a11y/no-display-none */
+.arrow {
+  color: var(--color-arrow);
+}
+
 .block-hero {
   background-image: url('../../images/mountains.jpg');
   background-position: center -25rem;
