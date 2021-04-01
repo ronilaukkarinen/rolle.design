@@ -78,8 +78,8 @@ h1.big-title {
   }
 
   ul {
-    @include responsive-font(4vw, 22px, 25px);
-    font-weight: 300;
+    @include responsive-font(22px, 25px);
+    font-weight: 400;
     margin-left: auto;
     margin-right: auto;
     margin-top: 8rem;

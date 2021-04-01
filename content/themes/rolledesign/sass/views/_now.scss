@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-no-important, selector-max-specificity, no-descending-specificity */
+/* stylelint-disable declaration-no-important, selector-max-specificity, no-descending-specificity, a11y/no-display-none */
 .block-hero-dont-fade {
   opacity: 1 !important;
   padding-bottom: 0;
@@ -35,7 +35,7 @@
 }
 
 .block-hero-now ul {
-  font-weight: 300;
+  font-weight: 400;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5rem;

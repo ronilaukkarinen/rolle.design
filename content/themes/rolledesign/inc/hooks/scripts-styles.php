@@ -5,8 +5,8 @@
  * @package rolle
  * @Author: Niku Hietanen
  * @Date: 2020-02-20 13:46:50
- * @Last Modified by: Niku Hietanen
- * @Last Modified time: 2021-02-19 15:47:59
+ * @Last Modified by: Roni Laukkarinen
+ * @Last Modified time: 2021-04-01 21:08:50
  */
 
 namespace Air_Light;
@@ -66,8 +66,8 @@ function enqueue_theme_scripts() {
     'rolle_externalLinkDomains',
     [
       'localhost:3000',
-      'airdev.test',
-      'dudetest.xyz',
+      'rolledesign.test',
+      'rolle.design',
     ]
   );
 } // end rolle_scripts
@@ -108,7 +108,7 @@ function enqueue_polyfills() {
  * @return string file and path of the asset file
  */
 function get_asset_file( $filename ) {
-  $env = 'development' === wp_get_environment_type() && ! isset( $_GET['load_production_builds'] ) ? 'dev' : 'prod';
+  $env = 'development' === wp_get_environment_type() && ! isset( $_GET['load_production_builds'] ) ? 'dev' : 'prod'; // phpcs:ignore
 
   $filetype = pathinfo( $filename )['extension'];
 
