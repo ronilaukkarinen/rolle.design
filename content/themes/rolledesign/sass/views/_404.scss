@@ -1,6 +1,8 @@
 // Error 404 title
 .block-error-404 {
   .container {
+    max-width: $width-max-article;
+
     @media (min-width: $container-mobile) {
       padding-bottom: 10%;
       padding-top: 10%;
@@ -8,7 +10,19 @@
   }
 
   h1 {
-    @include responsive-font(42px, 200px);
+    @include responsive-font(42px, 300px);
+    color: $color-synthwavesunsetred;
+    font-family: $font-accent;
     margin-bottom: 2rem;
+  }
+
+  h2 {
+    color: $color-synthwavesunsetred;
+    font-family: $font-accent;
+  }
+
+  p {
+    font-family: $font-accent;
+    font-size: var(--font-size-huge);
   }
 }

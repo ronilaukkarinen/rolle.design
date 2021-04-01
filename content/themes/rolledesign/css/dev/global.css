@@ -3249,6 +3249,10 @@ body *[aria-invalid="true"] {
   color: #eaf1f8;
 }
 
+.block-error-404 .container {
+  max-width: 720px;
+}
+
 @media (min-width: 480px) {
   .block-error-404 .container {
     padding-bottom: 10%;
@@ -3258,19 +3262,31 @@ body *[aria-invalid="true"] {
 
 .block-error-404 h1 {
   font-size: 42px;
+  color: #f82872;
+  font-family: "Sofia Pro", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
   margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 320px) {
   .block-error-404 h1 {
-    font-size: calc(42px + 158 * ((100vw - 320px) / 1600));
+    font-size: calc(42px + 258 * ((100vw - 320px) / 1600));
   }
 }
 
 @media screen and (min-width: 1920px) {
   .block-error-404 h1 {
-    font-size: 200px;
+    font-size: 300px;
   }
+}
+
+.block-error-404 h2 {
+  color: #f82872;
+  font-family: "Sofia Pro", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+.block-error-404 p {
+  font-family: "Sofia Pro", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  font-size: var(--font-size-huge);
 }
 
 /* stylelint-disable no-descending-specificity, a11y/no-display-none, sh-waqar/declaration-use-variable */
