@@ -71,7 +71,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("../../../content/themes/rolle/fonts/Inter-Regular.woff") format("woff"), url("../../../content/themes/rolle/fonts/Inter-Regular.woff2") format("woff2"), url("../../../content/themes/rolle/fonts/Inter-Regular.ttf") format("truetype");
+  src: url("../../../content/themes/rolledesign/fonts/Inter-Regular.woff") format("woff"), url("../../../content/themes/rolledesign/fonts/Inter-Regular.woff2") format("woff2"), url("../../../content/themes/rolledesign/fonts/Inter-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -79,7 +79,7 @@
   font-family: "Inter";
   font-style: italic;
   font-weight: 400;
-  src: url("../../../content/themes/rolle/fonts/Inter-Italic.woff") format("woff"), url("../../../content/themes/rolle/fonts/Inter-Italic.woff2") format("woff2"), url("../../../content/themes/rolle/fonts/Inter-Italic.ttf") format("truetype");
+  src: url("../../../content/themes/rolledesign/fonts/Inter-Italic.woff") format("woff"), url("../../../content/themes/rolledesign/fonts/Inter-Italic.woff2") format("woff2"), url("../../../content/themes/rolledesign/fonts/Inter-Italic.ttf") format("truetype");
 }
 
 @font-face {
@@ -87,7 +87,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src: url("../../../content/themes/rolle/fonts/Inter-Medium.woff") format("woff"), url("../../../content/themes/rolle/fonts/Inter-Medium.woff2") format("woff2"), url("../../../content/themes/rolle/fonts/Inter-Medium.ttf") format("truetype");
+  src: url("../../../content/themes/rolledesign/fonts/Inter-Medium.woff") format("woff"), url("../../../content/themes/rolledesign/fonts/Inter-Medium.woff2") format("woff2"), url("../../../content/themes/rolledesign/fonts/Inter-Medium.ttf") format("truetype");
 }
 
 @font-face {
@@ -95,7 +95,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  src: url("../../../content/themes/rolle/fonts/Inter-SemiBold.woff") format("woff"), url("../../../content/themes/rolle/fonts/Inter-SemiBold.woff2") format("woff2"), url("../../../content/themes/rolle/fonts/Inter-SemiBold.ttf") format("truetype");
+  src: url("../../../content/themes/rolledesign/fonts/Inter-SemiBold.woff") format("woff"), url("../../../content/themes/rolledesign/fonts/Inter-SemiBold.woff2") format("woff2"), url("../../../content/themes/rolledesign/fonts/Inter-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
@@ -103,7 +103,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: url("../../../content/themes/rolle/fonts/Inter-Bold.woff") format("woff"), url("../../../content/themes/rolle/fonts/Inter-Bold.woff2") format("woff2"), url("../../../content/themes/rolle/fonts/Inter-Bold.ttf") format("truetype");
+  src: url("../../../content/themes/rolledesign/fonts/Inter-Bold.woff") format("woff"), url("../../../content/themes/rolledesign/fonts/Inter-Bold.woff2") format("woff2"), url("../../../content/themes/rolledesign/fonts/Inter-Bold.ttf") format("truetype");
 }
 
 @font-face {
@@ -111,13 +111,29 @@
   font-family: "Futura PT";
   font-style: normal;
   font-weight: 600;
-  src: url("../../../content/themes/rolle/fonts/futurapt-demi.woff") format("woff"), url("../../../content/themes/rolle/fonts/futurapt-demi.woff2") format("woff2"), url("../../../content/themes/rolle/fonts/futurapt-demi.ttf") format("truetype");
+  src: url("../../../content/themes/rolledesign/fonts/futurapt-demi.woff") format("woff"), url("../../../content/themes/rolledesign/fonts/futurapt-demi.woff2") format("woff2"), url("../../../content/themes/rolledesign/fonts/futurapt-demi.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../../content/themes/rolledesign/fonts/sofiaproregular.woff") format("woff"), url("../../../content/themes/rolledesign/fonts/sofiaproregular.woff2") format("woff2"), url("../../../content/themes/rolledesign/fonts/sofiaproregular.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../../content/themes/rolledesign/fonts/sofiaprobold.woff") format("woff"), url("../../../content/themes/rolledesign/fonts/sofiaprobold.woff2") format("woff2"), url("../../../content/themes/rolledesign/fonts/sofiaprobold.ttf") format("truetype");
 }
 
 .wp-block.is-style-boxed,
 .is-style-boxed {
-  border: 2px solid #545773;
-  color: #545773;
+  border: 2px solid #2d2f3e;
+  color: #2d2f3e;
   font-size: 17px;
   font-style: normal;
   font-weight: 500;
@@ -126,10 +142,21 @@
   width: calc(100% - 4rem);
 }
 
-@media (min-width: 840px) {
+@media (min-width: 760px) {
   .gutenberg-content .is-style-boxed {
     transform: translate(2rem, 0);
   }
+}
+
+.gutenberg-content p.is-style-ingress,
+.wp-block.is-style-ingress,
+.is-style-ingress {
+  font-family: -apple-system, "BlinkMacSystemFont", "Sofia Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  opacity: .8;
 }
 
 .wp-block-button__link {
@@ -193,5 +220,23 @@
 }
 
 .wp-block:not([data-align="wide"]), .wp-block:not([data-align="full"]) {
-  max-width: 800px !important;
+  max-width: 720px !important;
+}
+
+.wp-block h1,
+.wp-block h2,
+.wp-block h3,
+.wp-block h4,
+.wp-block h5,
+.wp-block h6 {
+  font-family: -apple-system, "BlinkMacSystemFont", "Sofia Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+}
+
+body.wp-admin div.edit-post-text-editor,
+body.wp-admin div.editor-post-title__block,
+.wp-block.editor-post-title {
+  max-width: 720px !important;
 }

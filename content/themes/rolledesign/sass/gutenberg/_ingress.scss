@@ -1,0 +1,11 @@
+// Ingress style
+.gutenberg-content p.is-style-ingress,
+.wp-block.is-style-ingress,
+.is-style-ingress {
+  font-family: $font-headings-blog;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  opacity: .8;
+}

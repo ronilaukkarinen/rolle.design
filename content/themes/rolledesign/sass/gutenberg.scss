@@ -26,6 +26,7 @@
 
 // Gutenberg blocks
 @import 'gutenberg/boxed';
+@import 'gutenberg/ingress';
 @import 'gutenberg/button';
 @import 'gutenberg/button-file';
 
@@ -50,4 +51,22 @@
   &:not([data-align="full"]) {
     max-width: $width-max-article !important;
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font-headings-blog;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+  }
+}
+
+body.wp-admin div.edit-post-text-editor,
+body.wp-admin div.editor-post-title__block,
+.wp-block.editor-post-title {
+  max-width: $width-max-article !important;
 }

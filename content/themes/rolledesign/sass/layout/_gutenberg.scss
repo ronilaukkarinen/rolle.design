@@ -1,7 +1,36 @@
+/* stylelint-disable sh-waqar/declaration-use-variable, no-descending-specificity */
 // WordPress blog & articles view
 //
 // The styles for most of the TinyMCE produced
 // classes and WordPress Gutenberg editor formatting.
+
+.block-blog article > h2:first-child::before,
+.gutenberg-content h1::before {
+  background-color: #767676;
+  content: '\020';
+  display: block;
+  height: 2px;
+  margin: 1rem 0;
+  width: 1em;
+}
+
+.block-blog article > h2 {
+  @extend %h1;
+  font-family: $font-headings-blog;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  opacity: .8;
+
+  a {
+    color: $color-headings;
+  }
+}
+
+.block-blog .container {
+  max-width: $width-max-article;
+  padding-bottom: var(--padding-block);
+  padding-top: var(--padding-block);
+}
 
 // Blog post category styles
 .cat {
@@ -26,9 +55,7 @@
 
   a:hover,
   a:focus {
-    /* stylelint-disable sh-waqar/declaration-use-variable */
     border-color: rgba($color-blog-tags, .4);
-    /* stylelint-enable sh-waqar/declaration-use-variable */
   }
 }
 
@@ -38,6 +65,22 @@
   padding-left: 0;
   padding-right: 0;
   padding-top: var(--padding-block);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font-headings-blog;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
   .blocks-gallery-grid {
     display: grid;
@@ -113,18 +156,6 @@
   h5,
   .is-style-ingress {
     line-height: 1.22;
-  }
-
-  // Don't add extra margin on top of first title
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    &:first-child {
-      margin-top: 0;
-    }
   }
 
   img {

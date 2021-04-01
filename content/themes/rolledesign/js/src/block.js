@@ -7,3 +7,8 @@ wp.blocks.registerBlockStyle('core/paragraph', {
   name: 'boxed',
   label: 'Laatikko',
 });
+
+wp.blocks.registerBlockStyle('core/paragraph', {
+  name: 'ingress',
+  label: 'Ingressi',
+});
