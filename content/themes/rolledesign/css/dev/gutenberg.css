@@ -86,8 +86,32 @@
   font-display: optional;
   font-family: "Inter";
   font-style: normal;
+  font-weight: 500;
+  src: url("../../../content/themes/rolle/fonts/Inter-Medium.woff") format("woff"), url("../../../content/themes/rolle/fonts/Inter-Medium.woff2") format("woff2"), url("../../../content/themes/rolle/fonts/Inter-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: optional;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../../content/themes/rolle/fonts/Inter-SemiBold.woff") format("woff"), url("../../../content/themes/rolle/fonts/Inter-SemiBold.woff2") format("woff2"), url("../../../content/themes/rolle/fonts/Inter-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: optional;
+  font-family: "Inter";
+  font-style: normal;
   font-weight: 700;
   src: url("../../../content/themes/rolle/fonts/Inter-Bold.woff") format("woff"), url("../../../content/themes/rolle/fonts/Inter-Bold.woff2") format("woff2"), url("../../../content/themes/rolle/fonts/Inter-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: optional;
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../../content/themes/rolle/fonts/futurapt-demi.woff") format("woff"), url("../../../content/themes/rolle/fonts/futurapt-demi.woff2") format("woff2"), url("../../../content/themes/rolle/fonts/futurapt-demi.ttf") format("truetype");
 }
 
 .wp-block.is-style-boxed,

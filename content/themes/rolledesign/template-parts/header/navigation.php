@@ -16,28 +16,19 @@ namespace Air_Light;
 
 <div class="main-navigation-wrapper" id="main-navigation-wrapper">
 
-  <!-- NB! Accessibility: Add/remove has-visible-label class for button if you want to enable/disable visible "Show menu/Hide menu" label for seeing users -->
-  <button aria-controls="nav" id="nav-toggle" class="nav-toggle hamburger has-visible-label" type="button" aria-label="<?php echo esc_html( get_default_localization( 'Open main menu' ) ); ?>">
-    <span class="hamburger-box">
-      <span class="hamburger-inner"></span>
-    </span>
-    <span id="nav-toggle-label" class="nav-toggle-label"><?php echo esc_html( get_default_localization( 'Open main menu' ) ); ?></span>
-  </button>
-
   <nav id="nav" class="nav-primary" aria-label="<?php echo esc_html( get_default_localization( 'Main navigation' ) ); ?>">
 
-    <?php wp_nav_menu( array(
-      'theme_location' => 'primary',
-      'container'      => false,
-      'depth'          => 4,
-      'menu_class'     => 'menu-items',
-      'menu_id'        => 'main-menu',
-      'echo'           => true,
-      'fallback_cb'    => __NAMESPACE__ . '\Nav_Walker::fallback',
-      'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-      'has_dropdown'   => true,
-      'walker'         => new Nav_Walker(),
-    ) ); ?>
+  <nav class="main-menu">
+    <ul>
+      <li><a class="home" href="<?php echo esc_url( get_home_url() ); ?>/"><?php include get_theme_file_path( '/svg/home.svg' ); ?><span>Home</span></a></li>
+      <li><a class="blog" href="/blog"><?php include get_theme_file_path( '/svg/blog.svg' ); ?><span>Blog</span></a></li>
+      <li><a class="wordpress" href="<?php echo esc_url( get_home_url() ); ?>/wordpress"><?php include get_theme_file_path( '/svg/home.svg' ); ?><span>WordPress</span></a></li>
+      <li><a class="projects" href="<?php echo esc_url( get_home_url() ); ?>/projects"><?php include get_theme_file_path( '/svg/projects.svg' ); ?><span>Projects</span></a></li>
+      <li><a class="contact" href="<?php echo esc_url( get_home_url() ); ?>/contact"><?php include get_theme_file_path( '/svg/contact.svg' ); ?><span>Contact</span></a></li>
+      <li><a class="about" href="<?php echo esc_url( get_home_url() ); ?>/about"><?php include get_theme_file_path( '/svg/coffee.svg' ); ?><span>About</span></a></li>
+      <li><a class="now" href="<?php echo esc_url( get_home_url() ); ?>/now"><?php include get_theme_file_path( '/svg/now.svg' ); ?><span>Now</span></a></li>
+    </ul>
+  </nav>
 
   </nav><!-- #nav -->
 </div>
