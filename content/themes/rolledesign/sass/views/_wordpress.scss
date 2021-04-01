@@ -1,6 +1,10 @@
+/* stylelint-disable no-descending-specificity, a11y/no-display-none, sh-waqar/declaration-use-variable */
 .block.block-hero.block-hero-wordpress {
+  h1 {
+    color: $color-blue-alt;
+  }
+
   h1 svg {
-    fill: #0173aa;
     height: 8rem;
     margin-bottom: 2rem;
     margin-top: 0;
@@ -13,13 +17,13 @@
   }
 
   a {
-    color: #0173aa;
+    color: $color-blue-alt;
     text-decoration: none;
   }
 
   a:hover,
   a:focus {
-    color: #21252b;
+    color: $color-blue-alt-midnight;
   }
 }
 
@@ -31,74 +35,65 @@
   height: 32px;
   left: 0;
   margin: 4px;
+  min-width: 32px;
   padding: 2px;
-  position: absolute;
-  top: 8px;
   width: 32px;
 }
 
 .badge-themes {
-  background: transparent;
   box-shadow: 0 0 0 4px rgb(78, 50, 136);
   fill: rgb(78, 50, 136);
 }
 
 .badge-translation-contributor {
-  background: transparent;
   box-shadow: 0 0 0 4px rgb(195, 34, 131);
   fill: rgb(195, 34, 131);
 }
 
 .badge-translation-editor {
-  background: rgba(195, 34, 131, .25);
+  background-color: rgba(195, 34, 131, .25);
   box-shadow: 0 0 0 4px rgb(195, 34, 131);
   fill: rgb(195, 34, 131);
 }
 
 .badge-speaker {
-  background: transparent;
   box-shadow: 0 0 0 4px rgb(247, 173, 67);
   fill: rgb(247, 173, 67);
 }
 
 .badge-plugins {
-  background: transparent;
   box-shadow: 0 0 0 4px rgb(240, 103, 35);
   fill: rgb(240, 103, 35);
 }
 
 .badge-community-contributor {
-  background: transparent;
   box-shadow: 0 0 0 4px rgb(17, 121, 157);
   fill: rgb(17, 121, 157);
 }
 
 .badge-community {
-  background: rgba(17, 121, 157, .25);
+  background-color: rgba(17, 121, 157, .25);
   box-shadow: 0 0 0 4px rgb(17, 121, 157);
   fill: rgb(17, 121, 157);
 }
 
 .badge-code {
-  background: transparent;
   box-shadow: 0 0 0 4px rgb(205, 0, 0);
   fill: rgb(205, 0, 0);
 }
 
 .badge-meta-contributor {
-  background: transparent;
   box-shadow: 0 0 0 4px rgb(174, 173, 173);
   fill: rgb(174, 173, 173);
 }
 
 .badge-organizer {
-  background: transparent;
   box-shadow: 0 0 0 4px rgb(247, 173, 67);
   fill: rgb(247, 173, 67);
 }
 
 .item-list {
-  @include grid(3, $gutter_x: 30px, $gutter_y: 30px);
+  @include grid(3, $gutter_x: 30px, $gutter_y: 0);
   list-style: none;
   margin-bottom: 0;
   margin-left: auto;
@@ -120,13 +115,19 @@
 }
 
 .item-list li {
+  align-items: center;
   border-bottom: 0;
-  box-sizing: border-box;
   color: #444;
-  display: inline-block;
+  display: inline-flex;
+  font-family: $font-accent;
   font-size: 17px;
-  padding: 18px 0 16px 55px;
+  line-height: 1;
+  padding: 9px 0 9px 55px;
   position: relative;
+
+  svg {
+    margin-right: 19px;
+  }
 }
 
 .open-source {
@@ -136,7 +137,7 @@
 
   // Pinned GitHub items
   .repos {
-    @include grid(3, $gutter_x: 3rem);
+    @include grid(3, $gutter_x: 3rem, $gutter_y: 3rem);
     margin-left: auto;
     margin-right: auto;
     max-width: $width-grid-base;
@@ -156,12 +157,11 @@
   }
 
   .repo {
-    background: #fff;
+    background-color: $color-white;
     border: 1px solid #d1d5da;
     border-radius: 3px;
-    max-width: 42rem;
+    font-family: $font-accent;
     padding: 2rem;
-    width: 100%;
 
     @media (max-width: 1200px) {
       max-width: 100%;
@@ -181,13 +181,27 @@
       margin: 0;
     }
 
+    h3 a,
+    a.github-link {
+      color: $color-github-link;
+    }
+
     h3 {
       font-weight: 600;
       margin-bottom: 1.5rem;
     }
 
     h3 svg {
+      fill: $color-github-text;
       margin-right: 1rem;
+    }
+
+    ul li svg {
+      fill: $color-github-text;
+    }
+
+    a::after {
+      display: none;
     }
 
     ul,
@@ -200,12 +214,15 @@
     ul {
       display: flex;
       justify-content: flex-start;
+      line-height: 1;
       margin-top: 1.5rem;
+      padding: 0;
     }
 
     ul li {
       font-size: 16px;
       margin-right: 2.5rem;
+      padding: 0;
 
       &:nth-child(3) svg {
         margin-right: .6rem;
@@ -219,13 +236,15 @@
     ul li,
     p,
     h3 {
-      @include responsive-font(16px, 18px);
+      font-size: var(--font-size-small);
     }
 
     ul li,
     h3 a {
       align-items: center;
       display: flex;
+      justify-content: flex-start;
+      line-height: 1;
     }
 
     .circle {
@@ -237,11 +256,11 @@
       width: 12px;
     }
 
-    .css {
+    .circle.css {
       background-color: #563d7c;
     }
 
-    .php {
+    .circle.php {
       background-color: #4f5d95;
     }
   }

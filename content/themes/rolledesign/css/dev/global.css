@@ -299,7 +299,7 @@ template {
   --margin-between-text-elements: 4rem;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1110px) {
   :root {
     --padding-container-horizontal: 2rem;
   }
@@ -717,7 +717,7 @@ a.is-external-link.no-external-link-indicator::after {
   margin: 0 auto;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
+  max-width: 960px;
   padding-bottom: var(--padding-container-vertical);
   padding-left: var(--padding-container-horizontal);
   padding-right: var(--padding-container-horizontal);
@@ -1252,7 +1252,7 @@ pre {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
+  max-width: 960px;
   padding-bottom: var(--padding-site-header-vertical);
   padding-left: var(--padding-container-horizontal);
   padding-right: var(--padding-container-horizontal);
@@ -2206,7 +2206,7 @@ input[type="checkbox"]:not(:checked):not(:focus) + label:hover::before {
 
 @media (min-width: 870px) {
   .gutenberg-content > *.alignwide {
-    max-width: 1200px;
+    max-width: 960px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -3102,8 +3102,12 @@ body *[aria-invalid="true"] {
   }
 }
 
+/* stylelint-disable no-descending-specificity, a11y/no-display-none, sh-waqar/declaration-use-variable */
+.block.block-hero.block-hero-wordpress h1 {
+  color: #0173aa;
+}
+
 .block.block-hero.block-hero-wordpress h1 svg {
-  fill: #0173aa;
   height: 8rem;
   margin-bottom: 2rem;
   margin-top: 0;
@@ -3132,68 +3136,59 @@ body *[aria-invalid="true"] {
   height: 32px;
   left: 0;
   margin: 4px;
+  min-width: 32px;
   padding: 2px;
-  position: absolute;
-  top: 8px;
   width: 32px;
 }
 
 .badge-themes {
-  background: transparent;
   box-shadow: 0 0 0 4px #4e3288;
   fill: #4e3288;
 }
 
 .badge-translation-contributor {
-  background: transparent;
   box-shadow: 0 0 0 4px #c32283;
   fill: #c32283;
 }
 
 .badge-translation-editor {
-  background: rgba(195, 34, 131, 0.25);
+  background-color: rgba(195, 34, 131, 0.25);
   box-shadow: 0 0 0 4px #c32283;
   fill: #c32283;
 }
 
 .badge-speaker {
-  background: transparent;
   box-shadow: 0 0 0 4px #f7ad43;
   fill: #f7ad43;
 }
 
 .badge-plugins {
-  background: transparent;
   box-shadow: 0 0 0 4px #f06723;
   fill: #f06723;
 }
 
 .badge-community-contributor {
-  background: transparent;
   box-shadow: 0 0 0 4px #11799d;
   fill: #11799d;
 }
 
 .badge-community {
-  background: rgba(17, 121, 157, 0.25);
+  background-color: rgba(17, 121, 157, 0.25);
   box-shadow: 0 0 0 4px #11799d;
   fill: #11799d;
 }
 
 .badge-code {
-  background: transparent;
   box-shadow: 0 0 0 4px #cd0000;
   fill: #cd0000;
 }
 
 .badge-meta-contributor {
-  background: transparent;
   box-shadow: 0 0 0 4px #aeadad;
   fill: #aeadad;
 }
 
 .badge-organizer {
-  background: transparent;
   box-shadow: 0 0 0 4px #f7ad43;
   fill: #f7ad43;
 }
@@ -3203,14 +3198,14 @@ body *[aria-invalid="true"] {
   /* autoprefixer: off */
   grid-auto-rows: minmax(0, auto);
   grid-column-gap: 30px;
-  grid-row-gap: 30px;
+  grid-row-gap: 0;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   list-style: none;
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
-  max-width: 1200px;
+  max-width: 960px;
   overflow: hidden;
   padding: 0;
   position: relative;
@@ -3224,7 +3219,7 @@ body *[aria-invalid="true"] {
     overflow: hidden;
   }
   .item-list > div {
-    margin-bottom: 30px;
+    margin-bottom: 0;
     margin-right: 30px;
     width: calc(33.33333% - 30px);
   }
@@ -3240,7 +3235,7 @@ body *[aria-invalid="true"] {
     overflow: hidden;
   }
   .item-list > div {
-    margin-bottom: 30px;
+    margin-bottom: 0;
     margin-right: 30px;
     width: calc(33.33333% - 30px);
   }
@@ -3256,7 +3251,7 @@ body *[aria-invalid="true"] {
     overflow: hidden;
   }
   .item-list > div {
-    margin-bottom: 30px;
+    margin-bottom: 0;
     margin-right: 30px;
     width: calc(33.33333% - 30px);
   }
@@ -3332,13 +3327,19 @@ body *[aria-invalid="true"] {
 }
 
 .item-list li {
+  align-items: center;
   border-bottom: 0;
-  box-sizing: border-box;
   color: #444;
-  display: inline-block;
+  display: inline-flex;
+  font-family: "Sofia Pro", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
   font-size: 17px;
-  padding: 18px 0 16px 55px;
+  line-height: 1;
+  padding: 9px 0 9px 55px;
   position: relative;
+}
+
+.item-list li svg {
+  margin-right: 19px;
 }
 
 .open-source {
@@ -3352,11 +3353,11 @@ body *[aria-invalid="true"] {
   /* autoprefixer: off */
   grid-auto-rows: minmax(0, auto);
   grid-column-gap: 3rem;
-  grid-row-gap: 16px;
+  grid-row-gap: 3rem;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
+  max-width: 960px;
 }
 
 @supports not (display: grid) {
@@ -3366,7 +3367,7 @@ body *[aria-invalid="true"] {
     overflow: hidden;
   }
   .open-source .repos > div {
-    margin-bottom: 16px;
+    margin-bottom: 3rem;
     margin-right: 3rem;
     width: calc(33.33333% - 3rem);
   }
@@ -3382,7 +3383,7 @@ body *[aria-invalid="true"] {
     overflow: hidden;
   }
   .open-source .repos > div {
-    margin-bottom: 16px;
+    margin-bottom: 3rem;
     margin-right: 3rem;
     width: calc(33.33333% - 3rem);
   }
@@ -3398,7 +3399,7 @@ body *[aria-invalid="true"] {
     overflow: hidden;
   }
   .open-source .repos > div {
-    margin-bottom: 16px;
+    margin-bottom: 3rem;
     margin-right: 3rem;
     width: calc(33.33333% - 3rem);
   }
@@ -3481,12 +3482,11 @@ body *[aria-invalid="true"] {
 }
 
 .open-source .repo {
-  background: #fff;
+  background-color: #fff;
   border: 1px solid #d1d5da;
   border-radius: 3px;
-  max-width: 42rem;
+  font-family: "Sofia Pro", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
   padding: 2rem;
-  width: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -3509,13 +3509,27 @@ body *[aria-invalid="true"] {
   margin: 0;
 }
 
+.open-source .repo h3 a,
+.open-source .repo a.github-link {
+  color: #0366d6;
+}
+
 .open-source .repo h3 {
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
 .open-source .repo h3 svg {
+  fill: #586069;
   margin-right: 1rem;
+}
+
+.open-source .repo ul li svg {
+  fill: #586069;
+}
+
+.open-source .repo a::after {
+  display: none;
 }
 
 .open-source .repo ul,
@@ -3528,12 +3542,15 @@ body *[aria-invalid="true"] {
 .open-source .repo ul {
   display: flex;
   justify-content: flex-start;
+  line-height: 1;
   margin-top: 1.5rem;
+  padding: 0;
 }
 
 .open-source .repo ul li {
   font-size: 16px;
   margin-right: 2.5rem;
+  padding: 0;
 }
 
 .open-source .repo ul li:nth-child(3) svg {
@@ -3547,29 +3564,15 @@ body *[aria-invalid="true"] {
 .open-source .repo ul li,
 .open-source .repo p,
 .open-source .repo h3 {
-  font-size: 16px;
-}
-
-@media screen and (min-width: 320px) {
-  .open-source .repo ul li,
-  .open-source .repo p,
-  .open-source .repo h3 {
-    font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .open-source .repo ul li,
-  .open-source .repo p,
-  .open-source .repo h3 {
-    font-size: 18px;
-  }
+  font-size: var(--font-size-small);
 }
 
 .open-source .repo ul li,
 .open-source .repo h3 a {
   align-items: center;
   display: flex;
+  justify-content: flex-start;
+  line-height: 1;
 }
 
 .open-source .repo .circle {
@@ -3581,11 +3584,11 @@ body *[aria-invalid="true"] {
   width: 12px;
 }
 
-.open-source .repo .css {
+.open-source .repo .circle.css {
   background-color: #563d7c;
 }
 
-.open-source .repo .php {
+.open-source .repo .circle.php {
   background-color: #4f5d95;
 }
 

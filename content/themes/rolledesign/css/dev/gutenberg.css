@@ -8,7 +8,7 @@
   --margin-between-text-elements: 4rem;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1110px) {
   :root {
     --padding-container-horizontal: 2rem;
   }
