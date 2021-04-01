@@ -21,7 +21,7 @@
   --color-shade: #fff;
   --color-faded: rgba(255, 255, 255, .8);
   --color-alt-grey: rgba(255, 255, 255, .8);
-  --color-toggled: #aaa;
+  --color-toggled: #414850;
 
   // Required brand colors
   --color-fuchsia: #e2127a;
@@ -39,8 +39,8 @@
   --color-instagram-hover: lighten(--color-instagram, 15%);
   --color-bright: #737fbf;
   --color-blue-faded: #58a6ff;
-  --color-blue-alt: #58a6ff;
-  --color-blue-alt-midnight: #21252b;
+  --color-blue-alt: #0b96db;
+  --color-blue-alt-midnight: #2caff1;
   --color-github-link: #58a6ff;
   --color-github-text: #8b949e;
   --color-twitter: #1da1f2;
@@ -66,7 +66,7 @@
   --color-buttons: --color-darkgrey;
   --color-buttons-hover: --color-main;
   --color-background-toggle-slider: #ccc;
-  --color-light-grey-alt: #444;
+  --color-light-grey-alt: #333;
   --color-grey-mid: rgba(255, 255, 255, .6);
   --color-almostwhite: rgba(44, 44, 44, .5);
   --color-repo-border: #30363c;
@@ -79,11 +79,17 @@
 // Toggle switch
 .theme-switch-wrapper {
   align-items: center;
-  display: flex;
-  position: absolute;
-  right: 7.6rem;
-  top: 7.6rem;
+  display: block;
+  margin-bottom: 7rem;
+  text-align: center;
   z-index: 999;
+
+  @media (min-width: $width-max-mobile) {
+    display: flex;
+    position: absolute;
+    right: 7.6rem;
+    top: 7.6rem;
+  }
 
   em {
     font-size: 1rem;

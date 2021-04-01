@@ -4,10 +4,7 @@ $width-max-article: 720px;
 $width-grid-base: 960px;
 
 // This is the breakpoint navigation transforms into mobile menu
-// NB! IMPORTANT! Remember to change in js/src/navigation.js:
-// const responsivenav = 960;
-// If these are not the same, navigation toggles will not work properly.
-$width-max-mobile: 840px;
+$width-max-mobile: 1090px;
 
 // Breakpoints for comntainers
 $container-mobile: 480px;

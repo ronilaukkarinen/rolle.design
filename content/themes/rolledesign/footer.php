@@ -7,7 +7,7 @@
  * @Author: Roni Laukkarinen
  * @Date: 2020-05-11 13:33:49
  * @Last Modified by: Roni Laukkarinen
- * @Last Modified time: 2021-04-01 18:17:17
+ * @Last Modified time: 2021-04-02 00:43:10
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  * @package rolle
@@ -31,6 +31,15 @@ namespace Air_Light;
 </footer><!-- #colophon -->
 
 </div><!-- #page -->
+
+<nav aria-hidden="true">
+  <div class="theme-switch-wrapper">
+    <label class="theme-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      <div class="slider round"></div>
+    </label>
+  </div>
+</nav>
 
 <?php wp_footer(); ?>
 </body>

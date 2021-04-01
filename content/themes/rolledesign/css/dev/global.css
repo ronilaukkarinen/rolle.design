@@ -401,7 +401,7 @@ html.is-animating .transition-fade {
   }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 1090px) {
   :root {
     --padding-site-header-vertical: 2rem;
   }
@@ -642,7 +642,7 @@ a.is-external-link.no-external-link-indicator::after {
   text-align: center;
 }
 
-@media (min-width: 840px) {
+@media (min-width: 1090px) {
   .main-menu {
     margin-top: 4rem;
   }
@@ -694,7 +694,7 @@ a.is-external-link.no-external-link-indicator::after {
   }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 1090px) {
   .main-menu ul li a svg {
     height: 2.4rem;
     width: 2.4rem;
@@ -2588,7 +2588,7 @@ div.lazy {
   --color-shade: #fff;
   --color-faded: rgba(255, 255, 255, .8);
   --color-alt-grey: rgba(255, 255, 255, .8);
-  --color-toggled: #aaa;
+  --color-toggled: #414850;
   --color-fuchsia: #e2127a;
   --color-synthwavesunsetpink: #eb21f8;
   --color-synthwavesunsetred: #f82872;
@@ -2604,8 +2604,8 @@ div.lazy {
   --color-instagram-hover: lighten(--color-instagram, 15%);
   --color-bright: #737fbf;
   --color-blue-faded: #58a6ff;
-  --color-blue-alt: #58a6ff;
-  --color-blue-alt-midnight: #21252b;
+  --color-blue-alt: #0b96db;
+  --color-blue-alt-midnight: #2caff1;
   --color-github-link: #58a6ff;
   --color-github-text: #8b949e;
   --color-twitter: #1da1f2;
@@ -2629,7 +2629,7 @@ div.lazy {
   --color-buttons: --color-darkgrey;
   --color-buttons-hover: --color-main;
   --color-background-toggle-slider: #ccc;
-  --color-light-grey-alt: #444;
+  --color-light-grey-alt: #333;
   --color-grey-mid: rgba(255, 255, 255, .6);
   --color-almostwhite: rgba(44, 44, 44, .5);
   --color-repo-border: #30363c;
@@ -2644,11 +2644,19 @@ div.lazy {
 
 .theme-switch-wrapper {
   align-items: center;
-  display: flex;
-  position: absolute;
-  right: 7.6rem;
-  top: 7.6rem;
+  display: block;
+  margin-bottom: 7rem;
+  text-align: center;
   z-index: 999;
+}
+
+@media (min-width: 1090px) {
+  .theme-switch-wrapper {
+    display: flex;
+    position: absolute;
+    right: 7.6rem;
+    top: 7.6rem;
+  }
 }
 
 .theme-switch-wrapper em {
@@ -2913,7 +2921,7 @@ input:checked + .slider::before {
     /* autoprefixer: off */
     grid-auto-rows: minmax(0, auto);
     grid-column-gap: 30px;
-    grid-row-gap: 30px;
+    grid-row-gap: 0;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   @supports not (display: grid) {
@@ -2923,7 +2931,7 @@ input:checked + .slider::before {
       overflow: hidden;
     }
     .item-list > div {
-      margin-bottom: 30px;
+      margin-bottom: 0;
       margin-right: 30px;
       width: calc(50% - 30px);
     }
@@ -2940,7 +2948,7 @@ input:checked + .slider::before {
     overflow: hidden;
   }
   .item-list > div {
-    margin-bottom: 30px;
+    margin-bottom: 0;
     margin-right: 30px;
     width: calc(50% - 30px);
   }
@@ -2957,7 +2965,7 @@ input:checked + .slider::before {
       overflow: hidden;
     }
     .item-list > div {
-      margin-bottom: 30px;
+      margin-bottom: 0;
       margin-right: 30px;
       width: calc(50% - 30px);
     }
@@ -2969,7 +2977,61 @@ input:checked + .slider::before {
 
 @media (max-width: 535px) {
   .item-list {
-    display: block;
+    display: grid;
+    /* autoprefixer: off */
+    grid-auto-rows: minmax(0, auto);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  @supports not (display: grid) {
+    .item-list {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .item-list > div {
+      margin-bottom: 0;
+      margin-right: 0;
+      width: calc(100% - 0);
+    }
+    .item-list > div:nth-child(1n+1) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media all and (max-width: 535px) and (-ms-high-contrast: none), (max-width: 535px) and (-ms-high-contrast: active) {
+  .item-list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .item-list > div {
+    margin-bottom: 0;
+    margin-right: 0;
+    width: calc(100% - 0);
+  }
+  .item-list > div:nth-child(1n+1) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 535px) {
+  @supports (-ms-ime-align: auto) {
+    .item-list {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .item-list > div {
+      margin-bottom: 0;
+      margin-right: 0;
+      width: calc(100% - 0);
+    }
+    .item-list > div:nth-child(1n+1) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -2983,6 +3045,12 @@ input:checked + .slider::before {
   line-height: 1;
   padding: 9px 0 9px 55px;
   position: relative;
+}
+
+@media (max-width: 535px) {
+  .item-list li {
+    padding-left: 9px;
+  }
 }
 
 .item-list li svg {
