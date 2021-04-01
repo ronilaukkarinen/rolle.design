@@ -45,3 +45,9 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\setup_editor_styles' );
  */
 require get_theme_file_path( 'inc/hooks/forms.php' );
 add_action( 'gform_enqueue_scripts', __NAMESPACE__ . '\dequeue_gf_stylesheets', 999 );
+
+/**
+ * Prevent content adding paragraphs and br-tags
+ */
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
