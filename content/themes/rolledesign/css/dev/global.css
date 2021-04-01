@@ -558,25 +558,22 @@ a.is-external-link.no-external-link-indicator::after {
   font-family: "Futura PT", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
+  justify-content: space-between;
   opacity: .5;
   padding: 2rem;
   position: relative;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 50ms;
+  transition: transform 0.2s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
   z-index: 2;
 }
 
 .main-menu ul li a svg {
+  margin-right: .6rem;
   position: relative;
   top: 3px;
-}
-
-@media (min-width: 840px) {
-  .main-menu ul li a svg {
-    left: -10px;
-  }
+  width: 16px;
 }
 
 @media (max-width: 840px) {
@@ -599,8 +596,9 @@ a.is-external-link.no-external-link-indicator::after {
   }
 }
 
-.main-menu ul li a:hover, .main-menu ul li a.active, .main-menu ul li a:focus {
+.main-menu ul li a:hover, .main-menu ul li a:focus {
   opacity: 1;
+  transform: scale(1.2);
 }
 
 .main-menu ul li {
@@ -610,8 +608,8 @@ a.is-external-link.no-external-link-indicator::after {
   text-align: center;
 }
 
-.main-menu ul li a.about {
-  display: none;
+.main-menu ul li.current-menu-item a {
+  opacity: 1;
 }
 
 .main-menu ul li:nth-child(1) svg {
@@ -628,11 +626,6 @@ a.is-external-link.no-external-link-indicator::after {
   color: #f88d1e;
 }
 
-.main-menu ul li:nth-child(3) a:hover,
-.main-menu ul li:nth-child(3) a:focus {
-  color: #eb21f8;
-}
-
 .main-menu ul li:nth-child(4) a:hover,
 .main-menu ul li:nth-child(4) a:focus {
   color: #4285f4;
@@ -643,13 +636,14 @@ a.is-external-link.no-external-link-indicator::after {
   color: #02ebf8;
 }
 
-.home .home,
-.blog .blog,
-.wordpress .wordpress,
-.projects .projects,
-.contact .contact,
-.now .now {
-  opacity: 1;
+.main-menu ul li:nth-child(6) a:hover,
+.main-menu ul li:nth-child(6) a:focus {
+  color: #eb21f8;
+}
+
+.main-menu ul li.menu-item-29 a:hover,
+.main-menu ul li.menu-item-29 a:focus {
+  color: #0073aa;
 }
 
 .block {
