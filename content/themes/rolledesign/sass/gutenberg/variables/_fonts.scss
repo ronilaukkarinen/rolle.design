@@ -73,3 +73,6 @@ $font-weight-headings: 700;
 @include fontFace('Futura PT', '../../../content/themes/rolledesign/fonts/futurapt-demi', 600);
 @include fontFace('Sofia Pro', '../../../content/themes/rolledesign/fonts/sofiaproregular', 400);
 @include fontFace('Sofia Pro', '../../../content/themes/rolledesign/fonts/sofiaprobold', 700);
+@include fontFace('SF Mono', '../../../content/themes/rolledesign/fonts/sfmono-regular', 400);
+@include fontFace('SF Mono', '../../../content/themes/rolledesign/fonts/sfmono-regularitalic', 400, italic);
+@include fontFace('SF Mono', '../../../content/themes/rolledesign/fonts/sfmono-bold', 700);

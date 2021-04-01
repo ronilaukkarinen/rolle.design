@@ -12,6 +12,8 @@ import getLocalization from './modules/localization';
 import styleExternalLinks from './modules/external-link';
 import './modules/gutenberg-helpers';
 import './modules/dark-mode';
+import './modules/prism';
+import './modules/copy-to-clipboard';
 import 'what-input';
 
 // Define Javascript is active by changing the body class

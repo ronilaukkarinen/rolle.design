@@ -195,6 +195,30 @@
   src: url("../../../content/themes/rolledesign/fonts/sofiaprobold.woff") format("woff"), url("../../../content/themes/rolledesign/fonts/sofiaprobold.woff2") format("woff2"), url("../../../content/themes/rolledesign/fonts/sofiaprobold.ttf") format("truetype");
 }
 
+@font-face {
+  font-display: fallback;
+  font-family: "SF Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../../content/themes/rolledesign/fonts/sfmono-regular.woff") format("woff"), url("../../../content/themes/rolledesign/fonts/sfmono-regular.woff2") format("woff2"), url("../../../content/themes/rolledesign/fonts/sfmono-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "SF Mono";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../../../content/themes/rolledesign/fonts/sfmono-regularitalic.woff") format("woff"), url("../../../content/themes/rolledesign/fonts/sfmono-regularitalic.woff2") format("woff2"), url("../../../content/themes/rolledesign/fonts/sfmono-regularitalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "SF Mono";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../../content/themes/rolledesign/fonts/sfmono-bold.woff") format("woff"), url("../../../content/themes/rolledesign/fonts/sfmono-bold.woff2") format("woff2"), url("../../../content/themes/rolledesign/fonts/sfmono-bold.ttf") format("truetype");
+}
+
 .gutenberg-content p.is-style-ingress,
 .wp-block.is-style-ingress,
 .is-style-ingress {

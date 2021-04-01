@@ -1,0 +1,171 @@
+/* stylelint-disable */
+/**
+ * Github-like theme for Prism.js
+ * @author Luke Askew http://github.com/lukeaskew
+ */
+
+:root {
+  --code-blocks: #f6f8fa;
+  --code-block-padding-vertical: 2rem;
+  --code-block-padding-horizontal: 2.6rem;
+  --blue: #005cc5;
+  --teal: #005cc5;
+  --black: #c7254e;
+  --purple: #d73a49;
+  --maroon: #6f42c1;
+  --green: #005cc5;
+  --light-gray: #c7254e;
+  --dark-gray: #94a7cc;
+  --radius: 4px;
+}
+
+[data-theme="dark"] {
+  --code-blocks: #090b0f;
+  --blue: #bd93f9;
+  --teal: #bd93f9;
+  --light-gray: #bd93f9;
+  --purple: #50fa7b;
+  --black: #ff79c6;
+  --green: #8be9fd;
+}
+
+// Copy to clipboard feature
+pre[class*="language-"] {
+  border-radius: var(--radius);
+  overflow: visible;
+  position: relative;
+}
+
+.copy {
+  background: var(--code-blocks);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  color: rgba(var(--color-black-rgb), .5);
+  content: 'kopioi';
+  cursor: pointer;
+  font-family: $font-monospace;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0;
+  position: absolute;
+  right: var(--code-block-padding-horizontal);
+  top: var(--code-block-padding-vertical);
+  transform: none;
+  transition: color 200ms ease;
+
+  span {
+    @extend .screen-reader-text;
+  }
+
+  svg {
+    height: 16px;
+    width: 16px;
+  }
+
+  &:hover .copy,
+  &:focus .copy {
+    transform: translate(-10px, -100%);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-black);
+  }
+}
+
+// Base
+// Code block.
+code {
+  border-radius: var(--radius);
+
+  pre & {
+    padding-top: var(--code-block-padding-vertical);
+    padding-bottom: var(--code-block-padding-vertical);
+    padding-left: var(--code-block-padding-horizontal);
+    padding-right: var(--code-block-padding-horizontal);
+  }
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  color: var(--black);
+  cursor: text;
+  direction: ltr;
+  font-family: $font-monospace;
+  hyphens: none;
+  line-height: 1.4;
+  tab-size: 4;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+}
+
+// Code blocks
+pre[class*='language-'] {
+  border-radius: var(--radius);
+  overflow: visible;
+  padding: 0;
+  border: 0;
+
+  code {
+    max-width: 100%;
+    background-color: var(--code-blocks);
+  }
+}
+
+// Token colors
+.token {
+  &.comment,
+  &.prolog,
+  &.doctype,
+  &.cdata {
+    color: var(--dark-gray);
+  }
+
+  &.punctuation,
+  &.string,
+  &.atrule,
+  &.attr-value {
+    color: var(--blue);
+  }
+
+  &.property,
+  &.tag {
+    color: var(--green);
+  }
+
+  &.boolean,
+  &.number {
+    color: var(--teal);
+  }
+
+  &.selector,
+  &.attr-name,
+  &.attr-value .punctuation:first-child,
+  &.keyword,
+  &.regex,
+  &.important {
+    color: var(--maroon);
+  }
+
+  &.operator,
+  &.entity,
+  &.url,
+  .language-css &.string {
+    color: var(--purple);
+  }
+
+  &.function,
+  &.class-name {
+    color: var(--purple);
+  }
+
+  &.entity {
+    cursor: help;
+  }
+}
+
+.namespace {
+  opacity: .7;
+}
+
