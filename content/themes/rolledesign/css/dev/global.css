@@ -490,20 +490,6 @@ template {
 }
 
 /* stylelint-enable a11y/no-outline-none */
-.gutenberg-content a {
-  text-decoration: underline;
-}
-
-.gutenberg-content a:hover, .gutenberg-content a:focus {
-  text-decoration: none;
-}
-
-.gutenberg-content .comments-link a,
-.gutenberg-content .tags a,
-.gutenberg-content .cat a {
-  text-decoration: none;
-}
-
 [data-whatinput="keyboard"] a:focus,
 [data-whatinput="keyboard"] input:focus,
 [data-whatinput="keyboard"] button:focus,
@@ -740,6 +726,7 @@ a.is-external-link.no-external-link-indicator::after {
   clear: both;
   display: flex;
   justify-content: space-between;
+  margin-top: var(--padding-block);
   overflow: hidden;
 }
 
@@ -1739,7 +1726,8 @@ input[type="checkbox"]:not(:checked):not(:focus) + label:hover::before {
 }
 
 /* stylelint-enable sh-waqar/declaration-use-variable, selector-max-pseudo-class */
-/* stylelint-disable sh-waqar/declaration-use-variable, no-descending-specificity */
+/* stylelint-disable sh-waqar/declaration-use-variable, a11y/no-display-none, selector-max-compound-selectors, declaration-no-important, csstools/value-no-unknown-custom-properties */
+/* stylelint-disable no-descending-specificity */
 .block-blog-post-list .listing {
   margin-bottom: 6rem;
 }
@@ -1787,7 +1775,7 @@ input[type="checkbox"]:not(:checked):not(:focus) + label:hover::before {
   font-weight: 500;
   padding-bottom: .2rem;
   padding-top: .2rem;
-  transition: color 0.55s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: border-color 0.55s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .block-blog-post-list li a:hover,
@@ -1798,6 +1786,50 @@ input[type="checkbox"]:not(:checked):not(:focus) + label:hover::before {
 .block-blog-post-list .date {
   font-size: var(--font-size-tiny);
   margin-left: .5rem;
+}
+
+.auth {
+  margin: 0;
+  order: 1;
+}
+
+.auth a {
+  display: inline-flex;
+  font-size: var(--font-size-tiny);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.55s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.auth a:hover, .auth a:focus {
+  color: #f82872;
+}
+
+.auth a:hover img,
+.auth a:focus img {
+  border-color: #f82872;
+}
+
+.auth a::after {
+  display: none;
+}
+
+.auth .gravatar-small {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border: 2px solid #222;
+  border-radius: 50%;
+  height: 22px;
+  margin-right: 1rem;
+  overflow: hidden;
+  transition: border-color 0.55s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+  width: 22px;
+}
+
+.date-single {
+  font-size: var(--font-size-small);
+  opacity: .7;
+  order: 2;
 }
 
 .comment-on-twitter {
@@ -1815,7 +1847,6 @@ input[type="checkbox"]:not(:checked):not(:focus) + label:hover::before {
   margin-bottom: 8rem;
   margin-top: 8rem;
   text-decoration: none;
-  /* stylelint-disable a11y/no-display-none */
 }
 
 .comment-on-twitter a::after {
@@ -1912,8 +1943,34 @@ input[type="checkbox"]:not(:checked):not(:focus) + label:hover::before {
   padding-left: 0;
   padding-right: 0;
   padding-top: var(--padding-block);
-  /* stylelint-disable selector-max-compound-selectors */
-  /* stylelint-enable selector-max-compound-selectors */
+}
+
+.gutenberg-content p:not([class]) > a {
+  border-bottom: 1px solid #e2127a;
+  color: #e2127a;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: border-color 0.33s cubic-bezier(0.19, 1, 0.22, 1), color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.gutenberg-content p:not([class]) > a::after {
+  background-image: url("../../svg/external-link-fuchsia.svg");
+}
+
+.gutenberg-content p:not([class]) > a:focus {
+  border-color: #222;
+  color: #222;
+  text-decoration: none;
+}
+
+.gutenberg-content p:not([class]) > a:focus::after {
+  background-image: url("../../svg/external-link-black.svg");
+}
+
+.gutenberg-content .comments-link a,
+.gutenberg-content .tags a,
+.gutenberg-content .cat a {
+  text-decoration: none;
 }
 
 .gutenberg-content h1,
@@ -2141,9 +2198,7 @@ input[type="checkbox"]:not(:checked):not(:focus) + label:hover::before {
 }
 
 .gutenberg-content .wp-block-image > figure.alignleft, .gutenberg-content .wp-block-image > figure.alignright {
-  /* stylelint-disable csstools/value-no-unknown-custom-properties */
   max-width: var(--child-img-width);
-  /* stylelint-enable */
 }
 
 .gutenberg-content .wp-block-image > figure.alignleft figcaption, .gutenberg-content .wp-block-image > figure.alignright figcaption, .gutenberg-content .wp-block-image > figure.aligncenter figcaption {
@@ -2154,9 +2209,7 @@ input[type="checkbox"]:not(:checked):not(:focus) + label:hover::before {
   .gutenberg-content .wp-block-image > figure.alignleft, .gutenberg-content .wp-block-image > figure.alignright, .gutenberg-content .wp-block-image > figure.aligncenter {
     float: none;
     margin: 0;
-    /* stylelint-disable declaration-no-important */
     width: 100% !important;
-    /* stylelint-enable */
   }
 }
 
@@ -2228,19 +2281,15 @@ input[type="checkbox"]:not(:checked):not(:focus) + label:hover::before {
 
 .gutenberg-content div[style="width: 640px;"],
 .gutenberg-content .wp-video {
-  /* stylelint-disable declaration-no-important */
   margin-left: auto !important;
   margin-right: auto !important;
   max-width: 720px !important;
   width: 100% !important;
-  /* stylelint-enable */
 }
 
 .gutenberg-content > figure.wp-caption {
-  /* stylelint-disable declaration-no-important */
   max-width: 720px !important;
   width: 100% !important;
-  /* stylelint-enable */
 }
 
 .gutenberg-content > * {
@@ -2257,12 +2306,10 @@ input[type="checkbox"]:not(:checked):not(:focus) + label:hover::before {
 .gutenberg-content > * .is-provider-instagram,
 .gutenberg-content > * .is-provider-twitter,
 .gutenberg-content > * .is-provider-facebook {
-  /* stylelint-disable declaration-no-important */
   margin-left: auto !important;
   margin-right: auto !important;
   max-width: 720px !important;
   width: 100% !important;
-  /* stylelint-enable */
 }
 
 @media (max-width: 760px) {
@@ -2295,12 +2342,10 @@ input[type="checkbox"]:not(:checked):not(:focus) + label:hover::before {
 }
 
 .gutenberg-content > *.twitter-tweet, .gutenberg-content > *.instagram-media, .gutenberg-content > *.wp-video {
-  /* stylelint-disable declaration-no-important */
   margin-left: auto !important;
   margin-right: auto !important;
   max-width: 720px !important;
   width: 100% !important;
-  /* stylelint-enable */
 }
 
 @media (max-width: 760px) {
@@ -2362,7 +2407,6 @@ input[type="checkbox"]:not(:checked):not(:focus) + label:hover::before {
 
 @media (max-width: 760px) {
   .wp-caption {
-    /* stylelint-disable declaration-no-important */
     width: 100% !important;
     /* stylelint-enable */
   }
@@ -2461,6 +2505,7 @@ pre code {
   justify-content: space-between;
 }
 
+/* stylelint-disable no-descending-specificity */
 ul.tags {
   list-style: none;
   margin-bottom: var(--margin-between-text-elements);

@@ -1,9 +1,10 @@
-/* stylelint-disable sh-waqar/declaration-use-variable, no-descending-specificity */
+/* stylelint-disable sh-waqar/declaration-use-variable, a11y/no-display-none, selector-max-compound-selectors, declaration-no-important, csstools/value-no-unknown-custom-properties */
 // WordPress blog & articles view
 //
 // The styles for most of the TinyMCE produced
 // classes and WordPress Gutenberg editor formatting.
 
+/* stylelint-disable no-descending-specificity */
 .block-blog-post-list {
   .listing {
     margin-bottom: 6rem;
@@ -40,7 +41,7 @@
     font-weight: 500;
     padding-bottom: .2rem;
     padding-top: .2rem;
-    transition: color .55s cubic-bezier(.19, 1, .22, 1), background-color .2s cubic-bezier(.19, 1, .22, 1);
+    transition: border-color .55s cubic-bezier(.19, 1, .22, 1), background-color .2s cubic-bezier(.19, 1, .22, 1);
   }
 
   li a:hover,
@@ -52,6 +53,50 @@
     font-size: var(--font-size-tiny);
     margin-left: .5rem;
   }
+}
+
+.auth {
+  margin: 0;
+  order: 1;
+
+  a {
+    display: inline-flex;
+    font-size: var(--font-size-tiny);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color .55s cubic-bezier(.19, 1, .22, 1), background-color .2s cubic-bezier(.19, 1, .22, 1);
+
+    &:hover,
+    &:focus {
+      color: $color-synthwavesunsetred;
+    }
+
+    &:hover img,
+    &:focus img {
+      border-color: $color-synthwavesunsetred;
+    }
+  }
+
+  a::after {
+    display: none;
+  }
+
+  .gravatar-small {
+    backface-visibility: hidden;
+    border: 2px solid $color-black;
+    border-radius: 50%;
+    height: 22px;
+    margin-right: 1rem;
+    overflow: hidden;
+    transition: border-color .55s cubic-bezier(.19, 1, .22, 1), background-color .2s cubic-bezier(.19, 1, .22, 1);
+    width: 22px;
+  }
+}
+
+.date-single {
+  font-size: var(--font-size-small);
+  opacity: .7;
+  order: 2;
 }
 
 .comment-on-twitter {
@@ -70,7 +115,6 @@
   margin-top: 8rem;
   text-decoration: none;
 
-  /* stylelint-disable a11y/no-display-none */
   &::after {
     display: none;
   }
@@ -165,6 +209,36 @@
   padding-left: 0;
   padding-right: 0;
   padding-top: var(--padding-block);
+
+  // Links within content
+  p:not([class]) > a {
+    border-bottom: 1px solid $color-fuchsia;
+    color: $color-fuchsia;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: border-color .33s cubic-bezier(.19, 1, .22, 1), color .2s cubic-bezier(.19, 1, .22, 1);
+
+    &::after {
+      background-image: url('../../svg/external-link-fuchsia.svg');
+    }
+
+    &:focus {
+      border-color: $color-black;
+      color: $color-black;
+      text-decoration: none;
+
+      &::after {
+        background-image: url('../../svg/external-link-black.svg');
+      }
+    }
+  }
+
+  // With exceptions for those that are already styled:
+  .comments-link a,
+  .tags a,
+  .cat a {
+    text-decoration: none;
+  }
 
   h1,
   h2,
@@ -325,7 +399,6 @@
     }
   }
 
-  /* stylelint-disable selector-max-compound-selectors */
   .wp-block-image figcaption,
   .wp-block-image .alignright > figcaption,
   .wp-block-image .aligncenter > figcaption,
@@ -333,7 +406,6 @@
     display: block;
     width: 100%;
   }
-  /* stylelint-enable selector-max-compound-selectors */
 
   .wp-block-image > figure {
     display: inline-block;
@@ -342,9 +414,7 @@
     &.alignleft,
     &.alignright {
       // Hack for keeping figcaption from flowing over floated image, this variable is set inline to the corresponding figure with gutenberg-helpers.js
-      /* stylelint-disable csstools/value-no-unknown-custom-properties */
       max-width: var(--child-img-width);
-      /* stylelint-enable */
     }
 
     &.alignleft,
@@ -359,9 +429,7 @@
         margin: 0;
 
         // Has to be important because we want to override inline width
-        /* stylelint-disable declaration-no-important */
         width: 100% !important;
-        /* stylelint-enable */
       }
 
       @media (max-width: $container-mobile) {
@@ -425,20 +493,16 @@
   div[style="width: 640px;"],
   .wp-video {
     // Forced to use important here, because embeds inline stuff
-    /* stylelint-disable declaration-no-important */
     margin-left: auto !important;
     margin-right: auto !important;
     max-width: $width-max-article !important;
     width: 100% !important;
-    /* stylelint-enable */
   }
 
   > figure.wp-caption {
     // Forced to use important here, because embeds inline stuff
-    /* stylelint-disable declaration-no-important */
     max-width: $width-max-article !important;
     width: 100% !important;
-    /* stylelint-enable */
   }
 
   > * {
@@ -455,7 +519,6 @@
     .is-provider-twitter,
     .is-provider-facebook {
       // Forced to use important here, because embeds inline stuff
-      /* stylelint-disable declaration-no-important */
       margin-left: auto !important;
       margin-right: auto !important;
       max-width: $width-max-article !important;
@@ -470,7 +533,6 @@
         padding-left: 2rem !important;
         padding-right: 2rem !important;
       }
-      /* stylelint-enable */
     }
 
     &.wp-block-image {
@@ -482,7 +544,6 @@
     &.instagram-media,
     &.wp-video {
       // Forced to use important here, because embeds inline stuff
-      /* stylelint-disable declaration-no-important */
       margin-left: auto !important;
       margin-right: auto !important;
       max-width: $width-max-article !important;
@@ -497,7 +558,6 @@
         padding-left: 2rem !important;
         padding-right: 2rem !important;
       }
-      /* stylelint-enable */
     }
 
     &.alignwide {
@@ -545,7 +605,6 @@
 
   @media (max-width: $width-max-article + 40px) {
     // Forced to use important here, because embeds inline stuff
-    /* stylelint-disable declaration-no-important */
     width: 100% !important;
     /* stylelint-enable */
   }
@@ -647,6 +706,7 @@ pre {
 }
 
 // Blog post tag styles
+/* stylelint-disable no-descending-specificity */
 ul.tags {
   list-style: none;
   margin-bottom: var(--margin-between-text-elements);

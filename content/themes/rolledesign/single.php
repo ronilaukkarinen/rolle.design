@@ -5,7 +5,7 @@
  *
  * @Date:   2019-10-15 12:30:02
  * @Last Modified by: Roni Laukkarinen
- * @Last Modified time: 2021-04-01 21:14:17
+ * @Last Modified time: 2021-04-01 22:21:45
  * @package rolle
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  */
@@ -24,16 +24,19 @@ get_header(); ?>
 
       <h1><?php the_title(); ?></h1>
 
-      <?php the_content(); ?>
+      <?php
+        the_content();
+        entry_footer();
+      ?>
 
       <?php if ( ! empty( $url_to_tweet ) ) : ?>
         <p class="comment-on-twitter"><a href="<?php echo esc_url( $url_to_tweet ); ?>">Comment on Twitter <?php include get_theme_file_path( '/svg/twitter.svg' ); ?></a></p>
       <?php endif; ?>
 
-      <?php entry_footer();
-      if ( get_edit_post_link() ) {
-        edit_post_link( sprintf( wp_kses( __( 'Edit <span class="screen-reader-text">%s</span>', 'rolle' ), [ 'span' => [ 'class' => [] ] ] ), get_the_title() ), '<p class="edit-link">', '</p>' );
-      }
+      <?php
+        if ( get_edit_post_link() ) {
+          edit_post_link( sprintf( wp_kses( __( 'Edit <span class="screen-reader-text">%s</span>', 'rolle' ), [ 'span' => [ 'class' => [] ] ] ), get_the_title() ), '<p class="edit-link">', '</p>' );
+        }
       ?>
 
     </div>
