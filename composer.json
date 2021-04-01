@@ -4,8 +4,7 @@
   "license": "MIT",
   "description": "A modern WordPress stack",
   "homepage": "https://github.com/digitoimistodude/dudestack",
-  "authors": [
-    {
+  "authors": [{
       "name": "Roni Laukkarinen",
       "email": "roni@dude.fi",
       "homepage": "https://github.com/ronilaukkarinen"
@@ -22,19 +21,20 @@
   "support": {
     "issues": "https://github.com/digitoimistodude/dudestack/issues"
   },
-   "config": {
+  "config": {
     "preferred-install": "dist",
     "generate-salts": true,
     "secure-http": true
   },
   "autoload": {
-    "psr-4": {"Roots\\Bedrock\\": "scripts/Roots/Bedrock"}
+    "psr-4": {
+      "Roots\\Bedrock\\": "scripts/Roots/Bedrock"
+    }
   },
   "scripts": {
     "post-root-package-install": ["Roots\\Bedrock\\Installer::addSalts"]
-   },
-  "repositories": [
-    {
+  },
+  "repositories": [{
       "type": "composer",
       "url": "https://wpackagist.org",
       "minimum-stability": "dev"
@@ -42,6 +42,10 @@
     {
       "type": "composer",
       "url": "https://wp-languages.github.io"
+    },
+    {
+      "type": "composer",
+      "url": "https://pivvenit.github.io/acf-composer-bridge/composer/v3/wordpress-plugin/"
     }
   ],
   "require": {
@@ -57,20 +61,15 @@
     "johnpbloch/wordpress": "5.7",
     "digitoimistodude/air-helper": "*",
     "wpackagist-plugin/classic-editor": "*",
-    "wpackagist-plugin/koko-analytics": "*",
-    "wpackagist-plugin/imagify": "*",
     "wpackagist-plugin/simple-history": "*",
     "wpackagist-plugin/sendgrid-email-delivery-simplified": "*",
     "wpackagist-plugin/worker": "*",
     "wpackagist-plugin/redis-cache": "*",
-    "wpackagist-plugin/autodescription": "*",
-    "wpackagist-plugin/gravity-forms-wcag-20-form-fields": "*"
+    "wpackagist-plugin/wordpress-seo": "*",
+    "wpackagist-plugin/so-clean-up-wp-seo": "*",
+    "advanced-custom-fields/advanced-custom-fields-pro": "5.9.5"
   },
-  "require-dev": {
-    "rarst/wps": "*",
-    "rarst/laps": "*",
-    "wpackagist-plugin/query-monitor": "*"
-  },
+  "require-dev": {},
   "extra": {
     "dropin-paths": {
       "content/languages/": ["vendor:koodimonni-language"],
@@ -78,8 +77,7 @@
       "content/languages/themes/": ["vendor:koodimonni-theme-language"]
     },
     "installer-paths": {
-      "content/mu-plugins/{$name}/": ["type:wordpress-muplugin"
-      ],
+      "content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
       "content/plugins/{$name}/": ["type:wordpress-plugin"],
       "content/themes/{$name}/": ["type:wordpress-theme"]
     },

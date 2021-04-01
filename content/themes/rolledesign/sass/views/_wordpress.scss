@@ -1,0 +1,248 @@
+.block.block-hero.block-hero-wordpress {
+  h1 svg {
+    fill: #0173aa;
+    height: 8rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    width: 8rem;
+  }
+
+  p {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  a {
+    color: #0173aa;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    color: #21252b;
+  }
+}
+
+// Official WordPress badge styles
+.badge {
+  border: 2px solid #f7f7f7;
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 32px;
+  left: 0;
+  margin: 4px;
+  padding: 2px;
+  position: absolute;
+  top: 8px;
+  width: 32px;
+}
+
+.badge-themes {
+  background: transparent;
+  box-shadow: 0 0 0 4px rgb(78, 50, 136);
+  fill: rgb(78, 50, 136);
+}
+
+.badge-translation-contributor {
+  background: transparent;
+  box-shadow: 0 0 0 4px rgb(195, 34, 131);
+  fill: rgb(195, 34, 131);
+}
+
+.badge-translation-editor {
+  background: rgba(195, 34, 131, .25);
+  box-shadow: 0 0 0 4px rgb(195, 34, 131);
+  fill: rgb(195, 34, 131);
+}
+
+.badge-speaker {
+  background: transparent;
+  box-shadow: 0 0 0 4px rgb(247, 173, 67);
+  fill: rgb(247, 173, 67);
+}
+
+.badge-plugins {
+  background: transparent;
+  box-shadow: 0 0 0 4px rgb(240, 103, 35);
+  fill: rgb(240, 103, 35);
+}
+
+.badge-community-contributor {
+  background: transparent;
+  box-shadow: 0 0 0 4px rgb(17, 121, 157);
+  fill: rgb(17, 121, 157);
+}
+
+.badge-community {
+  background: rgba(17, 121, 157, .25);
+  box-shadow: 0 0 0 4px rgb(17, 121, 157);
+  fill: rgb(17, 121, 157);
+}
+
+.badge-code {
+  background: transparent;
+  box-shadow: 0 0 0 4px rgb(205, 0, 0);
+  fill: rgb(205, 0, 0);
+}
+
+.badge-meta-contributor {
+  background: transparent;
+  box-shadow: 0 0 0 4px rgb(174, 173, 173);
+  fill: rgb(174, 173, 173);
+}
+
+.badge-organizer {
+  background: transparent;
+  box-shadow: 0 0 0 4px rgb(247, 173, 67);
+  fill: rgb(247, 173, 67);
+}
+
+.item-list {
+  @include grid(3, $gutter_x: 30px, $gutter_y: 30px);
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  max-width: $width-grid-base;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  text-align: left;
+
+  @media (max-width: 800px) {
+    @include grid(2, $gutter_x: 30px, $gutter_y: 30px);
+  }
+
+  @media (max-width: 535px) {
+    display: block;
+  }
+}
+
+.item-list li {
+  border-bottom: 0;
+  box-sizing: border-box;
+  color: #444;
+  display: inline-block;
+  font-size: 17px;
+  padding: 18px 0 16px 55px;
+  position: relative;
+}
+
+.open-source {
+  margin-top: 6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  // Pinned GitHub items
+  .repos {
+    @include grid(3, $gutter_x: 3rem);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $width-grid-base;
+
+    @media (min-width: 900px) {
+      max-width: 100rem;
+      width: 100%;
+    }
+
+    @media (max-width: 1000px) {
+      @include grid(2, $gutter_x: 3rem, $gutter_y: 3rem);
+    }
+
+    @media (max-width: 600px) {
+      display: block;
+    }
+  }
+
+  .repo {
+    background: #fff;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    max-width: 42rem;
+    padding: 2rem;
+    width: 100%;
+
+    @media (max-width: 1200px) {
+      max-width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      margin-bottom: 3rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h3,
+    p {
+      @extend %default;
+      margin: 0;
+    }
+
+    h3 {
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 svg {
+      margin-right: 1rem;
+    }
+
+    ul,
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 1.5rem;
+    }
+
+    ul li {
+      font-size: 16px;
+      margin-right: 2.5rem;
+
+      &:nth-child(3) svg {
+        margin-right: .6rem;
+      }
+    }
+
+    li svg {
+      margin-right: .5rem;
+    }
+
+    ul li,
+    p,
+    h3 {
+      @include responsive-font(16px, 18px);
+    }
+
+    ul li,
+    h3 a {
+      align-items: center;
+      display: flex;
+    }
+
+    .circle {
+      border-radius: 50%;
+      display: inline-block;
+      height: 12px;
+      margin-right: .8rem;
+      position: relative;
+      width: 12px;
+    }
+
+    .css {
+      background-color: #563d7c;
+    }
+
+    .php {
+      background-color: #4f5d95;
+    }
+  }
+}

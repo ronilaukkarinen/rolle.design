@@ -6,8 +6,8 @@
  * own files under /inc and just require here.
  *
  * @Date: 2019-10-15 12:30:02
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-02-23 13:40:37
+ * @Last Modified by: Roni Laukkarinen
+ * @Last Modified time: 2021-04-01 18:30:05
  *
  * @package rolle
  */

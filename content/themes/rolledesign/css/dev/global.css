@@ -871,7 +871,9 @@ input[type="number"],
 input[type="month"],
 input[type="week"],
 input[type="email"],
-input[type="search"] {
+input[type="search"],
+.open-source .repo h3,
+.open-source .repo p {
   font-size: var(--font-size-small);
   line-height: 1.7;
 }
@@ -905,7 +907,9 @@ input[type="search"] {
   input[type="month"],
   input[type="week"],
   input[type="email"],
-  input[type="search"] {
+  input[type="search"],
+  .open-source .repo h3,
+  .open-source .repo p {
     font-size: 17px;
   }
 }
@@ -939,7 +943,9 @@ input[type="search"] {
   input[type="month"],
   input[type="week"],
   input[type="email"],
-  input[type="search"] {
+  input[type="search"],
+  .open-source .repo h3,
+  .open-source .repo p {
     font-size: calc(17px + 3 * ((100vw - 320px) / 1600));
   }
 }
@@ -973,7 +979,9 @@ input[type="search"] {
   input[type="month"],
   input[type="week"],
   input[type="email"],
-  input[type="search"] {
+  input[type="search"],
+  .open-source .repo h3,
+  .open-source .repo p {
     font-size: 20px;
   }
 }
@@ -3092,6 +3100,493 @@ body *[aria-invalid="true"] {
   .block-error-404 h1 {
     font-size: 200px;
   }
+}
+
+.block.block-hero.block-hero-wordpress h1 svg {
+  fill: #0173aa;
+  height: 8rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  width: 8rem;
+}
+
+.block.block-hero.block-hero-wordpress p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.block.block-hero.block-hero-wordpress a {
+  color: #0173aa;
+  text-decoration: none;
+}
+
+.block.block-hero.block-hero-wordpress a:hover,
+.block.block-hero.block-hero-wordpress a:focus {
+  color: #21252b;
+}
+
+.badge {
+  border: 2px solid #f7f7f7;
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 32px;
+  left: 0;
+  margin: 4px;
+  padding: 2px;
+  position: absolute;
+  top: 8px;
+  width: 32px;
+}
+
+.badge-themes {
+  background: transparent;
+  box-shadow: 0 0 0 4px #4e3288;
+  fill: #4e3288;
+}
+
+.badge-translation-contributor {
+  background: transparent;
+  box-shadow: 0 0 0 4px #c32283;
+  fill: #c32283;
+}
+
+.badge-translation-editor {
+  background: rgba(195, 34, 131, 0.25);
+  box-shadow: 0 0 0 4px #c32283;
+  fill: #c32283;
+}
+
+.badge-speaker {
+  background: transparent;
+  box-shadow: 0 0 0 4px #f7ad43;
+  fill: #f7ad43;
+}
+
+.badge-plugins {
+  background: transparent;
+  box-shadow: 0 0 0 4px #f06723;
+  fill: #f06723;
+}
+
+.badge-community-contributor {
+  background: transparent;
+  box-shadow: 0 0 0 4px #11799d;
+  fill: #11799d;
+}
+
+.badge-community {
+  background: rgba(17, 121, 157, 0.25);
+  box-shadow: 0 0 0 4px #11799d;
+  fill: #11799d;
+}
+
+.badge-code {
+  background: transparent;
+  box-shadow: 0 0 0 4px #cd0000;
+  fill: #cd0000;
+}
+
+.badge-meta-contributor {
+  background: transparent;
+  box-shadow: 0 0 0 4px #aeadad;
+  fill: #aeadad;
+}
+
+.badge-organizer {
+  background: transparent;
+  box-shadow: 0 0 0 4px #f7ad43;
+  fill: #f7ad43;
+}
+
+.item-list {
+  display: grid;
+  /* autoprefixer: off */
+  grid-auto-rows: minmax(0, auto);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  max-width: 1200px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  text-align: left;
+}
+
+@supports not (display: grid) {
+  .item-list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .item-list > div {
+    margin-bottom: 30px;
+    margin-right: 30px;
+    width: calc(33.33333% - 30px);
+  }
+  .item-list > div:nth-child(3n+3) {
+    margin-right: 0;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .item-list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .item-list > div {
+    margin-bottom: 30px;
+    margin-right: 30px;
+    width: calc(33.33333% - 30px);
+  }
+  .item-list > div:nth-child(3n+3) {
+    margin-right: 0;
+  }
+}
+
+@supports (-ms-ime-align: auto) {
+  .item-list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .item-list > div {
+    margin-bottom: 30px;
+    margin-right: 30px;
+    width: calc(33.33333% - 30px);
+  }
+  .item-list > div:nth-child(3n+3) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .item-list {
+    display: grid;
+    /* autoprefixer: off */
+    grid-auto-rows: minmax(0, auto);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @supports not (display: grid) {
+    .item-list {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .item-list > div {
+      margin-bottom: 30px;
+      margin-right: 30px;
+      width: calc(50% - 30px);
+    }
+    .item-list > div:nth-child(2n+2) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media all and (max-width: 800px) and (-ms-high-contrast: none), (max-width: 800px) and (-ms-high-contrast: active) {
+  .item-list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .item-list > div {
+    margin-bottom: 30px;
+    margin-right: 30px;
+    width: calc(50% - 30px);
+  }
+  .item-list > div:nth-child(2n+2) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  @supports (-ms-ime-align: auto) {
+    .item-list {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .item-list > div {
+      margin-bottom: 30px;
+      margin-right: 30px;
+      width: calc(50% - 30px);
+    }
+    .item-list > div:nth-child(2n+2) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 535px) {
+  .item-list {
+    display: block;
+  }
+}
+
+.item-list li {
+  border-bottom: 0;
+  box-sizing: border-box;
+  color: #444;
+  display: inline-block;
+  font-size: 17px;
+  padding: 18px 0 16px 55px;
+  position: relative;
+}
+
+.open-source {
+  margin-top: 6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.open-source .repos {
+  display: grid;
+  /* autoprefixer: off */
+  grid-auto-rows: minmax(0, auto);
+  grid-column-gap: 3rem;
+  grid-row-gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+@supports not (display: grid) {
+  .open-source .repos {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .open-source .repos > div {
+    margin-bottom: 16px;
+    margin-right: 3rem;
+    width: calc(33.33333% - 3rem);
+  }
+  .open-source .repos > div:nth-child(3n+3) {
+    margin-right: 0;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .open-source .repos {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .open-source .repos > div {
+    margin-bottom: 16px;
+    margin-right: 3rem;
+    width: calc(33.33333% - 3rem);
+  }
+  .open-source .repos > div:nth-child(3n+3) {
+    margin-right: 0;
+  }
+}
+
+@supports (-ms-ime-align: auto) {
+  .open-source .repos {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .open-source .repos > div {
+    margin-bottom: 16px;
+    margin-right: 3rem;
+    width: calc(33.33333% - 3rem);
+  }
+  .open-source .repos > div:nth-child(3n+3) {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .open-source .repos {
+    max-width: 100rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .open-source .repos {
+    display: grid;
+    /* autoprefixer: off */
+    grid-auto-rows: minmax(0, auto);
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @supports not (display: grid) {
+    .open-source .repos {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .open-source .repos > div {
+      margin-bottom: 3rem;
+      margin-right: 3rem;
+      width: calc(50% - 3rem);
+    }
+    .open-source .repos > div:nth-child(2n+2) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media all and (max-width: 1000px) and (-ms-high-contrast: none), (max-width: 1000px) and (-ms-high-contrast: active) {
+  .open-source .repos {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .open-source .repos > div {
+    margin-bottom: 3rem;
+    margin-right: 3rem;
+    width: calc(50% - 3rem);
+  }
+  .open-source .repos > div:nth-child(2n+2) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  @supports (-ms-ime-align: auto) {
+    .open-source .repos {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .open-source .repos > div {
+      margin-bottom: 3rem;
+      margin-right: 3rem;
+      width: calc(50% - 3rem);
+    }
+    .open-source .repos > div:nth-child(2n+2) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .open-source .repos {
+    display: block;
+  }
+}
+
+.open-source .repo {
+  background: #fff;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  max-width: 42rem;
+  padding: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .open-source .repo {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .open-source .repo {
+    margin-bottom: 3rem;
+  }
+  .open-source .repo:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.open-source .repo h3,
+.open-source .repo p {
+  margin: 0;
+}
+
+.open-source .repo h3 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.open-source .repo h3 svg {
+  margin-right: 1rem;
+}
+
+.open-source .repo ul,
+.open-source .repo li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.open-source .repo ul {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+}
+
+.open-source .repo ul li {
+  font-size: 16px;
+  margin-right: 2.5rem;
+}
+
+.open-source .repo ul li:nth-child(3) svg {
+  margin-right: .6rem;
+}
+
+.open-source .repo li svg {
+  margin-right: .5rem;
+}
+
+.open-source .repo ul li,
+.open-source .repo p,
+.open-source .repo h3 {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  .open-source .repo ul li,
+  .open-source .repo p,
+  .open-source .repo h3 {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .open-source .repo ul li,
+  .open-source .repo p,
+  .open-source .repo h3 {
+    font-size: 18px;
+  }
+}
+
+.open-source .repo ul li,
+.open-source .repo h3 a {
+  align-items: center;
+  display: flex;
+}
+
+.open-source .repo .circle {
+  border-radius: 50%;
+  display: inline-block;
+  height: 12px;
+  margin-right: .8rem;
+  position: relative;
+  width: 12px;
+}
+
+.open-source .repo .css {
+  background-color: #563d7c;
+}
+
+.open-source .repo .php {
+  background-color: #4f5d95;
 }
 
 .wp-block.is-style-boxed,
