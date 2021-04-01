@@ -49,10 +49,6 @@ module.exports = {
         cert: "/var/www/certs/localhost.pem",
       }
     },
-    watch: [
-      themeDir + '**/*.php',
-      themeDir + 'js/src/**/*.js'
-    ]
   },
   styles: {
     gutenberg: themeDir + 'sass/base/gutenberg.scss',
@@ -61,6 +57,7 @@ module.exports = {
     development: themeDir + 'css/dev/',
     production: themeDir + 'css/prod/',
     stylelint: {
+      watch: themeDir + 'sass/**/*.scss',
       opts: {
         fix: false,
         ignoreFiles: ['!*.scss'],
