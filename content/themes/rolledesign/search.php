@@ -5,8 +5,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
  * @Date:   2019-10-15 12:30:02
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-01-12 17:23:47
+ * @Last Modified by: Roni Laukkarinen
+ * @Last Modified time: 2021-04-01 18:21:47
  * @package rolle
  */
 
@@ -36,8 +36,6 @@ foreach ( $results as $slug => $post_type ) {
 get_header(); ?>
 
 <main class="site-main">
-
-  <?php get_template_part( 'template-parts/hero', get_post_type() ); ?>
   <section class="block block-search">
     <div class="container">
       <h1><?php echo esc_html( get_default_localization( 'Search' ) ); ?></h1>

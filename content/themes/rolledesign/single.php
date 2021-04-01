@@ -4,8 +4,8 @@
  *
  *
  * @Date:   2019-10-15 12:30:02
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-01-12 16:11:09
+ * @Last Modified by: Roni Laukkarinen
+ * @Last Modified time: 2021-04-01 18:23:38
  * @package rolle
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  */
@@ -16,8 +16,6 @@ the_post();
 get_header(); ?>
 
 <main class="site-main">
-
-  <?php get_template_part( 'template-parts/hero', get_post_type() ); ?>
   <section class="block block-single has-light-bg">
     <div class="gutenberg-content">
 

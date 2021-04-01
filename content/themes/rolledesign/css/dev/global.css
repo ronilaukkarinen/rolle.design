@@ -458,7 +458,7 @@ template {
 }
 
 .screen-reader-text.skip-link:focus, .gform_body .skip-link.gform_validation_container:focus {
-  background-color: #045ee2;
+  background-color: #2a2d3e;
   color: white;
 }
 
@@ -686,7 +686,7 @@ a.is-external-link.no-external-link-indicator::after {
 }
 
 .shade {
-  background-color: #045ee2;
+  background-color: #2a2d3e;
   height: 100%;
   left: 0;
   opacity: .35;
@@ -835,7 +835,7 @@ body {
 }
 
 a {
-  color: #045ee2;
+  color: #2a2d3e;
   text-decoration: none;
 }
 
@@ -984,7 +984,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #045ee2;
+  color: #2a2d3e;
   font-family: "Inter", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
   font-weight: 700;
   margin-bottom: 2.7rem;
@@ -1446,8 +1446,8 @@ pre {
 .site-footer input[type="submit"]:focus,
 .site-footer input[type="button"]:hover,
 .site-footer input[type="button"]:focus {
-  background-color: #045ee2;
-  border-color: #045ee2;
+  background-color: #2a2d3e;
+  border-color: #2a2d3e;
   color: white;
 }
 
@@ -1487,8 +1487,8 @@ pre {
 .site-footer input[type="submit"].button-ghost:hover,
 .site-footer input[type="button"].button-ghost:focus,
 .site-footer input[type="button"].button-ghost:hover {
-  background-color: #045ee2;
-  border-color: #045ee2;
+  background-color: #2a2d3e;
+  border-color: #2a2d3e;
   color: white;
 }
 
@@ -2064,7 +2064,7 @@ input[type="checkbox"]:not(:checked):not(:focus) + label:hover::before {
 
 .gutenberg-content > blockquote,
 .gutenberg-content > blockquote.wp-block-quote {
-  border-left: 2px solid #045ee2;
+  border-left: 2px solid #2a2d3e;
   line-height: 1.77;
   margin-bottom: 4rem;
   margin-left: auto;
@@ -2091,7 +2091,7 @@ input[type="checkbox"]:not(:checked):not(:focus) + label:hover::before {
 
 .gutenberg-content > blockquote > p,
 .gutenberg-content > blockquote.wp-block-quote > p {
-  color: #045ee2;
+  color: #2a2d3e;
   line-height: 1.77;
 }
 
@@ -2756,7 +2756,7 @@ div.lazy {
   border-left: 1px solid #ece6f2;
   border-right: 1px solid #ece6f2;
   border-top: 2px solid #ece6f2;
-  color: #045ee2;
+  color: #2a2d3e;
   display: flex;
   font-weight: 500;
   height: 35px;
@@ -2790,14 +2790,14 @@ div.lazy {
 
 a.page-numbers:hover,
 a.page-numbers:focus {
-  background-color: #045ee2;
-  border-color: #045ee2;
+  background-color: #2a2d3e;
+  border-color: #2a2d3e;
   color: #fff;
 }
 
 .page-numbers.current {
-  background-color: #045ee2;
-  border-color: #045ee2;
+  background-color: #2a2d3e;
+  border-color: #2a2d3e;
   color: #fff;
 }
 
@@ -2858,7 +2858,7 @@ body *[aria-invalid="true"] {
 }
 
 .gform_body .gfield_required {
-  color: #045ee2;
+  color: #2a2d3e;
   font-size: var(--font-size-huge);
   position: relative;
   top: 3px;
@@ -3062,11 +3062,11 @@ body *[aria-invalid="true"] {
 
 .block-search-results .tags a {
   background-color: #eaf1f8;
-  color: #045ee2;
+  color: #2a2d3e;
 }
 
 .block-search-results .tags a:hover, .block-search-results .tags a:focus {
-  background-color: #045ee2;
+  background-color: #2a2d3e;
   color: #eaf1f8;
 }
 
@@ -3144,8 +3144,8 @@ body *[aria-invalid="true"] {
 }
 
 .wp-block-button__link:hover, .wp-block-button__link:focus {
-  background-color: #045ee2;
-  border-color: #045ee2;
+  background-color: #2a2d3e;
+  border-color: #2a2d3e;
   color: white;
 }
 

@@ -8,8 +8,8 @@
  * E.g., it puts together the home page when no home.php file exists.
  *
  * @Date:   2019-10-15 12:30:02
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-03-17 10:17:21
+ * @Last Modified by: Roni Laukkarinen
+ * @Last Modified time: 2021-04-01 18:21:54
  * @package rolle
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
@@ -19,8 +19,6 @@ namespace Air_Light;
 get_header(); ?>
 
 <main class="site-main">
-
-  <?php get_template_part( 'template-parts/hero', get_post_type() ); ?>
   <section class="block block-blog has-light-bg">
     <div class="container">
 
