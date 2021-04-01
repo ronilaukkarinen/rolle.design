@@ -57,7 +57,7 @@ module.exports = {
     development: themeDir + 'css/dev/',
     production: themeDir + 'css/prod/',
     stylelint: {
-      watch: themeDir + 'sass/**/*.scss',
+      src: themeDir + 'sass/**/*.scss',
       opts: {
         fix: false,
         ignoreFiles: ['!*.scss'],
