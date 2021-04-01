@@ -7,7 +7,7 @@
  * @Author: Roni Laukkarinen
  * @Date: 2020-05-11 13:33:49
  * @Last Modified by: Roni Laukkarinen
- * @Last Modified time: 2021-04-01 18:09:25
+ * @Last Modified time: 2021-04-01 18:17:17
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  * @package rolle
@@ -19,7 +19,7 @@ namespace Air_Light;
 
 </div><!-- #content -->
 
-<footer id="colophon" class="block block-my-things site-footer has-light-bg">
+<footer id="colophon" class="block block-has-space block-my-things site-footer has-light-bg">
 
   <div class="head">
     <p>I keep myself constantly busy. Everything is changing.</p>

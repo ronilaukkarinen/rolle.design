@@ -7,7 +7,7 @@
  *
  * @Date:   2019-10-15 12:30:02
  * @Last Modified by: Roni Laukkarinen
- * @Last Modified time: 2021-04-01 17:58:23
+ * @Last Modified time: 2021-04-01 18:17:33
  * @package rolle
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
@@ -16,7 +16,7 @@ namespace Air_Light;
 
 get_header(); ?>
 <main class="site-main">
-  <section class="block block-hero" id="hero">
+  <section class="block block-hero block-has-space" id="hero">
     <div class="content">
       <h1><span>Ron</span> <span>the</span> <span>don.</span></h1>
       <p>Just say <span>Rolle</span>. My full name is Roni Laukkarinen and I'm a web designer and developer from Finland.</p>
@@ -28,7 +28,7 @@ get_header(); ?>
     </div>
   </section>
 
-  <secton class="block block-doing-stuff">
+  <secton class="block block-doing-stuff block-has-space">
     <div class="head">
       <p>I like to create things like</p>
       <h2><span>Design,</span> <span>code,</span> <span>servers,</span> <span>articles.</span></h2>

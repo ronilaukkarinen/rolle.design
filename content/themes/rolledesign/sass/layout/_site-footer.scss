@@ -1,9 +1,8 @@
 /* stylelint-disable a11y/no-display-none */
+
 .block-doing-stuff {
   display: block;
   overflow: hidden;
-  padding-bottom: 8rem;
-  padding-top: 8rem;
   text-align: center;
 
   p {
@@ -25,8 +24,6 @@
 }
 
 .block-my-things {
-  padding-bottom: 8rem;
-  padding-top: 8rem;
   text-align: center;
 
   h2,

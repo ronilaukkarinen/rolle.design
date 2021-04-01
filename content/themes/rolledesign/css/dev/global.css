@@ -678,6 +678,13 @@ a.is-external-link.no-external-link-indicator::after {
   position: relative;
 }
 
+.block-has-space {
+  padding-bottom: var(--padding-block);
+  padding-left: var(--padding-container-horizontal);
+  padding-right: var(--padding-container-horizontal);
+  padding-top: var(--padding-block);
+}
+
 .shade {
   background-color: #045ee2;
   height: 100%;
@@ -1264,8 +1271,6 @@ pre {
 .block-doing-stuff {
   display: block;
   overflow: hidden;
-  padding-bottom: 8rem;
-  padding-top: 8rem;
   text-align: center;
 }
 
@@ -1299,8 +1304,6 @@ pre {
 }
 
 .block-my-things {
-  padding-bottom: 8rem;
-  padding-top: 8rem;
   text-align: center;
 }
 

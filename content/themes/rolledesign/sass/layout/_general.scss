@@ -15,6 +15,14 @@
   position: relative;
 }
 
+// Rolle.wtf specific
+.block-has-space {
+  padding-bottom: var(--padding-block);
+  padding-left: var(--padding-container-horizontal);
+  padding-right: var(--padding-container-horizontal);
+  padding-top: var(--padding-block);
+}
+
 // Default shade on top of blocks
 .shade {
   background-color: $color-main;
