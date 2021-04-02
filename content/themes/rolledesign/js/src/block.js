@@ -5,5 +5,5 @@
 // eslint-disable-next-line no-undef
 wp.blocks.registerBlockStyle('core/heading', {
   name: 'ingress',
-  label: 'Ingressi',
+  label: 'Ingress',
 });

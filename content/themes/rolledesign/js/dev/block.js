@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("/**\n * Declare the block you'd like to style.\n * Duplicate and customize the four lines below for each style variation you'd like to add.\n */\n// eslint-disable-next-line no-undef\nwp.blocks.registerBlockStyle('core/heading', {\n  name: 'ingress',\n  label: 'Ingressi'\n});\n\n//# sourceURL=webpack:///./content/themes/rolledesign/js/src/block.js?");
+eval("/**\n * Declare the block you'd like to style.\n * Duplicate and customize the four lines below for each style variation you'd like to add.\n */\n// eslint-disable-next-line no-undef\nwp.blocks.registerBlockStyle('core/heading', {\n  name: 'ingress',\n  label: 'Ingress'\n});\n\n//# sourceURL=webpack:///./content/themes/rolledesign/js/src/block.js?");
 
 /***/ }),
 
