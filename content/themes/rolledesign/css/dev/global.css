@@ -1852,13 +1852,12 @@ pre {
 
 @media (max-width: 760px) {
   .gutenberg-content {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    width: calc(100% - 4rem);
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
   }
   .gutenberg-content pre {
     margin-left: 0;
-    width: calc(100% - 8rem);
   }
   .gutenberg-content ol,
   .gutenberg-content ul {
@@ -2034,6 +2033,14 @@ pre {
   width: 100%;
 }
 
+@media (max-width: 760px) {
+  .gutenberg-content > * {
+    max-width: calc(100% - 4rem);
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .gutenberg-content > * .twitter-tweet,
 .gutenberg-content > * .instagram-media,
 .gutenberg-content > * .wp-video,
@@ -2123,6 +2130,8 @@ pre {
   margin-bottom: 8rem;
   margin-top: 8rem;
   max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
   width: 100%;
 }
 
@@ -3836,6 +3845,12 @@ h1.big-title {
   padding-bottom: var(--padding-container-vertical);
   padding-left: var(--padding-container-horizontal);
   padding-right: var(--padding-container-horizontal);
+}
+
+@media (max-width: 800px) {
+  .block-hero-dont-fade .content {
+    padding-bottom: 20rem;
+  }
 }
 
 .block-hero-now ul {

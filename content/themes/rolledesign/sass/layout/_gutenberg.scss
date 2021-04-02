@@ -313,13 +313,12 @@ $color-twitter: #1da1f2;
   }
 
   @media (max-width: $width-max-article + 40px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    width: calc(100% - 4rem);
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
 
     pre {
       margin-left: 0;
-      width: calc(100% - 8rem);
     }
 
     ol,
@@ -488,6 +487,12 @@ $color-twitter: #1da1f2;
     max-width: $width-max-article;
     width: 100%;
 
+    @media (max-width: $width-max-article + 40px) {
+      max-width: calc(100% - 4rem);
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
     .twitter-tweet,
     .instagram-media,
     .wp-video,
@@ -561,6 +566,8 @@ $color-twitter: #1da1f2;
       margin-bottom: 8rem;
       margin-top: 8rem;
       max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
       width: 100%;
 
       img {

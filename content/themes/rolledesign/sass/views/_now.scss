@@ -31,6 +31,10 @@
     padding-bottom: var(--padding-container-vertical);
     padding-left: var(--padding-container-horizontal);
     padding-right: var(--padding-container-horizontal);
+
+    @media (max-width: 800px) {
+      padding-bottom: 20rem;
+    }
   }
 }
 
