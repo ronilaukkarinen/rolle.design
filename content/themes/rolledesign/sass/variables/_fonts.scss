@@ -43,16 +43,28 @@ $font-weight-headings: 700;
   --font-size-large: #{$font-size-large};
   --font-size-extra-large: #{$font-size-extra-large};
   --font-size-huge: #{$font-size-huge};
-  --font-size-nav-toggle-label: 15px;
-
-  // Codyhouse helper variables
   --body-line-height: #{$line-height-paragraphs};
   --heading-line-height: #{$line-height-headings};
+  --font-size-nav-toggle-label: 15px;
+  --font-size-blog-main-heading: 46px;
+  --font-size-blog-supplementary-heading: 30px;
+
+  @media (max-width: $width-max-article + 40px) {
+    --font-size-blog-main-heading: 40px;
+    --font-size-blog-supplementary-heading: 28px;
+  }
 
   // Vars on iPad
   @media (max-width: $container-ipad) {
     --font-size-extra-large: 17px;
     --font-size-small: 17px;
+    --font-size-blog-main-heading: 38px;
+    --font-size-blog-supplementary-heading: 26px;
+  }
+
+  @media (max-width: 550px) {
+    --font-size-blog-main-heading: 32px;
+    --font-size-blog-supplementary-heading: 22px;
   }
 
   // Vars in mobile

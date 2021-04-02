@@ -114,6 +114,32 @@
   --font-size-huge: 22px;
   --body-line-height: 1.7;
   --heading-line-height: 1.5;
+  --font-size-nav-toggle-label: 15px;
+  --font-size-blog-main-heading: 46px;
+  --font-size-blog-supplementary-heading: 30px;
+}
+
+@media (max-width: 760px) {
+  :root {
+    --font-size-blog-main-heading: 40px;
+    --font-size-blog-supplementary-heading: 28px;
+  }
+}
+
+@media (max-width: 770px) {
+  :root {
+    --font-size-extra-large: 17px;
+    --font-size-small: 17px;
+    --font-size-blog-main-heading: 38px;
+    --font-size-blog-supplementary-heading: 26px;
+  }
+}
+
+@media (max-width: 550px) {
+  :root {
+    --font-size-blog-main-heading: 32px;
+    --font-size-blog-supplementary-heading: 22px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -224,10 +250,10 @@
 .wp-block.is-style-ingress,
 .is-style-ingress {
   font-family: -apple-system, "BlinkMacSystemFont", "Sofia Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 30px;
+  font-size: var(--font-size-blog-supplementary-heading);
   font-weight: 600;
   letter-spacing: -.02em;
-  line-height: 1.2;
+  line-height: 1.5;
   opacity: .8;
 }
 
@@ -248,7 +274,7 @@
 p[data-type="core/paragraph"] > a {
   border-bottom: 1px solid var(--color-fuchsia);
   color: var(--color-fuchsia);
-  line-height: 1.2;
+  line-height: 1.5;
   text-decoration: none;
   transition: border-color 0.33s cubic-bezier(0.19, 1, 0.22, 1), color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -301,7 +327,7 @@ p[data-type="core/paragraph"] > a:focus::after {
   font-family: -apple-system, "BlinkMacSystemFont", "Sofia Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   letter-spacing: -.02em;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 body.wp-admin div.edit-post-text-editor,

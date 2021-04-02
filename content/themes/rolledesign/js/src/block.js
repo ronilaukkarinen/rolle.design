@@ -7,3 +7,8 @@ wp.blocks.registerBlockStyle('core/heading', {
   name: 'ingress',
   label: 'Ingress',
 });
+
+wp.blocks.registerBlockStyle('core/paragraph', {
+  name: 'ingress',
+  label: 'Ingress',
+});

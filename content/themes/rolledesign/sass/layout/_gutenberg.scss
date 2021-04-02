@@ -161,9 +161,14 @@ $color-twitter: #1da1f2;
   width: 1em;
 }
 
+.block-single > .gutenberg-content > h1 {
+  font-size: var(--font-size-blog-main-heading);
+  line-height: 1.2;
+}
+
 .block-blog article > h2 {
-  @extend %h1;
   font-family: $font-headings-blog;
+  font-size: var(--font-size-blog-main-heading);
   letter-spacing: -.02em;
   line-height: 1.2;
   opacity: .8;
@@ -191,7 +196,7 @@ $color-twitter: #1da1f2;
   p:not([class]) > a {
     border-bottom: 1px solid var(--color-fuchsia);
     color: var(--color-fuchsia);
-    line-height: 1.2;
+    line-height: 1.5;
     text-decoration: none;
     transition: border-color .33s cubic-bezier(.19, 1, .22, 1), color .2s cubic-bezier(.19, 1, .22, 1);
 
@@ -226,7 +231,7 @@ $color-twitter: #1da1f2;
     font-family: $font-headings-blog;
     font-weight: 700;
     letter-spacing: -.02em;
-    line-height: 1.2;
+    line-height: 1.5;
 
     &:first-child {
       margin-top: 0;
@@ -306,7 +311,16 @@ $color-twitter: #1da1f2;
   h4,
   h5,
   .is-style-ingress {
-    line-height: 1.22;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-family: $font-headings-blog;
+    font-size: var(--font-size-blog-supplementary-heading);
+    font-weight: 600;
+    letter-spacing: -.02em;
+    line-height: 1.5;
+    opacity: .8;
   }
 
   img {

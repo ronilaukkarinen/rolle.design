@@ -434,15 +434,33 @@ html.is-animating .transition-fade {
   --font-size-large: 18px;
   --font-size-extra-large: 20px;
   --font-size-huge: 22px;
-  --font-size-nav-toggle-label: 15px;
   --body-line-height: 1.7;
   --heading-line-height: 1.5;
+  --font-size-nav-toggle-label: 15px;
+  --font-size-blog-main-heading: 46px;
+  --font-size-blog-supplementary-heading: 30px;
+}
+
+@media (max-width: 760px) {
+  :root {
+    --font-size-blog-main-heading: 40px;
+    --font-size-blog-supplementary-heading: 28px;
+  }
 }
 
 @media (max-width: 770px) {
   :root {
     --font-size-extra-large: 17px;
     --font-size-small: 17px;
+    --font-size-blog-main-heading: 38px;
+    --font-size-blog-supplementary-heading: 26px;
+  }
+}
+
+@media (max-width: 550px) {
+  :root {
+    --font-size-blog-main-heading: 32px;
+    --font-size-blog-supplementary-heading: 22px;
   }
 }
 
@@ -1118,21 +1136,18 @@ h6 {
   line-height: 1.5;
 }
 
-h1,
-.block-blog article > h2 {
+h1 {
   font-size: 32px;
 }
 
 @media screen and (min-width: 320px) {
-  h1,
-  .block-blog article > h2 {
+  h1 {
     font-size: calc(32px + 19 * ((100vw - 320px) / 1600));
   }
 }
 
 @media screen and (min-width: 1920px) {
-  h1,
-  .block-blog article > h2 {
+  h1 {
     font-size: 51px;
   }
 }
@@ -1654,8 +1669,14 @@ pre {
   width: 1em;
 }
 
+.block-single > .gutenberg-content > h1 {
+  font-size: var(--font-size-blog-main-heading);
+  line-height: 1.2;
+}
+
 .block-blog article > h2 {
   font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "San Francisco", "Inter", "Sofia Pro", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: var(--font-size-blog-main-heading);
   letter-spacing: -.02em;
   line-height: 1.2;
   opacity: .8;
@@ -1683,7 +1704,7 @@ pre {
 .gutenberg-content p:not([class]) > a {
   border-bottom: 1px solid var(--color-fuchsia);
   color: var(--color-fuchsia);
-  line-height: 1.2;
+  line-height: 1.5;
   text-decoration: none;
   transition: border-color 0.33s cubic-bezier(0.19, 1, 0.22, 1), color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -1720,7 +1741,7 @@ pre {
   font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "San Francisco", "Inter", "Sofia Pro", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   letter-spacing: -.02em;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 .gutenberg-content h1:first-child,
@@ -1847,7 +1868,16 @@ pre {
 .gutenberg-content h4,
 .gutenberg-content h5,
 .gutenberg-content .is-style-ingress {
-  line-height: 1.22;
+  line-height: 1.5;
+}
+
+.gutenberg-content h2 {
+  font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "San Francisco", "Inter", "Sofia Pro", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: var(--font-size-blog-supplementary-heading);
+  font-weight: 600;
+  letter-spacing: -.02em;
+  line-height: 1.5;
+  opacity: .8;
 }
 
 .gutenberg-content img {
@@ -3892,10 +3922,10 @@ h1.big-title {
 .wp-block.is-style-ingress,
 .is-style-ingress {
   font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "San Francisco", "Inter", "Sofia Pro", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 30px;
+  font-size: var(--font-size-blog-supplementary-heading);
   font-weight: 600;
   letter-spacing: -.02em;
-  line-height: 1.2;
+  line-height: 1.5;
   opacity: .8;
 }
 

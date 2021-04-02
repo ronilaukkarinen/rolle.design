@@ -3,9 +3,9 @@
 .wp-block.is-style-ingress,
 .is-style-ingress {
   font-family: $font-headings-blog;
-  font-size: 30px;
+  font-size: var(--font-size-blog-supplementary-heading);
   font-weight: 600;
   letter-spacing: -.02em;
-  line-height: 1.2;
+  line-height: 1.5;
   opacity: .8;
 }
