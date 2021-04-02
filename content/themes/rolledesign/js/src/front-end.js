@@ -51,7 +51,7 @@ rolle_LazyLoad.update();
 swup.on('contentReplaced', function () {
 
   // Always move scroll position to up when clicking a link
-  var moveTo = new MoveTo({
+  var moveToTop = new MoveTo({
     tolerance: 0,
     duration: 0,
     easing: 'easeOutQuart',
@@ -59,8 +59,42 @@ swup.on('contentReplaced', function () {
   });
 
   var target = document.getElementById('swup');
-  moveTo.move(target);
+  moveToTop.move(target);
 
+  // Bg parallax and moveTo functionality
+  const heros = document.getElementsByClassName('block-hero');
+  if( heros ) {
+    window.onscroll = function() {
+      for (var i = 0; i < heros.length; i++) {
+
+        var scrollposition = window.pageYOffset | document.body.scrollTop;
+        var hero = heros[i], css = hero.style;
+
+        css.opacity = 1 - scrollposition / 450;
+        css.backgroundSize = (100 + 50 * scrollposition / 250) + '%';
+      }
+    };
+  }
+
+  const easeFunctions = {
+    easeInQuad: function (t, b, c, d) {
+      t /= d;
+      return c * t * t + b;
+    },
+    easeOutQuad: function (t, b, c, d) {
+      t /= d;
+      return -c * t * (t - 2) + b;
+    }
+  };
+  const moveTo = new MoveTo({
+      ease: 'easeInQuad'
+    },
+    easeFunctions
+  );
+  const triggers = document.getElementsByClassName('js-trigger');
+  for (var i = 0; i < triggers.length; i++) {
+    moveTo.registerTrigger(triggers[i]);
+  }
 });
 // Swup ends
 
@@ -132,11 +166,6 @@ swup.on('contentReplaced', function () {
     } else {
       $(link_class).removeClass('fade-out');
     }
-  });
-
-  // Document ready start
-  $(function () {
-    // Your JavaScript here
   });
 })(jQuery);
 
