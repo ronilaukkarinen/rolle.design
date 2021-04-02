@@ -2095,6 +2095,11 @@ pre {
   }
 }
 
+.gutenberg-content > *.alignwide img,
+.gutenberg-content > *.alignfull img {
+  width: 100%;
+}
+
 .gutenberg-content > *.alignwide {
   margin-bottom: 4rem;
   margin-left: auto;

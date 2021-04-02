@@ -44,7 +44,7 @@ namespace Air_Light;
 
   <div id="swup" class="site">
 
-    <div class="nav-container">
+    <div class="nav-container" id="page">
       <header class="site-header">
 
         <?php get_template_part( 'template-parts/header/branding' ); ?>

@@ -536,6 +536,11 @@ $color-twitter: #1da1f2;
       }
     }
 
+    &.alignwide img,
+    &.alignfull img {
+      width: 100%;
+    }
+
     &.alignwide {
       margin-bottom: 4rem;
       margin-left: auto;

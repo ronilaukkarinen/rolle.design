@@ -8,9 +8,9 @@ import Swup from 'swup';
 import SwupScriptsPlugin from '@swup/scripts-plugin';
 import SwupBodyClassPlugin from '@swup/body-class-plugin';
 import LazyLoad from 'vanilla-lazyload';
+import reframe from 'reframe.js';
 import getLocalization from './modules/localization';
 import styleExternalLinks from './modules/external-link';
-import './modules/gutenberg-helpers';
 import './modules/dark-mode';
 import './modules/prism';
 import './modules/copy-to-clipboard';
@@ -22,6 +22,9 @@ document.body.classList.add('js');
 
 // Style external links
 styleExternalLinks();
+
+// Fit videos
+reframe('iframe');
 
 // Initiate Swup transitions
 const swup = new Swup({
