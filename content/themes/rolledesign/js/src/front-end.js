@@ -47,6 +47,23 @@ var rolle_LazyLoad = new LazyLoad();
 // After your content has changed...
 rolle_LazyLoad.update();
 
+// Swup starts
+swup.on('contentReplaced', function () {
+
+  // Always move scroll position to up when clicking a link
+  var moveTo = new MoveTo({
+    tolerance: 0,
+    duration: 0,
+    easing: 'easeOutQuart',
+    container: window
+  });
+
+  var target = document.getElementById('swup');
+  moveTo.move(target);
+
+});
+// Swup ends
+
 // jQuery start
 (function ($) {
   // Accessibility: Ensure back to top is right color on right background
