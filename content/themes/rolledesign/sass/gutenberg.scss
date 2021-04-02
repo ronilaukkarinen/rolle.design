@@ -46,10 +46,20 @@
 /* stylelint-disable declaration-no-important */
 .wp-block {
   font-family: $font-paragraphs !important;
+  max-width: $width-max-article !important;
 
-  &:not([data-align="wide"]),
-  &:not([data-align="full"]) {
-    max-width: $width-max-article !important;
+  &[data-align="full"] {
+    max-width: 100% !important;
+  }
+
+  &[data-align="wide"] {
+    max-width: 100% !important;
+
+    @media (min-width: 870px) {
+      max-width: $width-grid-base !important;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   h1,

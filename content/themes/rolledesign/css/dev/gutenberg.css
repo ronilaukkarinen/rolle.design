@@ -246,10 +246,23 @@
 /* stylelint-disable declaration-no-important */
 .wp-block {
   font-family: "Inter", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif !important;
+  max-width: 720px !important;
 }
 
-.wp-block:not([data-align="wide"]), .wp-block:not([data-align="full"]) {
-  max-width: 720px !important;
+.wp-block[data-align="full"] {
+  max-width: 100% !important;
+}
+
+.wp-block[data-align="wide"] {
+  max-width: 100% !important;
+}
+
+@media (min-width: 870px) {
+  .wp-block[data-align="wide"] {
+    max-width: 960px !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .wp-block h1,
