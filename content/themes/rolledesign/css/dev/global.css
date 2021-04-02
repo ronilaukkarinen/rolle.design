@@ -1891,7 +1891,7 @@ pre {
     width: 100%;
   }
   .gutenberg-content pre {
-    margin-left: 0;
+    margin-left: 2rem;
   }
   .gutenberg-content ol,
   .gutenberg-content ul {
@@ -2957,12 +2957,6 @@ pre[class*="language-"] {
   --green: #8be9fd;
 }
 
-pre[class*="language-"] {
-  border-radius: var(--radius);
-  overflow: visible;
-  position: relative;
-}
-
 .copy {
   background: var(--code-blocks);
   border-top-left-radius: var(--radius);
@@ -2973,10 +2967,13 @@ pre[class*="language-"] {
   font-family: "SF Mono", "Inconsolata", "Menlo", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
   font-size: 18px;
   font-weight: 400;
-  padding: 0;
+  padding-left: var(--code-block-padding-horizontal);
+  padding-right: var(--code-block-padding-horizontal);
+  padding-bottom: var(--code-block-padding-vertical);
+  padding-top: var(--code-block-padding-vertical);
   position: absolute;
-  right: var(--code-block-padding-horizontal);
-  top: var(--code-block-padding-vertical);
+  right: 0;
+  top: 0;
   transform: none;
   transition: color 200ms ease;
 }
@@ -3026,7 +3023,7 @@ pre[class*="language-"] {
 
 pre[class*="language-"] {
   border-radius: var(--radius);
-  overflow: visible;
+  overflow: hidden;
   padding: 0;
   border: 0;
 }
