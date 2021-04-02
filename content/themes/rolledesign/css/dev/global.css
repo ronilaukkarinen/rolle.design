@@ -278,6 +278,7 @@ template {
 /* stylelint-enable declaration-property-unit-allowed-list */
 :root {
   --color-white: #fff;
+  --color-white-rgb: 255, 255, 255;
   --color-black: #222;
   --color-black-rgb: 22, 22, 22;
   --color-shadows: #b8bbb3;
@@ -2579,6 +2580,7 @@ div.lazy {
 /* stylelint-disable a11y/no-display-none */
 [data-theme="dark"] {
   --color-white: #0d1118;
+  --color-white-rgb: 13, 17, 24;
   --color-black: #fff;
   --color-black-rgb: 255, 255, 255;
   --color-shadows: #b8bbb3;
@@ -2643,7 +2645,7 @@ div.lazy {
 }
 
 [data-theme="dark"] .block-hero,
-[data-theme="dark"] .block-hero-dont-fade .content {
+[data-theme="dark"] .block-hero-dont-fade {
   background-image: url("../../images/mountains-dark.jpg");
 }
 
@@ -3830,7 +3832,7 @@ h1.big-title {
 
 .block-hero-dont-fade .content {
   /* stylelint-disable property-disallowed-list, number-max-precision */
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.839373) 50%, white 100%);
+  background: linear-gradient(180deg, rgba(var(--color-white-rgb), 0) 0%, rgba(var(--color-white-rgb), 0.83937) 50%, rgba(var(--color-white-rgb), 1) 100%);
   padding-bottom: var(--padding-container-vertical);
   padding-left: var(--padding-container-horizontal);
   padding-right: var(--padding-container-horizontal);

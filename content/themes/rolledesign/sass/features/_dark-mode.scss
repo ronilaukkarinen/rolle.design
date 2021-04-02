@@ -1,12 +1,13 @@
 /* stylelint-disable a11y/no-display-none */
 [data-theme="dark"] {
   .block-hero,
-  .block-hero-dont-fade .content {
+  .block-hero-dont-fade {
     background-image: url('../../images/mountains-dark.jpg');
   }
 
   // Base colors
   --color-white: #0d1118;
+  --color-white-rgb: 13, 17, 24;
   --color-black: #fff;
   --color-black-rgb: 255, 255, 255;
   --color-shadows: #b8bbb3;
