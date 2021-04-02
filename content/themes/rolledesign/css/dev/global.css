@@ -1654,7 +1654,7 @@ pre {
 }
 
 .block-blog article > h2 {
-  font-family: -apple-system, "BlinkMacSystemFont", "Sofia Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "San Francisco", "Inter", "Sofia Pro", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   letter-spacing: -.02em;
   line-height: 1.2;
   opacity: .8;
@@ -1712,7 +1712,7 @@ pre {
 .gutenberg-content h4,
 .gutenberg-content h5,
 .gutenberg-content h6 {
-  font-family: -apple-system, "BlinkMacSystemFont", "Sofia Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "San Francisco", "Inter", "Sofia Pro", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   letter-spacing: -.02em;
   line-height: 1.2;
@@ -3870,7 +3870,7 @@ h1.big-title {
 .gutenberg-content p.is-style-ingress,
 .wp-block.is-style-ingress,
 .is-style-ingress {
-  font-family: -apple-system, "BlinkMacSystemFont", "Sofia Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "San Francisco", "Inter", "Sofia Pro", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 30px;
   font-weight: 600;
   letter-spacing: -.02em;
