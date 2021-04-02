@@ -40,8 +40,8 @@
   --color-twitter: #1da1f2;
 
   // Element text and background colors
-  --color-links: --color-main;
-  --color-hover: --color-dark;
+  --color-links: var(--color-main);
+  --color-hover: var(--color-dark);
   --color-blockquotes: #666;
   --color-code-blocks: #c7254e;
   --color-code-blocks-background: #f9f2f4;
@@ -57,8 +57,8 @@
   --color-error: lighten(#903a37, 40%);
   --color-disabled: #bbb;
   --color-captions: rgba(#4b4b5a, .9);
-  --color-buttons: --color-darkgrey;
-  --color-buttons-hover: --color-main;
+  --color-buttons: var(--color-darkgrey);
+  --color-buttons-hover: var(--color-main);
   --color-background-toggle-slider: #ccc;
   --color-light-grey-alt: #ccc;
   --color-grey-mid: #444;
