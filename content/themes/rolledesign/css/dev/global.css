@@ -1856,7 +1856,7 @@ pre {
     width: calc(100% - 4rem);
   }
   .gutenberg-content pre {
-    margin-left: 2rem;
+    margin-left: 0;
     width: calc(100% - 8rem);
   }
   .gutenberg-content ol,
