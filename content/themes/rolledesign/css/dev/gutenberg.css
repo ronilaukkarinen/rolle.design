@@ -296,6 +296,16 @@ p[data-type="core/paragraph"] > a:focus::after {
   background-image: url("../../svg/external-link-black.svg");
 }
 
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h2[data-type="core/heading"] {
+  font-family: -apple-system, "BlinkMacSystemFont", "Sofia Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: var(--font-size-blog-supplementary-heading);
+  font-weight: 600;
+  letter-spacing: -.02em;
+  line-height: 1.5;
+  opacity: .8;
+}
+
 /* stylelint-disable declaration-no-important */
 .wp-block {
   font-family: "Inter", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif !important;

@@ -64,6 +64,16 @@ p[data-type="core/paragraph"] > a {
   }
 }
 
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h2[data-type="core/heading"] {
+  font-family: $font-headings-blog;
+  font-size: var(--font-size-blog-supplementary-heading);
+  font-weight: 600;
+  letter-spacing: -.02em;
+  line-height: 1.5;
+  opacity: .8;
+}
+
 // Wider editor
 // Default is 580px which is way too narrow
 // Forced to use important here, because WordPress uses too specific selectors
