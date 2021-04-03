@@ -184,6 +184,7 @@ $color-twitter: #1da1f2;
   padding-top: var(--padding-block);
 }
 
+.editor-styles-wrapper,
 .gutenberg-content {
   max-width: 100%;
   padding-bottom: var(--padding-block);
@@ -351,7 +352,7 @@ $color-twitter: #1da1f2;
   small {
     border: 0;
     color: var(--color-captions);
-    font-size: 15px;
+    font-size: var(--font-size-captions);
     font-style: normal;
     margin-bottom: 6rem;
     margin-left: auto;

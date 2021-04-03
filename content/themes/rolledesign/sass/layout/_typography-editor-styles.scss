@@ -1,0 +1,24 @@
+// Typography
+//
+// Everything around fonts, font size definitions and typeset
+// presets. No modular scale, but a sophisticated viewport
+// based responsive mixin can be found in _helpers.scss
+
+// Set root size for rems
+/* stylelint-disable declaration-property-unit-allowed-list */
+:root {
+  font-size: 62.5%;
+}
+/* stylelint-enable declaration-property-unit-allowed-list */
+
+// Start typography settings
+body {
+  color: var(--color-paragraphs);
+  font-family: $font-paragraphs;
+  font-size: var(--font-size-medium);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $font-weight-paragraphs;
+  text-rendering: geometricPrecision;
+  text-size-adjust: none;
+}

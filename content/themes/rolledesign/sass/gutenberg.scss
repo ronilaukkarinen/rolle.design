@@ -24,6 +24,10 @@
 @import 'components/button-size-large';
 @import 'components/button-style-ghost';
 
+// Consistent editor styles for both
+@import 'layout/typography-editor-styles';
+@import 'layout/gutenberg';
+
 // Gutenberg blocks
 @import 'gutenberg/boxed';
 @import 'gutenberg/ingress';
@@ -64,6 +68,7 @@ p[data-type="core/paragraph"] > a {
   }
 }
 
+// Combined styles for editor and site
 .editor-styles-wrapper h2,
 .editor-styles-wrapper h2[data-type="core/heading"] {
   font-family: $font-headings-blog;
