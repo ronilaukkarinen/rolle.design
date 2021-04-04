@@ -3918,13 +3918,14 @@ h1.big-title {
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
+  max-width: 520px;
   padding: 0;
   width: 100%;
 }
 
 .block.block-hero.block-hero-contact .social-media a:nth-child(1) {
   color: var(--color-edit-link);
-  margin: 0 .8rem;
+  margin: .8rem;
 }
 
 @media (max-width: 560px) {
