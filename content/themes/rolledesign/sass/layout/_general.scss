@@ -96,10 +96,21 @@ body {
 
 // Better edit link
 .edit-link {
+  color: var(--color-edit-link);
   overflow: visible;
   padding-bottom: 6rem;
   padding-top: 6rem;
   text-align: center;
+
+  .post-edit-link {
+    color: var(--color-edit-link);
+    transition: color .33s cubic-bezier(.19, 1, .22, 1), color .2s cubic-bezier(.19, 1, .22, 1);
+  }
+
+  .post-edit-link:hover,
+  .post-edit-link:focus {
+    color: var(--color-fuchsia);
+  }
 }
 
 .pushable {
