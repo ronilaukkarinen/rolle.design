@@ -3912,6 +3912,39 @@ h1.big-title {
   }
 }
 
+.block.block-hero.block-hero-contact .social-media {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.block.block-hero.block-hero-contact .social-media a:nth-child(1) {
+  color: var(--color-edit-link);
+  margin: 0 .8rem;
+}
+
+@media (max-width: 560px) {
+  .block.block-hero.block-hero-contact .social-media a:nth-child(1) {
+    margin: 1rem;
+  }
+}
+
+.block.block-hero.block-hero-contact .social-media svg {
+  height: 26px;
+  width: 26px;
+}
+
+@media (max-width: 560px) {
+  .block.block-hero.block-hero-contact .social-media svg {
+    height: 30px;
+    width: 30px;
+  }
+}
+
 .block.block-hero.block-hero-contact p {
   margin-bottom: 0;
   margin-top: 0;

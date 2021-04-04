@@ -8,6 +8,35 @@ h1.big-title {
   }
 }
 
+.block.block-hero.block-hero-contact .social-media {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+
+  a:nth-child(1) {
+    color: var(--color-edit-link);
+    margin: 0 .8rem;
+
+    @media (max-width: 560px) {
+      margin: 1rem;
+    }
+  }
+
+  svg {
+    height: 26px;
+    width: 26px;
+
+    @media (max-width: 560px) {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
 .block.block-hero.block-hero-contact {
   p {
     margin-bottom: 0;
