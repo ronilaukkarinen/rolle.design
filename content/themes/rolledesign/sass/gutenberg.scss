@@ -4,6 +4,7 @@
 // editor side. Please remember to add imports
 // from "Gutenberg blocks" also to the main
 // global.scss to see them on front end side.
+/* stylelint-disable declaration-no-important */
 
 // Helpers
 @import 'helpers/typography';
@@ -79,10 +80,16 @@ p[data-type="core/paragraph"] > a {
   opacity: .8;
 }
 
+// First editor title
+.wp-block.editor-post-title.editor-post-title__block {
+  font-family: $font-headings-blog !important;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+}
+
 // Wider editor
 // Default is 580px which is way too narrow
 // Forced to use important here, because WordPress uses too specific selectors
-/* stylelint-disable declaration-no-important */
 .wp-block {
   font-family: $font-paragraphs !important;
   max-width: $width-max-article !important;
@@ -107,7 +114,7 @@ p[data-type="core/paragraph"] > a {
   h4,
   h5,
   h6 {
-    font-family: $font-headings-blog;
+    font-family: $font-headings-blog !important;
     font-weight: 700;
     letter-spacing: -.02em;
     line-height: 1.5;

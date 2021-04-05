@@ -1713,9 +1713,15 @@ pre {
   padding-top: var(--padding-block);
 }
 
+.editor-styles-wrapper li > a,
 .editor-styles-wrapper .is-style-ingress a,
+.editor-styles-wrapper p > strong > a,
+.editor-styles-wrapper p > em > a,
 .editor-styles-wrapper p:not([class]) > a,
+.gutenberg-content li > a,
 .gutenberg-content .is-style-ingress a,
+.gutenberg-content p > strong > a,
+.gutenberg-content p > em > a,
 .gutenberg-content p:not([class]) > a {
   border-bottom: 1px solid var(--color-fuchsia);
   color: var(--color-fuchsia);
@@ -1724,27 +1730,50 @@ pre {
   transition: border-color 0.33s cubic-bezier(0.19, 1, 0.22, 1), color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+.editor-styles-wrapper li > a::after,
 .editor-styles-wrapper .is-style-ingress a::after,
+.editor-styles-wrapper p > strong > a::after,
+.editor-styles-wrapper p > em > a::after,
 .editor-styles-wrapper p:not([class]) > a::after,
+.gutenberg-content li > a::after,
 .gutenberg-content .is-style-ingress a::after,
+.gutenberg-content p > strong > a::after,
+.gutenberg-content p > em > a::after,
 .gutenberg-content p:not([class]) > a::after {
   background-image: url("../../svg/external-link-fuchsia.svg");
 }
 
+.editor-styles-wrapper li > a:focus,
 .editor-styles-wrapper .is-style-ingress a:focus,
+.editor-styles-wrapper p > strong > a:focus,
+.editor-styles-wrapper p > em > a:focus,
 .editor-styles-wrapper p:not([class]) > a:focus,
+.gutenberg-content li > a:focus,
 .gutenberg-content .is-style-ingress a:focus,
+.gutenberg-content p > strong > a:focus,
+.gutenberg-content p > em > a:focus,
 .gutenberg-content p:not([class]) > a:focus {
   border-color: var(--color-black);
   color: var(--color-black);
   text-decoration: none;
 }
 
+.editor-styles-wrapper li > a:focus::after,
 .editor-styles-wrapper .is-style-ingress a:focus::after,
+.editor-styles-wrapper p > strong > a:focus::after,
+.editor-styles-wrapper p > em > a:focus::after,
 .editor-styles-wrapper p:not([class]) > a:focus::after,
+.gutenberg-content li > a:focus::after,
 .gutenberg-content .is-style-ingress a:focus::after,
+.gutenberg-content p > strong > a:focus::after,
+.gutenberg-content p > em > a:focus::after,
 .gutenberg-content p:not([class]) > a:focus::after {
   background-image: url("../../svg/external-link-black.svg");
+}
+
+.editor-styles-wrapper li > a::after,
+.gutenberg-content li > a::after {
+  display: none;
 }
 
 .editor-styles-wrapper .comments-link a,
@@ -1953,6 +1982,13 @@ pre {
   border-radius: 4px;
 }
 
+.editor-styles-wrapper ol,
+.editor-styles-wrapper ul,
+.gutenberg-content ol,
+.gutenberg-content ul {
+  padding-left: calc(2rem + 2.7rem);
+}
+
 @media (max-width: 760px) {
   .editor-styles-wrapper,
   .gutenberg-content {
@@ -1963,12 +1999,6 @@ pre {
   .editor-styles-wrapper pre,
   .gutenberg-content pre {
     margin-left: 2rem;
-  }
-  .editor-styles-wrapper ol,
-  .editor-styles-wrapper ul,
-  .gutenberg-content ol,
-  .gutenberg-content ul {
-    padding-left: calc(2rem + 2.7rem);
   }
   .editor-styles-wrapper ul.tags,
   .gutenberg-content ul.tags {
