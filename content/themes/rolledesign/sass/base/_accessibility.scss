@@ -83,7 +83,7 @@
 // Add icon to external links
 a.is-external-link {
   align-items: center;
-  display: inline-flex;
+  display: inline;
   justify-content: space-between;
 
   &::after {

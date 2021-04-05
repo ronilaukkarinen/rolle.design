@@ -652,7 +652,7 @@ html.is-animating .transition-fade {
 
 a.is-external-link {
   align-items: center;
-  display: inline-flex;
+  display: inline;
   justify-content: space-between;
 }
 
