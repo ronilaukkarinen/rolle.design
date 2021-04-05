@@ -3137,9 +3137,11 @@ pre[class*="language-"] {
   --light-gray: #c7254e;
   --dark-gray: #94a7cc;
   --radius: 4px;
+  --vars: var(--color-paragraphs);
 }
 
 [data-theme="dark"] {
+  --maroon: #8bd89e;
   --code-blocks: #090b0f;
   --blue: #bd93f9;
   --teal: #bd93f9;
@@ -3147,6 +3149,7 @@ pre[class*="language-"] {
   --purple: #50fa7b;
   --black: #ff79c6;
   --green: #8be9fd;
+  --vars: var(--color-paragraphs);
 }
 
 .copy {
@@ -3244,8 +3247,20 @@ pre[class*='language-'] code {
   color: var(--teal);
 }
 
+.token.variable {
+  color: var(--vars);
+}
+
 .token.selector, .token.attr-name,
-.token.attr-value .punctuation:first-child, .token.keyword, .token.regex, .token.important {
+.token.attr-value .punctuation:first-child, .token.regex, .token.important {
+  color: var(--maroon);
+}
+
+.token.token.keyword {
+  color: var(--black);
+}
+
+.token.token.selector {
   color: var(--maroon);
 }
 
@@ -3254,7 +3269,10 @@ pre[class*='language-'] code {
   color: var(--purple);
 }
 
-.token.function,
+.token.function {
+  color: var(--green);
+}
+
 .token.class-name {
   color: var(--purple);
 }

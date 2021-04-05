@@ -17,9 +17,11 @@
   --light-gray: #c7254e;
   --dark-gray: #94a7cc;
   --radius: 4px;
+  --vars: var(--color-paragraphs);
 }
 
 [data-theme="dark"] {
+  --maroon: #8bd89e;
   --code-blocks: #090b0f;
   --blue: #bd93f9;
   --teal: #bd93f9;
@@ -27,6 +29,7 @@
   --purple: #50fa7b;
   --black: #ff79c6;
   --green: #8be9fd;
+  --vars: var(--color-paragraphs);
 }
 
 // Copy to clipboard feature
@@ -136,12 +139,23 @@ pre[class*='language-'] {
     color: var(--teal);
   }
 
+  &.variable {
+    color: var(--vars);
+  }
+
   &.selector,
   &.attr-name,
   &.attr-value .punctuation:first-child,
-  &.keyword,
   &.regex,
   &.important {
+    color: var(--maroon);
+  }
+
+  &.token.keyword {
+    color: var(--black);
+  }
+
+  &.token.selector {
     color: var(--maroon);
   }
 
@@ -152,7 +166,10 @@ pre[class*='language-'] {
     color: var(--purple);
   }
 
-  &.function,
+  &.function {
+    color: var(--green);
+  }
+
   &.class-name {
     color: var(--purple);
   }
