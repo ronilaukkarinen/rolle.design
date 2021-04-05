@@ -915,7 +915,7 @@ body {
 .editor-styles-wrapper > blockquote.wp-block-quote,
 .gutenberg-content > blockquote,
 .gutenberg-content > blockquote.wp-block-quote {
-  border-left: 2px solid var(--color-links);
+  border-left: 3px solid var(--color-links);
   line-height: 1.77;
   margin-bottom: 4rem;
   margin-left: auto;
