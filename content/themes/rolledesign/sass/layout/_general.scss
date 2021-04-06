@@ -4,7 +4,7 @@
 // that apply everywhere throughout the website. Add more
 // always repeating elements right below.
 
-/* stylelint-disable property-disallowed-list, sh-waqar/declaration-use-variable, a11y/no-outline-none, a11y/no-display-none */
+/* stylelint-disable property-disallowed-list, sh-waqar/declaration-use-variable, a11y/no-outline-none, a11y/no-display-none, no-descending-specificity */
 // Default structural element
 .block {
   background-color: transparent;
@@ -209,4 +209,181 @@ body {
 
 .pushable:focus:not(:focus-visible) {
   outline: none;
+}
+
+// General blog stuff
+.block-blog-post-list {
+  .listing {
+    margin-bottom: 6rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h2 {
+    @include responsive-font(42px, 62px);
+    font-family: $font-accent;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 0 0 1rem;
+    padding: 0;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+
+  li a {
+    border-bottom: 2px solid rgba(var(--color-headings-rgb), .1);
+    font-weight: 500;
+    padding-bottom: .2rem;
+    padding-top: .2rem;
+    transition: border-color .55s cubic-bezier(.19, 1, .22, 1), background-color .2s cubic-bezier(.19, 1, .22, 1);
+  }
+
+  li a:hover,
+  li a:focus {
+    border-color: var(--color-synthwavesunsetred);
+  }
+
+  .date {
+    font-size: var(--font-size-tiny);
+    margin-left: .5rem;
+  }
+}
+
+.auth {
+  margin: 0;
+  order: 1;
+
+  a {
+    display: inline-flex;
+    font-size: var(--font-size-tiny);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color .55s cubic-bezier(.19, 1, .22, 1), background-color .2s cubic-bezier(.19, 1, .22, 1);
+
+    &:hover,
+    &:focus {
+      color: var(--color-synthwavesunsetred);
+    }
+
+    &:hover img,
+    &:focus img {
+      border-color: var(--color-synthwavesunsetred);
+    }
+  }
+
+  a::after {
+    display: none;
+  }
+
+  .gravatar-small {
+    border: 2px solid var(--color-black);
+    border-radius: 50%;
+    height: 22px;
+    margin-right: 1rem;
+    overflow: hidden;
+    transition: border-color .55s cubic-bezier(.19, 1, .22, 1), background-color .2s cubic-bezier(.19, 1, .22, 1);
+    width: 22px;
+  }
+}
+
+.date-single {
+  font-size: var(--font-size-small);
+  opacity: .7;
+  order: 2;
+}
+
+.comment-on-twitter {
+  line-height: 1;
+}
+
+.comment-on-twitter a {
+  align-items: baseline;
+  color: var(--color-twitter);
+  display: inline-flex;
+  font-family: $font-accent;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 8rem;
+  margin-top: 8rem;
+  text-decoration: none;
+
+  &::after {
+    display: none;
+  }
+
+  @media (max-width: $container-ipad) {
+    font-size: 2.4rem;
+  }
+
+  &:hover,
+  &:focus {
+    color: lighten($color-twitter, 15%);
+
+    svg {
+      stroke: lighten($color-twitter, 15%);
+    }
+  }
+
+  svg {
+    height: 5rem;
+    margin-left: 2rem;
+    position: relative;
+    stroke: $color-twitter;
+    stroke-width: 2px;
+    top: 1rem;
+    width: 5rem;
+
+    @media (max-width: $container-ipad) {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+}
+
+.block-blog article > h2:first-child::before,
+.gutenberg-content h1::before {
+  background-color: #767676;
+  content: '\020';
+  display: block;
+  height: 2px;
+  margin: 1rem 0;
+  width: 1em;
+}
+
+.block-single > .gutenberg-content > h1 {
+  font-family: $font-headings-blog;
+  font-size: var(--font-size-blog-main-heading);
+  line-height: 1.2;
+}
+
+.block-blog article > h2 {
+  font-family: $font-headings-blog;
+  font-size: var(--font-size-blog-main-heading);
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  opacity: .8;
+
+  a {
+    color: var(--color-headings);
+  }
+}
+
+.block-blog .container {
+  max-width: $width-max-article;
+  padding-bottom: var(--padding-block);
+  padding-top: var(--padding-block);
 }

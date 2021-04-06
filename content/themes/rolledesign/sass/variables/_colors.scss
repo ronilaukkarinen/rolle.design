@@ -1,3 +1,6 @@
+// SCSS colors
+$color-twitter: #1da1f2;
+
 :root {
   // Base colors
   --color-white: #fff;
@@ -7,6 +10,7 @@
   --color-shadows: #b8bbb3;
   --color-darkgrey: #545773;
   --color-lightgrey: #f5f5f5;
+  --color-white-smoke: var(--color-lightgrey);
   --color-body: #20202f;
   --color-headings: #20202f;
   --color-headings-rgb: 32, 32, 47;
@@ -17,6 +21,7 @@
   --color-faded: #757684;
   --color-alt-grey: #333;
   --color-toggled: #fff;
+  --color-pattens-blue: #eaf1f8;
 
   // Required brand colors
   --color-fuchsia: #e2127a;
@@ -38,7 +43,7 @@
   --color-blue-alt-midnight: #21252b;
   --color-github-link: #0366d6;
   --color-github-text: #586069;
-  --color-twitter: #1da1f2;
+  --color-twitter: #{$color-twitter};
 
   // Element text and background colors
   --color-links: var(--color-main);

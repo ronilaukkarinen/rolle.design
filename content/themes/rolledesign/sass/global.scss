@@ -15,7 +15,8 @@
 // Variables
 @import 'variables/breakpoints';
 @import 'variables/spacings';
-@import 'variables/fonts';
+@import 'variables/font-family';
+@import 'variables/font-sizes';
 
 // Style components
 @import 'components/button';
@@ -38,7 +39,6 @@
 @import 'layout/site-header';
 @import 'layout/site-footer';
 @import 'layout/forms';
-@import 'layout/gutenberg';
 @import 'layout/hero';
 
 // Global features
@@ -60,8 +60,11 @@
 @import 'views/contact';
 @import 'views/now';
 
+// Gutenberg layout outside blocks
+@import 'gutenberg/layout/content';
+
 // Gutenberg blocks
-@import 'gutenberg/boxed';
-@import 'gutenberg/ingress';
-@import 'gutenberg/button';
-@import 'gutenberg/button-file';
+@import 'gutenberg/blocks';
+
+// Gutenberg formatting
+@import 'gutenberg/formatting';

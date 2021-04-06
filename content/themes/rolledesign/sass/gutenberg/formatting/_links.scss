@@ -1,0 +1,35 @@
+// Links within content
+.editor-styles-wrapper,
+.gutenberg-content {
+  // Style choice not to have external link indicators in a list
+  /* stylelint-disable a11y/no-display-none */
+  li > a::after {
+    display: none;
+  }
+
+  li > a,
+  p > strong > a,
+  p > em > a,
+  .is-style-ingress a,
+  p:not([class]) > a {
+    border-bottom: 1px solid var(--color-fuchsia);
+    color: var(--color-fuchsia);
+    line-height: 1.5;
+    text-decoration: none;
+    transition: border-color .33s cubic-bezier(.19, 1, .22, 1), color .2s cubic-bezier(.19, 1, .22, 1);
+
+    &::after {
+      background-image: url('../../svg/external-link-fuchsia.svg');
+    }
+
+    &:focus {
+      border-color: var(--color-black);
+      color: var(--color-black);
+      text-decoration: none;
+
+      &::after {
+        background-image: url('../../svg/external-link-black.svg');
+      }
+    }
+  }
+}

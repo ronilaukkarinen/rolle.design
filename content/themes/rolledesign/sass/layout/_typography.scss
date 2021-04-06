@@ -20,7 +20,6 @@ body {
   -webkit-font-smoothing: antialiased;
   font-weight: $font-weight-paragraphs;
   text-rendering: geometricPrecision;
-  text-size-adjust: none;
 }
 
 // Links
@@ -81,7 +80,7 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: $line-height-headings;
+  line-height: var(--line-height-headings);
 }
 
 // Define heading scales

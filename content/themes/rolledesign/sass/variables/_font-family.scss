@@ -1,0 +1,13 @@
+// Fonts
+@include fontFace('Inter', '../../fonts/Inter-Regular', 400);
+@include fontFace('Inter', '../../fonts/Inter-Italic', 400, italic);
+@include fontFace('Inter', '../../fonts/Inter-Bold', 700);
+@include fontFace('Inter', '../../fonts/Inter-Medium', 500);
+@include fontFace('Inter', '../../fonts/Inter-SemiBold', 600);
+@include fontFace('Inter', '../../fonts/Inter-Bold', 700);
+@include fontFace('Futura PT', '../../fonts/futurapt-demi', 600);
+@include fontFace('Sofia Pro', '../../fonts/sofiaproregular', 400);
+@include fontFace('Sofia Pro', '../../fonts/sofiaprobold', 700);
+@include fontFace('SF Mono', '../../fonts/sfmono-regular', 400);
+@include fontFace('SF Mono', '../../fonts/sfmono-regularitalic', 400, italic);
+@include fontFace('SF Mono', '../../fonts/sfmono-bold', 700);

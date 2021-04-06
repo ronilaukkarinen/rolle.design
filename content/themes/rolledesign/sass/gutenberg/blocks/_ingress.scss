@@ -1,0 +1,16 @@
+// Ingress style
+.editor-styles-wrapper,
+.gutenberg-content {
+  h2,
+  p.is-style-ingress,
+  .wp-block.is-style-ingress,
+  .is-style-ingress {
+    color: var(--color-headings);
+    font-family: $font-headings-blog;
+    font-size: var(--font-size-blog-supplementary-heading);
+    font-weight: 600;
+    letter-spacing: -.02em;
+    line-height: var(--line-height-headings);
+    opacity: .8;
+  }
+}
