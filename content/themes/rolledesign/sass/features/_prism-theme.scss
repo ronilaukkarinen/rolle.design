@@ -17,6 +17,7 @@
   --light-gray: #c7254e;
   --dark-gray: #94a7cc;
   --radius: 4px;
+  --font-size: 1em;
   --vars: var(--color-paragraphs);
 }
 
@@ -30,6 +31,17 @@
   --black: #ff79c6;
   --green: #8be9fd;
   --vars: var(--color-paragraphs);
+}
+
+// Inline code block
+code {
+  background-color: var(--code-blocks);
+  border: 0;
+  border-radius: var(--radius);
+  color: var(--blue);
+  font-family: $font-monospace;
+  font-size: var(--font-size);
+  padding: .5rem 1rem;
 }
 
 // Copy to clipboard feature
@@ -89,6 +101,7 @@ code {
 code[class*='language-'],
 pre[class*='language-'] {
   color: var(--black);
+  font-size: var(--font-size);
   cursor: text;
   direction: ltr;
   font-family: $font-monospace;

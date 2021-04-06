@@ -1555,20 +1555,6 @@ samp {
   font-family: "SF Mono", "Inconsolata", "Menlo", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
 }
 
-code {
-  background-color: var(--color-code-blocks-background);
-  border-radius: .3rem;
-  color: var(--color-code-blocks);
-  font-family: "SF Mono", "Inconsolata", "Menlo", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
-  font-size: inherit;
-  padding: 0;
-}
-
-pre code {
-  display: inline-block;
-  padding: 2rem 2.6rem;
-}
-
 pre {
   border-radius: .3rem;
   display: block;
@@ -2369,6 +2355,7 @@ pre[class*="language-"] {
   --light-gray: #c7254e;
   --dark-gray: #94a7cc;
   --radius: 4px;
+  --font-size: 1em;
   --vars: var(--color-paragraphs);
 }
 
@@ -2382,6 +2369,16 @@ pre[class*="language-"] {
   --black: #ff79c6;
   --green: #8be9fd;
   --vars: var(--color-paragraphs);
+}
+
+code {
+  background-color: var(--code-blocks);
+  border: 0;
+  border-radius: var(--radius);
+  color: var(--blue);
+  font-family: "SF Mono", "Inconsolata", "Menlo", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+  font-size: var(--font-size);
+  padding: .5rem 1rem;
 }
 
 .copy {
@@ -2433,6 +2430,7 @@ pre code {
 code[class*="language-"],
 pre[class*="language-"] {
   color: var(--black);
+  font-size: var(--font-size);
   cursor: text;
   direction: ltr;
   font-family: "SF Mono", "Inconsolata", "Menlo", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
@@ -3514,12 +3512,12 @@ pre code {
     margin-right: var(--padding-container-horizontal);
     width: calc(100% - calc(var(--padding-container-horizontal) * 4));
   }
-}
-
-.editor-styles-wrapper pre,
-.gutenberg-content pre {
-  padding-left: var(--padding-container-horizontal);
-  padding-right: var(--padding-container-horizontal);
+  .editor-styles-wrapper pre,
+  .gutenberg-content pre {
+    margin-left: var(--padding-container-horizontal);
+    margin-right: var(--padding-container-horizontal);
+    width: calc(100% - calc(var(--padding-container-horizontal) * 2));
+  }
 }
 
 .editor-styles-wrapper .wp-block-columns.alignfull,

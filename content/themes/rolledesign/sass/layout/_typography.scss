@@ -242,21 +242,6 @@ samp {
   font-family: $font-monospace;
 }
 
-// Code block.
-code {
-  background-color: var(--color-code-blocks-background);
-  border-radius: .3rem;
-  color: var(--color-code-blocks);
-  font-family: $font-monospace;
-  font-size: inherit;
-  padding: 0;
-
-  pre & {
-    display: inline-block;
-    padding: 2rem 2.6rem;
-  }
-}
-
 // Preformatted text.
 pre {
   border-radius: .3rem;
