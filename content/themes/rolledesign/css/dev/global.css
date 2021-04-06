@@ -296,6 +296,7 @@ template {
   --color-alt-grey: #333;
   --color-toggled: #fff;
   --color-pattens-blue: #eaf1f8;
+  --color-lynch: #677287;
   --color-fuchsia: #e2127a;
   --color-synthwavesunsetpink: #eb21f8;
   --color-synthwavesunsetred: #f82872;
@@ -2050,6 +2051,7 @@ div.lazy {
   --color-alt-grey: rgba(255, 255, 255, .8);
   --color-toggled: #414850;
   --color-pattens-blue: #eaf1f8;
+  --color-lynch: #677287;
   --color-fuchsia: #e2127a;
   --color-synthwavesunsetpink: #eb21f8;
   --color-synthwavesunsetred: #f82872;
@@ -2353,7 +2355,7 @@ pre[class*="language-"] {
   --maroon: #6f42c1;
   --green: #005cc5;
   --light-gray: #c7254e;
-  --dark-gray: #94a7cc;
+  --dark-gray: var(--color-lynch);
   --radius: 4px;
   --font-size: 1em;
   --vars: var(--color-paragraphs);
