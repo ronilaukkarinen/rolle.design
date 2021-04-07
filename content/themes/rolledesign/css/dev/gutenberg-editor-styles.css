@@ -1614,6 +1614,199 @@ th {
   opacity: .8;
 }
 
+.editor-styles-wrapper .alignleft > *,
+.gutenberg-content .alignleft > * {
+  float: left;
+}
+
+.editor-styles-wrapper .alignright > *,
+.gutenberg-content .alignright > * {
+  float: right;
+}
+
+.editor-styles-wrapper .alignleft > img,
+.gutenberg-content .alignleft > img {
+  margin-bottom: var(--margin-between-paragraphs);
+  margin-right: var(--padding-container-horizontal);
+  margin-top: var(--margin-between-paragraphs);
+}
+
+.editor-styles-wrapper .alignleft > img + figcaption,
+.gutenberg-content .alignleft > img + figcaption {
+  margin-top: 0;
+}
+
+.editor-styles-wrapper .alignright > img,
+.gutenberg-content .alignright > img {
+  margin-bottom: var(--margin-between-paragraphs);
+  margin-left: var(--padding-container-horizontal);
+  margin-top: var(--margin-between-paragraphs);
+}
+
+.editor-styles-wrapper .alignright > img + figcaption,
+.gutenberg-content .alignright > img + figcaption {
+  margin-top: 0;
+}
+
+@media (min-width: 1000px) {
+  .editor-styles-wrapper .alignwide,
+  .gutenberg-content .alignwide {
+    max-width: 960px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .editor-styles-wrapper .alignfull,
+  .gutenberg-content .alignfull {
+    margin-bottom: var(--padding-block);
+    margin-top: var(--padding-block);
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.editor-styles-wrapper .alignfull.wp-block-image img,
+.gutenberg-content .alignfull.wp-block-image img {
+  border-radius: 0;
+}
+
+/* stylelint-disable selector-max-combinators, selector-max-compound-selectors */
+.editor-styles-wrapper figcaption,
+.editor-styles-wrapper cite,
+.editor-styles-wrapper small,
+.gutenberg-content figcaption,
+.gutenberg-content cite,
+.gutenberg-content small {
+  border: 0;
+  color: var(--color-captions);
+  font-size: var(--font-size-captions);
+  font-style: normal;
+  margin-bottom: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  max-width: 720px;
+  padding-bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .editor-styles-wrapper figcaption,
+  .editor-styles-wrapper cite,
+  .editor-styles-wrapper small,
+  .gutenberg-content figcaption,
+  .gutenberg-content cite,
+  .gutenberg-content small {
+    margin-top: 2rem;
+  }
+}
+
+.editor-styles-wrapper .wp-block-image figcaption,
+.editor-styles-wrapper .wp-block-image .alignright > figcaption,
+.editor-styles-wrapper .wp-block-image .aligncenter > figcaption,
+.editor-styles-wrapper .wp-block-image.is-resized > figcaption,
+.gutenberg-content .wp-block-image figcaption,
+.gutenberg-content .wp-block-image .alignright > figcaption,
+.gutenberg-content .wp-block-image .aligncenter > figcaption,
+.gutenberg-content .wp-block-image.is-resized > figcaption {
+  display: block;
+  width: 100%;
+}
+
+.editor-styles-wrapper cite,
+.gutenberg-content cite {
+  margin-bottom: 0;
+}
+
+kbd {
+  background-color: var(--color-pattens-blue);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(var(--color-black-rgb), 0.2), 0 0 0 2px var(--color-white) inset;
+  color: var(--color-paragraphs);
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  padding: 0 .5rem;
+  text-shadow: 0 1px 0 var(--color-white);
+  white-space: nowrap;
+}
+
+.editor-styles-wrapper,
+.gutenberg-content {
+  /* stylelint-disable a11y/no-display-none */
+}
+
+.editor-styles-wrapper li > a::after,
+.gutenberg-content li > a::after {
+  display: none;
+}
+
+.editor-styles-wrapper li > a,
+.editor-styles-wrapper p > strong > a,
+.editor-styles-wrapper p > em > a,
+.editor-styles-wrapper .is-style-ingress a,
+.editor-styles-wrapper p:not([class]) > a,
+.gutenberg-content li > a,
+.gutenberg-content p > strong > a,
+.gutenberg-content p > em > a,
+.gutenberg-content .is-style-ingress a,
+.gutenberg-content p:not([class]) > a {
+  border-bottom: 1px solid var(--color-fuchsia);
+  color: var(--color-fuchsia);
+  line-height: 1.5;
+  text-decoration: none;
+  transition: border-color 0.33s cubic-bezier(0.19, 1, 0.22, 1), color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.editor-styles-wrapper li > a::after,
+.editor-styles-wrapper p > strong > a::after,
+.editor-styles-wrapper p > em > a::after,
+.editor-styles-wrapper .is-style-ingress a::after,
+.editor-styles-wrapper p:not([class]) > a::after,
+.gutenberg-content li > a::after,
+.gutenberg-content p > strong > a::after,
+.gutenberg-content p > em > a::after,
+.gutenberg-content .is-style-ingress a::after,
+.gutenberg-content p:not([class]) > a::after {
+  background-image: url("../../svg/external-link-fuchsia.svg");
+}
+
+.editor-styles-wrapper li > a:focus,
+.editor-styles-wrapper p > strong > a:focus,
+.editor-styles-wrapper p > em > a:focus,
+.editor-styles-wrapper .is-style-ingress a:focus,
+.editor-styles-wrapper p:not([class]) > a:focus,
+.gutenberg-content li > a:focus,
+.gutenberg-content p > strong > a:focus,
+.gutenberg-content p > em > a:focus,
+.gutenberg-content .is-style-ingress a:focus,
+.gutenberg-content p:not([class]) > a:focus {
+  border-color: var(--color-black);
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.editor-styles-wrapper li > a:focus::after,
+.editor-styles-wrapper p > strong > a:focus::after,
+.editor-styles-wrapper p > em > a:focus::after,
+.editor-styles-wrapper .is-style-ingress a:focus::after,
+.editor-styles-wrapper p:not([class]) > a:focus::after,
+.gutenberg-content li > a:focus::after,
+.gutenberg-content p > strong > a:focus::after,
+.gutenberg-content p > em > a:focus::after,
+.gutenberg-content .is-style-ingress a:focus::after,
+.gutenberg-content p:not([class]) > a:focus::after {
+  background-image: url("../../svg/external-link-black.svg");
+}
+
+.editor-styles-wrapper img,
+.gutenberg-content img {
+  border-radius: 4px;
+}
+
 .editor-styles-wrapper {
   overflow-x: hidden;
 }
