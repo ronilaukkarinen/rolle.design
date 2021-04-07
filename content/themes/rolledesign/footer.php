@@ -17,7 +17,7 @@ namespace Air_Light;
 
 ?>
 
-</div><!-- #content -->
+</div>
 
 <footer id="colophon" class="block block-has-space block-my-things site-footer has-light-bg">
 

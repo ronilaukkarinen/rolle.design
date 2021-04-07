@@ -2,7 +2,7 @@
 /**
  * The template for displaying front page
  *
- * Contains the closing of the #content div and all content after.
+ * Contains the closing of the site wrapper div and all content after.
  * Initial styles for front page template.
  *
  * @Date:   2019-10-15 12:30:02

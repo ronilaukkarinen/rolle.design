@@ -20,7 +20,7 @@ get_header(); ?>
       $years = $wpdb->get_col( $wpdb->prepare( "SELECT DISTINCT YEAR(post_date) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'post' ORDER BY post_date DESC" ) ); // phpcs:ignore
 
       foreach ( $years as $year ) : ?>
-        <div class="listing">
+        <div class="listing" id="content">
         <h2><?php echo esc_html( $year ); ?></h2>
           <?php
           $months = $wpdb->get_col( $wpdb->prepare( "SELECT DISTINCT MONTH(post_date) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'post' AND YEAR(post_date) = '" . $year . "' ORDER BY post_date DESC" ) ); // phpcs:ignore
