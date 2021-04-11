@@ -4776,26 +4776,34 @@ kbd {
   white-space: nowrap;
 }
 
-.editor-styles-wrapper,
-.gutenberg-content {
-  /* stylelint-disable a11y/no-display-none */
-}
-
+/* stylelint-disable a11y/no-display-none, no-descending-specificity, selector-max-pseudo-class, stylelint-disable a11y/no-display-none */
 .editor-styles-wrapper li > a::after,
 .gutenberg-content li > a::after {
   display: none;
 }
 
+.editor-styles-wrapper [data-type="core/paragraph"] > a,
 .editor-styles-wrapper li > a,
 .editor-styles-wrapper p > strong > a,
 .editor-styles-wrapper p > em > a,
-.editor-styles-wrapper .is-style-ingress a,
-.editor-styles-wrapper p:not([class]) > a,
+.editor-styles-wrapper p:not([class]) > a:not([class]),
+.editor-styles-wrapper p.has-text-align-left > a,
+.editor-styles-wrapper p.has-text-align-center > a,
+.editor-styles-wrapper p.has-text-align-right > a,
+.editor-styles-wrapper p.has-small-font-size > a,
+.editor-styles-wrapper figcaption > a,
+.editor-styles-wrapper p:not([class]) > a.is-external-link,
+.gutenberg-content [data-type="core/paragraph"] > a,
 .gutenberg-content li > a,
 .gutenberg-content p > strong > a,
 .gutenberg-content p > em > a,
-.gutenberg-content .is-style-ingress a,
-.gutenberg-content p:not([class]) > a {
+.gutenberg-content p:not([class]) > a:not([class]),
+.gutenberg-content p.has-text-align-left > a,
+.gutenberg-content p.has-text-align-center > a,
+.gutenberg-content p.has-text-align-right > a,
+.gutenberg-content p.has-small-font-size > a,
+.gutenberg-content figcaption > a,
+.gutenberg-content p:not([class]) > a.is-external-link {
   border-bottom: 1px solid var(--color-fuchsia);
   color: var(--color-fuchsia);
   line-height: 1.5;
@@ -4803,44 +4811,80 @@ kbd {
   transition: border-color 0.33s cubic-bezier(0.19, 1, 0.22, 1), color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+.editor-styles-wrapper [data-type="core/paragraph"] > a::after,
 .editor-styles-wrapper li > a::after,
 .editor-styles-wrapper p > strong > a::after,
 .editor-styles-wrapper p > em > a::after,
-.editor-styles-wrapper .is-style-ingress a::after,
-.editor-styles-wrapper p:not([class]) > a::after,
+.editor-styles-wrapper p:not([class]) > a:not([class])::after,
+.editor-styles-wrapper p.has-text-align-left > a::after,
+.editor-styles-wrapper p.has-text-align-center > a::after,
+.editor-styles-wrapper p.has-text-align-right > a::after,
+.editor-styles-wrapper p.has-small-font-size > a::after,
+.editor-styles-wrapper figcaption > a::after,
+.editor-styles-wrapper p:not([class]) > a.is-external-link::after,
+.gutenberg-content [data-type="core/paragraph"] > a::after,
 .gutenberg-content li > a::after,
 .gutenberg-content p > strong > a::after,
 .gutenberg-content p > em > a::after,
-.gutenberg-content .is-style-ingress a::after,
-.gutenberg-content p:not([class]) > a::after {
+.gutenberg-content p:not([class]) > a:not([class])::after,
+.gutenberg-content p.has-text-align-left > a::after,
+.gutenberg-content p.has-text-align-center > a::after,
+.gutenberg-content p.has-text-align-right > a::after,
+.gutenberg-content p.has-small-font-size > a::after,
+.gutenberg-content figcaption > a::after,
+.gutenberg-content p:not([class]) > a.is-external-link::after {
   background-image: url("../../svg/external-link-fuchsia.svg");
 }
 
+.editor-styles-wrapper [data-type="core/paragraph"] > a:focus,
 .editor-styles-wrapper li > a:focus,
 .editor-styles-wrapper p > strong > a:focus,
 .editor-styles-wrapper p > em > a:focus,
-.editor-styles-wrapper .is-style-ingress a:focus,
-.editor-styles-wrapper p:not([class]) > a:focus,
+.editor-styles-wrapper p:not([class]) > a:not([class]):focus,
+.editor-styles-wrapper p.has-text-align-left > a:focus,
+.editor-styles-wrapper p.has-text-align-center > a:focus,
+.editor-styles-wrapper p.has-text-align-right > a:focus,
+.editor-styles-wrapper p.has-small-font-size > a:focus,
+.editor-styles-wrapper figcaption > a:focus,
+.editor-styles-wrapper p:not([class]) > a.is-external-link:focus,
+.gutenberg-content [data-type="core/paragraph"] > a:focus,
 .gutenberg-content li > a:focus,
 .gutenberg-content p > strong > a:focus,
 .gutenberg-content p > em > a:focus,
-.gutenberg-content .is-style-ingress a:focus,
-.gutenberg-content p:not([class]) > a:focus {
+.gutenberg-content p:not([class]) > a:not([class]):focus,
+.gutenberg-content p.has-text-align-left > a:focus,
+.gutenberg-content p.has-text-align-center > a:focus,
+.gutenberg-content p.has-text-align-right > a:focus,
+.gutenberg-content p.has-small-font-size > a:focus,
+.gutenberg-content figcaption > a:focus,
+.gutenberg-content p:not([class]) > a.is-external-link:focus {
   border-color: var(--color-black);
   color: var(--color-black);
   text-decoration: none;
 }
 
+.editor-styles-wrapper [data-type="core/paragraph"] > a:focus::after,
 .editor-styles-wrapper li > a:focus::after,
 .editor-styles-wrapper p > strong > a:focus::after,
 .editor-styles-wrapper p > em > a:focus::after,
-.editor-styles-wrapper .is-style-ingress a:focus::after,
-.editor-styles-wrapper p:not([class]) > a:focus::after,
+.editor-styles-wrapper p:not([class]) > a:not([class]):focus::after,
+.editor-styles-wrapper p.has-text-align-left > a:focus::after,
+.editor-styles-wrapper p.has-text-align-center > a:focus::after,
+.editor-styles-wrapper p.has-text-align-right > a:focus::after,
+.editor-styles-wrapper p.has-small-font-size > a:focus::after,
+.editor-styles-wrapper figcaption > a:focus::after,
+.editor-styles-wrapper p:not([class]) > a.is-external-link:focus::after,
+.gutenberg-content [data-type="core/paragraph"] > a:focus::after,
 .gutenberg-content li > a:focus::after,
 .gutenberg-content p > strong > a:focus::after,
 .gutenberg-content p > em > a:focus::after,
-.gutenberg-content .is-style-ingress a:focus::after,
-.gutenberg-content p:not([class]) > a:focus::after {
+.gutenberg-content p:not([class]) > a:not([class]):focus::after,
+.gutenberg-content p.has-text-align-left > a:focus::after,
+.gutenberg-content p.has-text-align-center > a:focus::after,
+.gutenberg-content p.has-text-align-right > a:focus::after,
+.gutenberg-content p.has-small-font-size > a:focus::after,
+.gutenberg-content figcaption > a:focus::after,
+.gutenberg-content p:not([class]) > a.is-external-link:focus::after {
   background-image: url("../../svg/external-link-black.svg");
 }
 

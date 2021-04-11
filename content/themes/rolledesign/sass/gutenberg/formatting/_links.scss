@@ -1,17 +1,22 @@
 // Links within content
+/* stylelint-disable a11y/no-display-none, no-descending-specificity, selector-max-pseudo-class, stylelint-disable a11y/no-display-none */
 .editor-styles-wrapper,
 .gutenberg-content {
-  // Style choice not to have external link indicators in a list
-  /* stylelint-disable a11y/no-display-none */
   li > a::after {
     display: none;
   }
 
+  [data-type="core/paragraph"] > a,
   li > a,
   p > strong > a,
   p > em > a,
-  .is-style-ingress a,
-  p:not([class]) > a {
+  p:not([class]) > a:not([class]),
+  p.has-text-align-left > a,
+  p.has-text-align-center > a,
+  p.has-text-align-right > a,
+  p.has-small-font-size > a,
+  figcaption > a,
+  p:not([class]) > a.is-external-link {
     border-bottom: 1px solid var(--color-fuchsia);
     color: var(--color-fuchsia);
     line-height: 1.5;
