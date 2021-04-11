@@ -2050,7 +2050,7 @@ div.lazy {
   --color-faded: rgba(255, 255, 255, .8);
   --color-alt-grey: rgba(255, 255, 255, .8);
   --color-toggled: #414850;
-  --color-pattens-blue: #eaf1f8;
+  --color-pattens-blue: #222324;
   --color-lynch: #677287;
   --color-fuchsia: #e2127a;
   --color-synthwavesunsetpink: #eb21f8;
@@ -4764,7 +4764,7 @@ th {
 
 kbd {
   background-color: var(--color-pattens-blue);
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-light-grey-alt);
   border-radius: 4px;
   box-shadow: 0 1px 0 rgba(var(--color-black-rgb), 0.2), 0 0 0 2px var(--color-white) inset;
   color: var(--color-paragraphs);
