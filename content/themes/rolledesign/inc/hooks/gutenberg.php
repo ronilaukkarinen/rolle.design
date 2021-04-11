@@ -81,7 +81,7 @@ function setup_editor_styles() {
   add_theme_support( 'editor-styles' );
 
   // Enqueue editor styles.
-  add_editor_style( get_theme_file_uri( get_asset_file( 'gutenberg.css' ) ) );
+  add_editor_style( get_theme_file_uri( get_asset_file( 'gutenberg-editor-styles.css' ) ) );
 }
 
 // Add backend styles for Gutenberg.
@@ -89,5 +89,5 @@ add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\gutenberg_editor_as
 
 function gutenberg_editor_assets() {
   // Load the theme styles within Gutenberg.
-  wp_enqueue_style( 'my-gutenberg-editor-styles', get_theme_file_uri( get_asset_file( 'gutenberg.css' ) ), false ); // phpcs:ignore
+  wp_enqueue_style( 'my-gutenberg-editor-styles', get_theme_file_uri( get_asset_file( 'gutenberg-editor-styles.css' ) ), false ); // phpcs:ignore
 }

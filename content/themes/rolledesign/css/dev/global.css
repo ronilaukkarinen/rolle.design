@@ -4116,6 +4116,7 @@ pre code {
 .gutenberg-content h3,
 .gutenberg-content h4,
 .gutenberg-content h5 {
+  font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "San Francisco", "Inter", "Sofia Pro", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: var(--line-height-core-heading);
 }
 
@@ -4132,6 +4133,16 @@ pre code {
 .gutenberg-content h5:first-child,
 .gutenberg-content h6:first-child {
   margin-top: 0;
+}
+
+.editor-styles-wrapper .wp-block h1,
+.editor-styles-wrapper .wp-block h2,
+.editor-styles-wrapper .wp-block h3,
+.editor-styles-wrapper .wp-block h4,
+.editor-styles-wrapper .wp-block h5,
+.editor-styles-wrapper .wp-block h6,
+.editor-styles-wrapper .wp-block.editor-post-title.editor-post-title__block {
+  font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "San Francisco", "Inter", "Sofia Pro", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 .editor-styles-wrapper .wp-block-image,
