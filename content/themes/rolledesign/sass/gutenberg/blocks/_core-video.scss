@@ -22,3 +22,43 @@
     width: 100%;
   }
 }
+
+// Ensure one post custom styles load up
+/* stylelint-disable sh-waqar/declaration-use-variable */
+.postid-295 {
+  .wp-block-video {
+    background-color: rgb(22, 25, 30);
+    border: none;
+    border-radius: .5rem;
+    box-shadow: rgb(0, 0, 0 / 55%) 0 20px 68px;
+    color: var(--color-white);
+    margin-top: 4rem;
+    overflow: auto;
+    padding: 4rem 2rem;
+    position: relative;
+    resize: none;
+    width: calc(100% - 4rem);
+    z-index: 2;
+  }
+
+  @media (max-width: 800px) {
+    .wp-block-video {
+      margin-left: 2rem;
+      margin-right: 2rem;
+      width: calc(100% - 8rem);
+    }
+  }
+
+  .wp-block-video::after {
+    background-color: #f85955;
+    border-radius: 50%;
+    box-shadow: #f85955 0 0 0 .4rem, #fbbe3f 1.8rem 0 0 .4rem, #45cc4b 3.6rem 0 0 .4rem;
+    content: "";
+    height: 4px;
+    left: 1.5rem;
+    position: absolute;
+    top: 1.5rem;
+    width: 4px;
+    z-index: 2;
+  }
+}
