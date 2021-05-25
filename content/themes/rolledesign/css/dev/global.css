@@ -1002,6 +1002,12 @@ body {
   margin-bottom: 6rem;
 }
 
+.block-blog-post-list .listing h3 {
+  font-weight: 600;
+  margin-bottom: 1.7rem;
+  opacity: .8;
+}
+
 .block-blog-post-list .listing:last-child {
   margin-bottom: 0;
 }

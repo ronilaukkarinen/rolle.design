@@ -216,6 +216,12 @@ body {
   .listing {
     margin-bottom: 6rem;
 
+    h3 {
+      font-weight: 600;
+      margin-bottom: 1.7rem;
+      opacity: .8;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
