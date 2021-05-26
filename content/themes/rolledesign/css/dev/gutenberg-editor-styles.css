@@ -1653,9 +1653,21 @@ th {
 .gutenberg-content p.is-style-ingress,
 .gutenberg-content .wp-block.is-style-ingress,
 .gutenberg-content .is-style-ingress {
+  font-size: var(--font-size-blog-supplementary-heading);
+}
+
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper p.is-style-ingress,
+.editor-styles-wrapper .wp-block.is-style-ingress,
+.editor-styles-wrapper .is-style-ingress,
+.gutenberg-content h3,
+.gutenberg-content h2,
+.gutenberg-content p.is-style-ingress,
+.gutenberg-content .wp-block.is-style-ingress,
+.gutenberg-content .is-style-ingress {
   color: var(--color-headings);
   font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "San Francisco", "Inter", "Sofia Pro", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: var(--font-size-blog-supplementary-heading);
   font-weight: 600;
   letter-spacing: -.02em;
   line-height: var(--line-height-headings);
