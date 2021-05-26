@@ -13,6 +13,7 @@ import getLocalization from './modules/localization';
 import styleExternalLinks from './modules/external-link';
 import './modules/dark-mode';
 import './modules/prism';
+import './modules/prism-inline-color';
 import './modules/copy-to-clipboard';
 import 'what-input';
 
