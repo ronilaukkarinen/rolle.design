@@ -10,6 +10,7 @@ span.inline-color-wrapper {
 	 * SVG-inlining explained:
 	 * https://stackoverflow.com/a/21626701/7595472
 	 */
+  /* stylelint-disable-next-line */
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyIDIiPjxwYXRoIGZpbGw9ImdyYXkiIGQ9Ik0wIDBoMnYySDB6Ii8+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0wIDBoMXYxSDB6TTEgMWgxdjFIMXoiLz48L3N2Zz4=");
   /* This is to prevent visual glitches where one pixel from the repeating pattern could be seen. */
   background-position: center;
