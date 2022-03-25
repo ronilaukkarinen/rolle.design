@@ -1712,6 +1712,18 @@ pre {
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 0;
+  position: relative;
+}
+
+.block-hero::after {
+  background-image: linear-gradient(180deg, rgba(var(--color-white-rgb), 0) 0%, rgba(var(--color-white-rgb), 1) 100%);
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 150px;
+  left: 0;
+  position: absolute;
+  width: 100%;
 }
 
 .block-hero.block-hero-front {
@@ -1741,18 +1753,6 @@ pre {
 .block-hero .instagram-link:hover,
 .block-hero .instagram-link:focus {
   color: var(--color-instagram-hover);
-}
-
-@media (max-width: 750px) {
-  .block-hero {
-    background-position: center 30rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .block-hero {
-    background-position: center 40rem;
-  }
 }
 
 .block-hero .content {
@@ -1871,6 +1871,18 @@ pre {
 @media screen and (min-width: 1920px) {
   .block-hero p {
     font-size: 28px;
+  }
+}
+
+@media (max-width: 750px) {
+  .block-hero {
+    background-position: center 30rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .block-hero {
+    background-position: center 40rem;
   }
 }
 
