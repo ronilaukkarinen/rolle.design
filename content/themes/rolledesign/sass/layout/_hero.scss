@@ -15,7 +15,7 @@
   padding-top: 0;
   position: relative;
 
-  &::after {
+  &:not(.block-no-triggers)::after {
     background-image: linear-gradient(180deg, rgba(var(--color-white-rgb), 0) 0%, rgba(var(--color-white-rgb), 1) 100%);
     bottom: 0;
     content: '';
