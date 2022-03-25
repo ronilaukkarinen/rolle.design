@@ -2,7 +2,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-04-05 10:50:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-03-25 11:37:39
+ * @Last Modified time: 2022-03-25 11:41:51
  */
 /**
  * Air theme JavaScript.
@@ -129,6 +129,25 @@ swup.on('contentReplaced', function () {
 
 });
 // Swup ends
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Check if the media query matches or is not available.
+  if ( ! mediaQuery || mediaQuery.matches) {
+    // doSomethingWithoutAnimation();
+  } else {
+    doSomethingWithAnimation();
+  }
+});
+
+// Adds an event listener to check for changes in the media query's value.
+mediaQuery.addEventListener("change", () => {
+  if (mediaQuery.matches) {
+    // doSomethingWithoutAnimation();
+  } else {
+    doSomethingWithAnimation();
+  }
+});
 
 // jQuery start
 (function ($) {

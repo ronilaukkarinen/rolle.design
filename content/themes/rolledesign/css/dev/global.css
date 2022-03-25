@@ -3375,18 +3375,6 @@ h1.big-title {
   padding-right: 0;
 }
 
-@media (max-width: 1500px) {
-  .block-hero-dont-fade {
-    background-position: 0 30%;
-  }
-}
-
-@media (max-width: 700px) {
-  .block-hero-dont-fade {
-    background-position: bottom center;
-  }
-}
-
 .block-hero-dont-fade.block-has-space {
   padding-bottom: 0;
   padding-left: 0;
@@ -3401,7 +3389,7 @@ h1.big-title {
 
 .block-hero-dont-fade .content {
   /* stylelint-disable property-disallowed-list, number-max-precision */
-  background: linear-gradient(180deg, rgba(var(--color-white-rgb), 0) 0%, rgba(var(--color-white-rgb), 0.83937) 50%, rgba(var(--color-white-rgb), 1) 100%);
+  background: linear-gradient(180deg, rgba(var(--color-white-rgb), 0) 0%, rgba(var(--color-white-rgb), 0.9) 30%, rgba(var(--color-white-rgb), 1) 100%);
   padding-bottom: var(--padding-container-vertical);
   padding-left: var(--padding-container-horizontal);
   padding-right: var(--padding-container-horizontal);
@@ -3410,6 +3398,18 @@ h1.big-title {
 @media (max-width: 800px) {
   .block-hero-dont-fade .content {
     padding-bottom: 20rem;
+  }
+}
+
+@media (max-width: 1500px) {
+  .block-hero-dont-fade {
+    background-position: 0 30%;
+  }
+}
+
+@media (max-width: 700px) {
+  .block-hero-dont-fade {
+    background-position: bottom center;
   }
 }
 
