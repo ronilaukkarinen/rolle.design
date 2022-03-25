@@ -2,7 +2,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-04-05 10:50:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-03-25 11:31:20
+ * @Last Modified time: 2022-03-25 11:36:20
  */
 /**
  * Air theme JavaScript.
@@ -44,33 +44,10 @@ const swup = new Swup({
   ]
 });
 
-// Init lazyload
-// Usage example on template side when air-helper enabled:
-// <?php vanilla_lazyload_tag( get_post_thumbnail_id( $post->ID ) ); ?>
-// Refer to documentation:
-// 1) https://github.com/digitoimistodude/air-helper#image-lazyloading-1
-// 2) https://github.com/verlok/vanilla-lazyload#-getting-started---html
-var rolle_LazyLoad = new LazyLoad();
-// After your content has changed...
-rolle_LazyLoad.update();
-
-// Swup starts
-swup.on('contentReplaced', function () {
-
-  // Always move scroll position to up when clicking a link
-  var moveToTop = new MoveTo({
-    tolerance: 0,
-    duration: 0,
-    easing: 'easeOutQuart',
-    container: window
-  });
-
-  var target = document.getElementById('swup');
-  moveToTop.move(target);
-
-  // Bg parallax and moveTo functionality
+// Bg parallax and moveTo functionality
+function doSomethingWithAnimation() {
   const heros = document.getElementsByClassName('block-hero');
-  if( heros ) {
+  if ( heros ) {
     window.onscroll = function() {
       for (var i = 0; i < heros.length; i++) {
 
@@ -102,6 +79,54 @@ swup.on('contentReplaced', function () {
   for (var i = 0; i < triggers.length; i++) {
     moveTo.registerTrigger(triggers[i]);
   }
+}
+
+// Init lazyload
+// Usage example on template side when air-helper enabled:
+// <?php vanilla_lazyload_tag( get_post_thumbnail_id( $post->ID ) ); ?>
+// Refer to documentation:
+// 1) https://github.com/digitoimistodude/air-helper#image-lazyloading-1
+// 2) https://github.com/verlok/vanilla-lazyload#-getting-started---html
+var rolle_LazyLoad = new LazyLoad();
+// After your content has changed...
+rolle_LazyLoad.update();
+
+// Grab the prefers reduced media query
+const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+// Swup starts
+swup.on('contentReplaced', function () {
+
+  // Always move scroll position to up when clicking a link
+  var moveToTop = new MoveTo({
+    tolerance: 0,
+    duration: 0,
+    easing: 'easeOutQuart',
+    container: window
+  });
+
+  var target = document.getElementById('swup');
+  moveToTop.move(target);
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+    // Check if the media query matches or is not available.
+    if ( ! mediaQuery || mediaQuery.matches) {
+      doSomethingWithoutAnimation();
+    } else {
+      doSomethingWithAnimation();
+    }
+  });
+
+  // Adds an event listener to check for changes in the media query's value.
+  mediaQuery.addEventListener("change", () => {
+    if (mediaQuery.matches) {
+      doSomethingWithoutAnimation();
+    } else {
+      doSomethingWithAnimation();
+    }
+  });
+
 });
 // Swup ends
 
@@ -175,61 +200,3 @@ swup.on('contentReplaced', function () {
     }
   });
 })(jQuery);
-
-function doSomethingWithAnimation() {
-  const heros = document.getElementsByClassName('block-hero');
-  if ( heros ) {
-    window.onscroll = function() {
-      for (var i = 0; i < heros.length; i++) {
-
-        var scrollposition = window.pageYOffset | document.body.scrollTop;
-        var hero = heros[i], css = hero.style;
-
-        css.opacity = 1 - scrollposition / 450;
-        css.backgroundSize = (100 + 50 * scrollposition / 250) + '%';
-      }
-    };
-  }
-
-  const easeFunctions = {
-    easeInQuad: function (t, b, c, d) {
-      t /= d;
-      return c * t * t + b;
-    },
-    easeOutQuad: function (t, b, c, d) {
-      t /= d;
-      return -c * t * (t - 2) + b;
-    }
-  };
-  const moveTo = new MoveTo({
-      ease: 'easeInQuad'
-    },
-    easeFunctions
-  );
-  const triggers = document.getElementsByClassName('js-trigger');
-  for (var i = 0; i < triggers.length; i++) {
-    moveTo.registerTrigger(triggers[i]);
-  }
-}
-
-// Grab the prefers reduced media query.
-const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  // Check if the media query matches or is not available.
-  if ( ! mediaQuery || mediaQuery.matches) {
-    doSomethingWithoutAnimation();
-  } else {
-    doSomethingWithAnimation();
-  }
-});
-
-// Adds an event listener to check for changes in the media query's value.
-mediaQuery.addEventListener("change", () => {
-  if (mediaQuery.matches) {
-    doSomethingWithoutAnimation();
-  } else {
-    doSomethingWithAnimation();
-  }
-});
