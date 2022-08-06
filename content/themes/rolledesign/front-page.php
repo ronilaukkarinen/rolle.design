@@ -30,7 +30,7 @@ get_header(); ?>
 
   <secton class="block block-doing-stuff block-has-space">
     <div class="head">
-      <p>I like to create things like</p>
+      <p>I like to do things like</p>
       <h2><span>Design,</span> <span>code,</span> <span>servers,</span> <span>articles.</span></h2>
     </div>
   </secton>
