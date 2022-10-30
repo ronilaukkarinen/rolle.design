@@ -22,8 +22,8 @@ namespace Air_Light;
 <footer id="colophon" class="block block-has-space block-my-things site-footer has-light-bg">
 
   <div class="head">
-    <p>I keep myself constantly busy. Everything is changing.</p>
-    <h2><a href="https://github.com/ronilaukkarinen">Follow my projects on GitHub. <?php include get_theme_file_path( '/svg/github.svg' ); ?></a></h2>
+    <p>I keep myself constantly busy. Everything is changing. Psst, I'm on <a rel="me" href="https://mstdn.social/@rolle">Mastodon</a>.</p>
+    <h2><a href="https://github.com/ronilaukkarinen" class="no-external-link-indicator">Follow my projects on GitHub. <?php include get_theme_file_path( '/svg/github.svg' ); ?></a></h2>
   </div>
 
   <p class="back-to-top"><a href="#page" class="js-trigger top no-text-link no-external-link-indicator" data-mt-duration="300"><span class="screen-reader-text"><?php echo esc_html( get_default_localization( 'Back to top' ) ); ?></span><?php include get_theme_file_path( '/svg/chevron-up.svg' ); ?></a></p>

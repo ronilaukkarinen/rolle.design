@@ -80,48 +80,15 @@
   }
 }
 
-// Add icon to external links
-a.is-external-link {
-  align-items: center;
-  display: inline;
-  justify-content: space-between;
+// External link icon
+.external-link-icon {
+  margin-left: .7rem;
+  margin-right: .2rem;
 
-  &::after {
-    background-image: url('../../svg/external-link.svg');
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: 14px 14px;
-    content: '';
-    display: inline-flex;
-    height: 14px;
-    margin-left: 5px;
-    margin-right: 2px;
-    position: relative;
-    right: 0;
-    top: 0;
-    transition: all .18s ease-in-out;
-    width: 14px;
+  @media (max-width: $container-mobile) {
+    height: 12px;
+    margin-left: .4rem;
+    transform: translateY(1px);
+    width: 12px;
   }
 }
-
-// Do not use external links indicators in areas that they don't look good or fit
-/* stylelint-disable a11y/no-display-none */
-a.is-external-link.global-link::after,
-a.is-external-link.no-external-link-indicator::after {
-  display: none;
-}
-/* stylelint-enable a11y/no-display-none */
-
-// Accessibility: Disable animation if reduce motion is enabled
-@media screen and (prefers-reduced-motion: reduce), (update: slow) {
-  // Your animations here
-}
-
-// Define here the upsell blocks that have overlay link areas
-// inside them
-// These should always have overflow visible, because otherwise
-// the outline will not be visible outside the element
-// .block.block-three-upsells .container,
-// body .block .container .col {
-//   overflow: visible;
-// }

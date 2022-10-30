@@ -360,8 +360,7 @@ template {
  */
 /* stylelint-disable property-disallowed-list */
 .transition-fade {
-  -webkit-animation: slideUp 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
-          animation: slideUp 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  animation: slideUp 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
   opacity: 1;
   transform: translate3d(0, 2vh, 0);
   transition: .2s;
@@ -369,15 +368,6 @@ template {
 
 html.is-animating .transition-fade {
   opacity: 0;
-}
-
-@-webkit-keyframes slideUp {
-  0% {
-    transform: translate3d(0, 2vh, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
 }
 
 @keyframes slideUp {
@@ -657,36 +647,20 @@ html.is-animating .transition-fade {
   outline-width: 4px;
 }
 
-a.is-external-link {
-  align-items: center;
-  display: inline;
-  justify-content: space-between;
+.external-link-icon {
+  margin-left: .7rem;
+  margin-right: .2rem;
 }
 
-a.is-external-link::after {
-  background-image: url("../../svg/external-link.svg");
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: 14px 14px;
-  content: '';
-  display: inline-flex;
-  height: 14px;
-  margin-left: 5px;
-  margin-right: 2px;
-  position: relative;
-  right: 0;
-  top: 0;
-  transition: all .18s ease-in-out;
-  width: 14px;
+@media (max-width: 480px) {
+  .external-link-icon {
+    height: 12px;
+    margin-left: .4rem;
+    transform: translateY(1px);
+    width: 12px;
+  }
 }
 
-/* stylelint-disable a11y/no-display-none */
-a.is-external-link.global-link::after,
-a.is-external-link.no-external-link-indicator::after {
-  display: none;
-}
-
-/* stylelint-enable a11y/no-display-none */
 /* stylelint-disable a11y/no-display-none */
 .main-menu {
   display: block;
@@ -1127,12 +1101,6 @@ body {
   display: none;
 }
 
-@media (max-width: 770px) {
-  .comment-on-twitter a {
-    font-size: 2.4rem;
-  }
-}
-
 .comment-on-twitter a:hover, .comment-on-twitter a:focus {
   color: #65bff6;
 }
@@ -1155,6 +1123,12 @@ body {
   .comment-on-twitter a svg {
     height: 3rem;
     width: 3rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .comment-on-twitter a {
+    font-size: 2.4rem;
   }
 }
 
@@ -1190,6 +1164,10 @@ body {
   max-width: 720px;
   padding-bottom: var(--padding-block);
   padding-top: var(--padding-block);
+}
+
+svg.external-link-icon {
+  bottom: 0;
 }
 
 /* stylelint-disable a11y/no-display-none */
@@ -1691,7 +1669,7 @@ pre {
   width: 100%;
 }
 
-.block-my-things .head svg {
+.block-my-things .head svg:not(.external-link-icon) {
   bottom: 2px;
   margin-left: 5px;
   position: relative;
@@ -2220,6 +2198,7 @@ pre[class*="language-"] {
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-x: auto;
   -moz-tab-size: 4;
+    -o-tab-size: 4;
        tab-size: 4;
   text-align: left;
   white-space: pre;
@@ -2459,6 +2438,7 @@ pre[class*="language-"] {
           hyphens: none;
   line-height: 1.4;
   -moz-tab-size: 4;
+    -o-tab-size: 4;
        tab-size: 4;
   text-align: left;
   white-space: pre;

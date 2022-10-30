@@ -16,7 +16,7 @@ import SwupBodyClassPlugin from '@swup/body-class-plugin';
 import LazyLoad from 'vanilla-lazyload';
 import reframe from 'reframe.js';
 import getLocalization from './modules/localization';
-import styleExternalLinks from './modules/external-link';
+import { styleExternalLinks, initExternalLinkLabels } from './modules/external-link';
 import './modules/dark-mode';
 import './modules/prism';
 import './modules/prism-inline-color';
@@ -29,6 +29,7 @@ document.body.classList.add('js');
 
 // Style external links
 styleExternalLinks();
+initExternalLinkLabels();
 
 // Fit videos
 reframe('iframe');

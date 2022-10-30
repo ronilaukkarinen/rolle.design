@@ -65,7 +65,7 @@
     width: 100%;
   }
 
-  .head svg {
+  .head svg:not(.external-link-icon) {
     bottom: 2px;
     margin-left: 5px;
     position: relative;

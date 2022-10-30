@@ -331,10 +331,6 @@ body {
     display: none;
   }
 
-  @media (max-width: $container-ipad) {
-    font-size: 2.4rem;
-  }
-
   &:hover,
   &:focus {
     color: lighten($color-twitter, 15%);
@@ -357,6 +353,10 @@ body {
       height: 3rem;
       width: 3rem;
     }
+  }
+
+  @media (max-width: $container-ipad) {
+    font-size: 2.4rem;
   }
 }
 
@@ -392,4 +392,8 @@ body {
   max-width: $width-max-article;
   padding-bottom: var(--padding-block);
   padding-top: var(--padding-block);
+}
+
+svg.external-link-icon {
+  bottom: 0;
 }

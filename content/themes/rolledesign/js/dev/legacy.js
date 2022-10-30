@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var airbnb_browser_shims__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! airbnb-browser-shims */ \"./content/themes/rolledesign/node_modules/airbnb-browser-shims/index.js\");\n/* harmony import */ var airbnb_browser_shims__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(airbnb_browser_shims__WEBPACK_IMPORTED_MODULE_0__);\n/**\n * Polyfills etc. for legacy browsers (pre ES2015/ES6)\n */\n// Import polyfills and shims\n\n\n//# sourceURL=webpack:///./content/themes/rolledesign/js/src/legacy.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var airbnb_browser_shims__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! airbnb-browser-shims */ \"./content/themes/rolledesign/node_modules/airbnb-browser-shims/index.js\");\n/* harmony import */ var airbnb_browser_shims__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(airbnb_browser_shims__WEBPACK_IMPORTED_MODULE_0__);\n/**\n * Polyfills etc. for legacy browsers (pre ES2015/ES6)\n */\n\n// Import polyfills and shims\n\n\n//# sourceURL=webpack:///./content/themes/rolledesign/js/src/legacy.js?");
 
 /***/ }),
 
@@ -2780,7 +2780,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! /Users/rolle/Projects/rolledesign/content/themes/rolledesign/js/src/legacy.js */\"./content/themes/rolledesign/js/src/legacy.js\");\n\n\n//# sourceURL=webpack:///multi_./content/themes/rolledesign/js/src/legacy.js?");
+eval("module.exports = __webpack_require__(/*! /mnt/c/Users/Rolle/Projects/rolle.design/content/themes/rolledesign/js/src/legacy.js */\"./content/themes/rolledesign/js/src/legacy.js\");\n\n\n//# sourceURL=webpack:///multi_./content/themes/rolledesign/js/src/legacy.js?");
 
 /***/ }),
 
