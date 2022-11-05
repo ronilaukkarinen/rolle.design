@@ -22,7 +22,7 @@ namespace Air_Light;
 <footer id="colophon" class="block block-has-space block-my-things site-footer has-light-bg">
 
   <div class="head">
-    <p>I keep myself constantly busy. Everything is changing. Psst, I'm on <a rel="me" href="https://mstdn.social/@rolle">Mastodon</a>.</p>
+    <p>I keep myself constantly busy. Everything is changing. Psst, I'm on <a rel="me" href="https://mementomori.social/@rolle">Mastodon</a>.</p>
     <h2><a href="https://github.com/ronilaukkarinen" class="no-external-link-indicator">Follow my projects on GitHub. <?php include get_theme_file_path( '/svg/github.svg' ); ?></a></h2>
   </div>
 
