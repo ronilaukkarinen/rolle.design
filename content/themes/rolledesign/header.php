@@ -7,7 +7,7 @@
  * @Author: Roni Laukkarinen
  * @Date: 2020-05-11 13:17:32
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-12-15 13:23:33
+ * @Last Modified time: 2022-12-15 13:26:25
  *
  * @package rolle
  */
@@ -26,15 +26,7 @@ namespace Air_Light;
 
   <?php wp_head(); ?>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QG6L8BW5Q0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QG6L8BW5Q0');
-</script>
+  <script defer data-domain="rolle.design" src="https://analytics.dude.fi/js/plausible.js"></script>
 </head>
 
 <body <?php body_class( 'no-js' ); ?>>
