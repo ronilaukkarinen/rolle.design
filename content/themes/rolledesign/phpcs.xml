@@ -101,6 +101,7 @@
 
         <!-- Project based -->
         <exclude name="Squiz.PHP.CommentedOutCode.Found" />
+        <exclude name="WordPress.WP.EnqueuedResources.NonEnqueuedScript" />
     </rule>
 
     <!-- Verify that the text_domain is set to the desired text-domain.

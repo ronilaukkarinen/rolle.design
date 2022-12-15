@@ -2,7 +2,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-04-05 10:50:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-03-25 11:41:51
+ * @Last Modified time: 2022-12-15 11:23:17
  */
 /**
  * Air theme JavaScript.
@@ -17,10 +17,10 @@ import LazyLoad from 'vanilla-lazyload';
 import reframe from 'reframe.js';
 import getLocalization from './modules/localization';
 import { styleExternalLinks, initExternalLinkLabels } from './modules/external-link';
-import './modules/dark-mode';
 import './modules/prism';
 import './modules/prism-inline-color';
 import './modules/copy-to-clipboard';
+import './modules/dark-mode';
 import 'what-input';
 
 // Define Javascript is active by changing the body class

@@ -6,8 +6,8 @@
  *
  * @Author: Roni Laukkarinen
  * @Date: 2020-05-11 13:33:49
- * @Last Modified by: Roni Laukkarinen
- * @Last Modified time: 2021-04-02 00:43:10
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2022-12-15 13:25:12
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  * @package rolle
