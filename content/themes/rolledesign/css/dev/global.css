@@ -661,6 +661,10 @@ html.is-animating .transition-fade {
   }
 }
 
+.no-external-link-icon svg.external-link-icon {
+  display: none;
+}
+
 /* stylelint-disable a11y/no-display-none */
 .main-menu {
   display: block;
@@ -2198,7 +2202,6 @@ pre[class*="language-"] {
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-x: auto;
   -moz-tab-size: 4;
-    -o-tab-size: 4;
        tab-size: 4;
   text-align: left;
   white-space: pre;
@@ -2438,7 +2441,6 @@ pre[class*="language-"] {
           hyphens: none;
   line-height: 1.4;
   -moz-tab-size: 4;
-    -o-tab-size: 4;
        tab-size: 4;
   text-align: left;
   white-space: pre;

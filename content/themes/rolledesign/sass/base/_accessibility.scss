@@ -31,6 +31,7 @@
   &:focus {
     background-color: var(--color-lightgrey);
     border-radius: 0;
+    // stylelint-disable-next-line
     box-shadow: 0 0 2px 2px rgba(var(--color-black-rgb), .6);
     clip: auto;
     clip-path: none;
@@ -91,4 +92,10 @@
     transform: translateY(1px);
     width: 12px;
   }
+}
+
+// Hide external link icon if the link has an exception
+// stylelint-disable
+.no-external-link-icon svg.external-link-icon {
+  display: none;
 }
