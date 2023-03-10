@@ -66,6 +66,7 @@
     "wpackagist-plugin/redis-cache": "*",
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/so-clean-up-wp-seo": "*",
+    "wpackagist-plugin/webmention": "*",
     "advanced-custom-fields/advanced-custom-fields-pro": "5.9.5"
   },
   "require-dev": {},
