@@ -30,7 +30,13 @@ get_header(); ?>
       ?>
 
       <?php if ( ! empty( $url_to_tweet ) ) : ?>
-        <p class="comment-on-twitter"><a href="<?php echo esc_url( $url_to_tweet ); ?>">Comment on Twitter <?php include get_theme_file_path( '/svg/twitter.svg' ); ?></a></p>
+        <?php
+        // If URL contains twitter.com
+        if ( strpos( $url_to_tweet, 'twitter.com' ) !== false ) : ?>
+          <p class="comment-on-twitter"><a class="no-external-link-icon" href="<?php echo esc_url( $url_to_tweet ); ?>">Comment on Twitter <?php include get_theme_file_path( '/svg/twitter.svg' ); ?></a></p>
+        <?php else : ?>
+          <p class="comment-on-mastodon"><a class="no-external-link-icon" href="<?php echo esc_url( $url_to_tweet ); ?>">Comment on Mastodon <?php include get_theme_file_path( '/svg/mastodon.svg' ); ?></a></p>
+        <?php endif; ?>
       <?php endif; ?>
 
       <?php if ( get_edit_post_link() ) {

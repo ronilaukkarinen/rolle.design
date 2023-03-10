@@ -315,6 +315,7 @@ body {
   line-height: 1;
 }
 
+.comment-on-mastodon a,
 .comment-on-twitter a {
   align-items: baseline;
   color: var(--color-twitter);
@@ -326,7 +327,9 @@ body {
   margin-bottom: 8rem;
   margin-top: 8rem;
   text-decoration: none;
+}
 
+.comment-on-twitter a {
   &::after {
     display: none;
   }
@@ -346,6 +349,36 @@ body {
     position: relative;
     stroke: $color-twitter;
     stroke-width: 2px;
+    top: 1rem;
+    width: 5rem;
+
+    @media (max-width: $container-ipad) {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  @media (max-width: $container-ipad) {
+    font-size: 2.4rem;
+  }
+}
+
+.comment-on-mastodon > a {
+  color: var(--color-mastodon);
+
+  &::after {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-mastodon-lighten);
+  }
+
+  svg {
+    height: 5rem;
+    margin-left: 2rem;
+    position: relative;
     top: 1rem;
     width: 5rem;
 

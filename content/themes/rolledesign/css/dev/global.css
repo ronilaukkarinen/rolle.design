@@ -317,6 +317,8 @@ template {
   --color-github-link: #0366d6;
   --color-github-text: #586069;
   --color-twitter: #1da1f2;
+  --color-mastodon: #595aff;
+  --color-mastodon-lighten: #8c8dff;
   --color-links: var(--color-main);
   --color-hover: var(--color-dark);
   --color-blockquotes: #666;
@@ -1088,6 +1090,7 @@ body {
   line-height: 1;
 }
 
+.comment-on-mastodon a,
 .comment-on-twitter a {
   align-items: baseline;
   color: var(--color-twitter);
@@ -1132,6 +1135,39 @@ body {
 
 @media (max-width: 770px) {
   .comment-on-twitter a {
+    font-size: 2.4rem;
+  }
+}
+
+.comment-on-mastodon > a {
+  color: var(--color-mastodon);
+}
+
+.comment-on-mastodon > a::after {
+  display: none;
+}
+
+.comment-on-mastodon > a:hover, .comment-on-mastodon > a:focus {
+  color: var(--color-mastodon-lighten);
+}
+
+.comment-on-mastodon > a svg {
+  height: 5rem;
+  margin-left: 2rem;
+  position: relative;
+  top: 1rem;
+  width: 5rem;
+}
+
+@media (max-width: 770px) {
+  .comment-on-mastodon > a svg {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .comment-on-mastodon > a {
     font-size: 2.4rem;
   }
 }

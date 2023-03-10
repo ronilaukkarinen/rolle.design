@@ -45,6 +45,8 @@ $color-twitter: #1da1f2;
   --color-github-link: #0366d6;
   --color-github-text: #586069;
   --color-twitter: #{$color-twitter};
+  --color-mastodon: #595aff;
+  --color-mastodon-lighten: #8c8dff;
 
   // Element text and background colors
   --color-links: var(--color-main);
