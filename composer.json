@@ -67,6 +67,7 @@
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/so-clean-up-wp-seo": "*",
     "wpackagist-plugin/webmention": "*",
+    "wpackagist-plugin/semantic-linkbacks": "*",
     "advanced-custom-fields/advanced-custom-fields-pro": "5.9.5"
   },
   "require-dev": {},
