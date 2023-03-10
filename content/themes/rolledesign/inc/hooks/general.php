@@ -27,3 +27,14 @@ function widgets_init() {
     'after_title'   => '</h2>',
   ) );
 } // end widgets_init
+
+/**
+ * Auto approve webmentions.
+ *
+ * @link https://indieweb.org/Wordpress_Webmention_Plugin
+ */
+function unspam_webmentions($approved, $commentdata) {
+  return $commentdata['comment_type'] == 'webmention' ? 1 : $approved;
+}
+
+add_filter('pre_comment_approved', __NAMESPACE__ . '\unspam_webmentions', '99', 2);
