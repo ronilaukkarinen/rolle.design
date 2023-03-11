@@ -13,6 +13,7 @@
     "reframe.js": "^3.0.2",
     "slick-carousel": "^1.8.1",
     "swup": "^2.0.14",
+    "vanilla-lazyload": "^17.8.3",
     "what-input": "^5.2.10"
   }
 }
