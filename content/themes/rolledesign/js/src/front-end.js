@@ -96,7 +96,10 @@ const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 swup.on('contentReplaced', function () {
 
   // Reframe.js
-  reframe('.wp-block-embed__wrapper iframe, .wp-has-aspect-ratio iframe, .article-content iframe');
+  // Delay
+  setTimeout(function () {
+    reframe('.wp-block-embed__wrapper iframe, .wp-has-aspect-ratio iframe, .article-content iframe');
+  }, 1000);
 
   // Always move scroll position to up when clicking a link
   var moveToTop = new MoveTo({
@@ -132,6 +135,9 @@ swup.on('contentReplaced', function () {
 // Swup ends
 
 document.addEventListener('DOMContentLoaded', function () {
+
+  // Reframe.js
+  reframe('.wp-block-embed__wrapper iframe, .wp-has-aspect-ratio iframe, .article-content iframe');
 
   // Check if the media query matches or is not available.
   if ( ! mediaQuery || mediaQuery.matches) {
