@@ -104,7 +104,7 @@ eval("/**\n * Declare the block you'd like to style.\n * Duplicate and customize
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! /Users/rolle/Projects/rolle.design/content/themes/rolledesign/js/src/block.js */\"./content/themes/rolledesign/js/src/block.js\");\n\n\n//# sourceURL=webpack:///multi_./content/themes/rolledesign/js/src/block.js?");
+eval("module.exports = __webpack_require__(/*! /home/rolle/Projects/rolle.design/content/themes/rolledesign/js/src/block.js */\"./content/themes/rolledesign/js/src/block.js\");\n\n\n//# sourceURL=webpack:///multi_./content/themes/rolledesign/js/src/block.js?");
 
 /***/ })
 

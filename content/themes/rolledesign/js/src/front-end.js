@@ -9,12 +9,11 @@
  */
 
 // Import modules (comment to disable)
+import reframe from 'reframe.js';
 import MoveTo from 'moveto';
 import Swup from 'swup';
 import SwupScriptsPlugin from '@swup/scripts-plugin';
 import SwupBodyClassPlugin from '@swup/body-class-plugin';
-import LazyLoad from 'vanilla-lazyload';
-import reframe from 'reframe.js';
 import getLocalization from './modules/localization';
 import { styleExternalLinks, initExternalLinkLabels } from './modules/external-link';
 import './modules/prism';
@@ -30,9 +29,6 @@ document.body.classList.add('js');
 // Style external links
 styleExternalLinks();
 initExternalLinkLabels();
-
-// Fit videos
-reframe('iframe');
 
 // Initiate Swup transitions
 const swup = new Swup({
@@ -97,6 +93,9 @@ const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 // Swup starts
 swup.on('contentReplaced', function () {
+
+  // Reframe.js
+  reframe('.wp-block-embed__wrapper iframe, .wp-has-aspect-ratio iframe, .article-content iframe');
 
   // Always move scroll position to up when clicking a link
   var moveToTop = new MoveTo({
