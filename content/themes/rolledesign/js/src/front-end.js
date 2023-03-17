@@ -96,7 +96,10 @@ const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 swup.on('contentReplaced', function () {
 
   // Iframe heights
-  iFrameResize({ log: true }, 'iframe');
+  // If iFrameResize is defined
+  if (typeof iFrameResize === 'function') {
+    iFrameResize({ log: true }, 'iframe');
+  }
 
   // Always move scroll position to up when clicking a link
   var moveToTop = new MoveTo({
@@ -134,7 +137,9 @@ swup.on('contentReplaced', function () {
 document.addEventListener('DOMContentLoaded', function () {
 
   // Iframe heights
-  iFrameResize({ log: true }, 'iframe');
+  if (typeof iFrameResize === 'function') {
+    iFrameResize({ log: true }, 'iframe');
+  }
 
   // Check if the media query matches or is not available.
   if ( ! mediaQuery || mediaQuery.matches) {
