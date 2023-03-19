@@ -1934,74 +1934,39 @@ pre {
   color: var(--color-synthwavesunsetpink);
 }
 
-.site-footer .top {
-  background-color: transparent;
-  padding: 16px;
-}
-
-.site-footer .top svg {
-  align-items: center;
-  display: flex;
-  fill: var(--color-black);
-  height: 18px;
-  justify-content: center;
-  margin: 0;
-  opacity: .8;
-  transition: all .3s ease;
-  width: 18px;
-}
-
-@media (max-width: 480px) {
-  .site-footer .top svg {
-    height: 15px;
-    width: 15px;
-  }
-}
-
-.site-footer .top:hover, .site-footer .top:focus, .site-footer .top:active {
-  opacity: 1;
-}
-
-.site-footer .top:hover svg, .site-footer .top:focus svg, .site-footer .top:active svg {
-  transform: translateY(-0.5rem);
-}
-
-.site-footer .back-to-top {
-  align-items: center;
-  bottom: 1rem;
-  display: flex;
-  justify-content: center;
-  margin: 0;
+.top {
+  --color-background-top: var(--color-white);
+  --color-background-top-hover: var(--color-white);
+  background-color: var(--color-background-top);
+  border-radius: 2px;
+  bottom: var(--padding-container-horizontal);
+  color: var(--color-black);
+  cursor: pointer;
+  font-size: 16px;
+  height: 3rem;
+  line-height: 30px;
   opacity: 0;
   position: fixed;
-  right: 1rem;
+  right: var(--padding-container-horizontal);
+  text-align: center;
   text-decoration: none;
-  transition: opacity 0.22s 0s, visibility 0s 0.22s;
-  z-index: 9999;
+  transition: 500ms opacity;
+  visibility: hidden;
+  width: 3rem;
+  z-index: 1;
 }
 
-.site-footer .back-to-top.has-light-bg svg {
-  fill: var(--color-black);
+.top:hover {
+  background-color: var(--color-background-top-hover);
 }
 
-.site-footer .back-to-top.has-dark-bg svg {
-  fill: var(--color-white);
+.top:focus {
+  background-color: var(--color-background-top);
 }
 
-.site-footer .back-to-top.is-visible, .site-footer .back-to-top.fade-out {
-  transition: opacity 0.22s 0s, visibility 0s 0s;
-}
-
-.site-footer .back-to-top.is-visible {
+.top.is-visible {
   opacity: 1;
-}
-
-.site-footer .back-to-top.fade-out {
-  opacity: 1;
-}
-
-.site-footer .back-to-top.fade-out:focus, .site-footer .back-to-top.fade-out:hover {
-  opacity: 1;
+  visibility: visible;
 }
 
 .gallery {

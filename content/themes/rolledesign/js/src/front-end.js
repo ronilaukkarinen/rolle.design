@@ -9,14 +9,15 @@
  */
 
 // Import modules (comment to disable)
-import reframe from 'reframe.js';
 import MoveTo from 'moveto';
 import Swup from 'swup';
 import SwupScriptsPlugin from '@swup/scripts-plugin';
 import SwupBodyClassPlugin from '@swup/body-class-plugin';
 import LazyLoad from 'vanilla-lazyload';
+import reframe from 'reframe.js';
 import getLocalization from './modules/localization';
 import { styleExternalLinks, initExternalLinkLabels } from './modules/external-link';
+import backToTop from './modules/top';
 import './modules/prism';
 import './modules/prism-inline-color';
 import './modules/copy-to-clipboard';
@@ -30,6 +31,9 @@ document.body.classList.add('js');
 // Style external links
 styleExternalLinks();
 initExternalLinkLabels();
+
+// Fit videos
+reframe('iframe');
 
 // Initiate Swup transitions
 const swup = new Swup({
@@ -95,11 +99,8 @@ const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 // Swup starts
 swup.on('contentReplaced', function () {
 
-  // Iframe heights
-  // If iFrameResize is defined
-  if (typeof iFrameResize === 'function') {
-    iFrameResize({ log: true }, 'iframe');
-  }
+  // Init back to top
+  backToTop();
 
   // Always move scroll position to up when clicking a link
   var moveToTop = new MoveTo({
@@ -136,10 +137,8 @@ swup.on('contentReplaced', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  // Iframe heights
-  if (typeof iFrameResize === 'function') {
-    iFrameResize({ log: true }, 'iframe');
-  }
+  // Init back to top
+  backToTop();
 
   // Check if the media query matches or is not available.
   if ( ! mediaQuery || mediaQuery.matches) {
@@ -157,74 +156,3 @@ mediaQuery.addEventListener("change", () => {
     doSomethingWithAnimation();
   }
 });
-
-// jQuery start
-(function ($) {
-  // Accessibility: Ensure back to top is right color on right background
-  // Note: Needs .has-light-bg or .has-dark-bg class on all blocks
-  var stickyOffset = $('.back-to-top').offset();
-  var $contentDivs = $('.block, .site-footer');
-  $(document).scroll(function () {
-    $contentDivs.each(function (k) {
-      var _thisOffset = $(this).offset();
-      var _actPosition = _thisOffset.top - $(window).scrollTop();
-      if (
-        _actPosition < stickyOffset.top &&
-        _actPosition + $(this).height() > 0
-      ) {
-        $('.back-to-top')
-          .removeClass('has-light-bg has-dark-bg')
-          .addClass(
-            $(this).hasClass('has-light-bg') ? 'has-light-bg' : 'has-dark-bg'
-          );
-        return false;
-      }
-    });
-  });
-
-  // Detect Visible section on viewport from bottom
-  // @link https://codepen.io/BoyWithSilverWings/pen/MJgQqR
-  $.fn.isInViewport = function () {
-    var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).outerHeight();
-
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
-
-    return elementBottom > viewportTop && elementTop < viewportBottom;
-  };
-
-  // Accessibility: Ensure back to top is right color on right background
-  $(window).on('resize scroll', function () {
-    $('.block, .site-footer').each(function () {
-      if ($(this).isInViewport()) {
-        $('.back-to-top')
-          .removeClass('has-light-bg has-dark-bg')
-          .addClass(
-            $(this).hasClass('has-light-bg') ? 'has-light-bg' : 'has-dark-bg'
-          );
-      }
-    });
-  });
-
-  // Hide or show the 'back to top' link
-  $(window).scroll(function () {
-    // Back to top
-    var offset = 300; // Browser window scroll (in pixels) after which the 'back to top' link is shown
-    var offset_opacity = 1200; // Browser window scroll (in pixels) after which the link opacity is reduced
-    var scroll_top_duration = 700; // Duration of the top scrolling animation (in ms)
-    var link_class = '.back-to-top';
-
-    if ($(this).scrollTop() > offset) {
-      $(link_class).addClass('is-visible');
-    } else {
-      $(link_class).removeClass('is-visible');
-    }
-
-    if ($(this).scrollTop() > offset_opacity) {
-      $(link_class).addClass('fade-out');
-    } else {
-      $(link_class).removeClass('fade-out');
-    }
-  });
-})(jQuery);
