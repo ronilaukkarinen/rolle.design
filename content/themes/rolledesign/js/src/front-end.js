@@ -8,13 +8,11 @@
  * Air theme JavaScript.
  */
 
-// Import modules (comment to disable)
 import MoveTo from 'moveto';
 import Swup from 'swup';
 import SwupScriptsPlugin from '@swup/scripts-plugin';
 import SwupBodyClassPlugin from '@swup/body-class-plugin';
 import LazyLoad from 'vanilla-lazyload';
-import reframe from 'reframe.js';
 import getLocalization from './modules/localization';
 import { styleExternalLinks, initExternalLinkLabels } from './modules/external-link';
 import backToTop from './modules/top';
@@ -23,6 +21,7 @@ import './modules/prism-inline-color';
 import './modules/copy-to-clipboard';
 import './modules/dark-mode';
 import 'what-input';
+import { iframeResizer } from 'iframe-resizer';
 
 // Define Javascript is active by changing the body class
 document.body.classList.remove('no-js');
@@ -31,9 +30,6 @@ document.body.classList.add('js');
 // Style external links
 styleExternalLinks();
 initExternalLinkLabels();
-
-// Fit videos
-reframe('iframe');
 
 // Initiate Swup transitions
 const swup = new Swup({
@@ -102,6 +98,12 @@ swup.on('contentReplaced', function () {
   // Init back to top
   backToTop();
 
+  // Iframe heights
+  // Check if there's iframe on the page
+  if ( document.querySelector('iframe') ) {
+    iFrameResize({ log: true }, 'iframe');
+  }
+
   // Always move scroll position to up when clicking a link
   var moveToTop = new MoveTo({
     tolerance: 0,
@@ -139,6 +141,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Init back to top
   backToTop();
+  // Iframe heights
+  if ( document.querySelector('iframe') ) {
+    iFrameResize({ log: true }, 'iframe');
+  }
 
   // Check if the media query matches or is not available.
   if ( ! mediaQuery || mediaQuery.matches) {

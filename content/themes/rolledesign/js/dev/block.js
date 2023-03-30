@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("/**\n * Declare the block you'd like to style.\n * Duplicate and customize the four lines below for each style variation you'd like to add.\n */\n// eslint-disable-next-line no-undef\nwp.blocks.registerBlockStyle('core/heading', {\n  name: 'ingress',\n  label: 'Ingress'\n});\nwp.blocks.registerBlockStyle('core/paragraph', {\n  name: 'ingress',\n  label: 'Ingress'\n});\n\n//# sourceURL=webpack:///./content/themes/rolledesign/js/src/block.js?");
+eval("/**\n * Declare the block you'd like to style.\n * Duplicate and customize the four lines below for each style variation you'd like to add.\n */\n// eslint-disable-next-line no-undef\nwp.blocks.registerBlockStyle('core/heading', {\n  name: 'ingress',\n  label: 'Ingress'\n});\n\n// eslint-disable-next-line no-undef\nwp.blocks.registerBlockStyle('core/paragraph', {\n  name: 'ingress',\n  label: 'Ingress'\n});\n\n//# sourceURL=webpack:///./content/themes/rolledesign/js/src/block.js?");
 
 /***/ }),
 
@@ -104,7 +104,7 @@ eval("/**\n * Declare the block you'd like to style.\n * Duplicate and customize
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! /mnt/c/Users/Rolle/Projects/rolle.design/content/themes/rolledesign/js/src/block.js */\"./content/themes/rolledesign/js/src/block.js\");\n\n\n//# sourceURL=webpack:///multi_./content/themes/rolledesign/js/src/block.js?");
+eval("module.exports = __webpack_require__(/*! /home/rolle/Projects/rolle.design/content/themes/rolledesign/js/src/block.js */\"./content/themes/rolledesign/js/src/block.js\");\n\n\n//# sourceURL=webpack:///multi_./content/themes/rolledesign/js/src/block.js?");
 
 /***/ })
 

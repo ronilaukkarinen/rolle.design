@@ -8,6 +8,7 @@ wp.blocks.registerBlockStyle('core/heading', {
   label: 'Ingress',
 });
 
+// eslint-disable-next-line no-undef
 wp.blocks.registerBlockStyle('core/paragraph', {
   name: 'ingress',
   label: 'Ingress',
