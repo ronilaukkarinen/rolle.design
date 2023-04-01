@@ -86,52 +86,9 @@ $theme_settings = [
   // If you want to use classic editor somewhere, define it here
   'use_classic_editor' => [ 'page' ],
 
-  // Don't restrict blocks
-  // 'allowed_blocks' => 'all',
+    // Don't restrict blocks
+    'allowed_blocks' => 'all',
 
-  // Restrict to only selected blocks
-  'allowed_blocks' => [
-
-    // Set default blocks allowed in every post type
-    'default' => [
-      'core/archives',
-      'core/audio',
-      'core/buttons',
-      'core/categories',
-      'core/code',
-      'core/column',
-      'core/columns',
-      // 'core/coverImage',
-      'core/embed',
-      'core/file',
-      'core/freeform',
-      'core/gallery',
-      'core/heading',
-      'core/html',
-      'core/image',
-      'core/latestComments',
-      'core/latestPosts',
-      'core/list',
-      'core/more',
-      'core/nextpage',
-      'core/paragraph',
-      'core/preformatted',
-      'core/pullquote',
-      'core/quote',
-      'core/reusableBlock',
-      'core/separator',
-      'core/shortcode',
-      'core/spacer',
-      'core/subhead',
-      'core/table',
-      'core/textColumns',
-      'core/verse',
-      'core/video',
-    ],
-      'post' => [
-      'core/coverImage', // This block is now allowed only in posts
-    ],
-  ],
     // Module caching
     'enable_module_caching' => true,
     'exclude_module_from_cache' => [
