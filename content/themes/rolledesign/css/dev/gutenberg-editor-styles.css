@@ -1205,7 +1205,7 @@ pre code {
 .gutenberg-content .wp-block-categories-list,
 .gutenberg-content ol:not([class]),
 .gutenberg-content ul:not([class]) {
-  padding-left: calc(2rem + var(--margin-between-paragraphs));
+  padding-left: 2.2rem;
   width: calc((100% - calc(var(--padding-container-horizontal) * 2)) - calc(2rem + var(--margin-between-paragraphs)));
 }
 
