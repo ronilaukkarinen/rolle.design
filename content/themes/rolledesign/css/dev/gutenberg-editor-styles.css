@@ -1121,6 +1121,8 @@ pre code {
   display: block;
   margin-bottom: var(--margin-wp-block-image);
   margin-top: var(--margin-wp-block-image);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .editor-styles-wrapper .wp-block-image.alignfull,
