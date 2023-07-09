@@ -2203,6 +2203,7 @@ pre[class*="language-"] {
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-x: auto;
   -moz-tab-size: 4;
+    -o-tab-size: 4;
        tab-size: 4;
   text-align: left;
   white-space: pre;
@@ -2442,6 +2443,7 @@ pre[class*="language-"] {
           hyphens: none;
   line-height: 1.4;
   -moz-tab-size: 4;
+    -o-tab-size: 4;
        tab-size: 4;
   text-align: left;
   white-space: pre;
@@ -3438,8 +3440,10 @@ h1.big-title {
 
 .gutenberg-content > * {
   line-height: var(--line-height-paragraphs-blog);
-  margin-left: auto;
-  margin-right: auto;
+  /* stylelint-disable-next-line */
+  margin-left: auto !important;
+  /* stylelint-disable-next-line */
+  margin-right: auto !important;
   max-width: 720px;
   padding-left: 0;
   padding-right: 0;

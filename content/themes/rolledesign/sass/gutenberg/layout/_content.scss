@@ -11,8 +11,10 @@
 // Gutenberg core magic
 .gutenberg-content > * {
   line-height: var(--line-height-paragraphs-blog);
-  margin-left: auto;
-  margin-right: auto;
+  /* stylelint-disable-next-line */
+  margin-left: auto !important;
+  /* stylelint-disable-next-line */
+  margin-right: auto !important;
   max-width: $width-max-article;
   padding-left: 0;
   padding-right: 0;
