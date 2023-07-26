@@ -26,10 +26,21 @@ body {
 a {
   color: var(--color-links);
   text-decoration: none;
+  transition: all 200ms;
 
   &:hover,
   &:focus {
     color: var(--color-hover);
+  }
+}
+
+.has-colored-links a {
+  color: var(--color-synthwaveblue);
+  font-weight: 600;
+
+  &:hover,
+  &:focus {
+    color: var(--color-synthwavesunsetpink);
   }
 }
 

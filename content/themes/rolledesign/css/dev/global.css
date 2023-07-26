@@ -319,7 +319,7 @@ template {
   --color-twitter: #1da1f2;
   --color-mastodon: #595aff;
   --color-mastodon-lighten: #8c8dff;
-  --color-links: var(--color-synthwavedarkblue);
+  --color-links: var(--color-main);
   --color-hover: var(--color-dark);
   --color-blockquotes: #666;
   --color-code-blocks: #c7254e;
@@ -1238,10 +1238,20 @@ body {
 a {
   color: var(--color-links);
   text-decoration: none;
+  transition: all 200ms;
 }
 
 a:hover, a:focus {
   color: var(--color-hover);
+}
+
+.has-colored-links a {
+  color: var(--color-synthwaveblue);
+  font-weight: 600;
+}
+
+.has-colored-links a:hover, .has-colored-links a:focus {
+  color: var(--color-synthwavesunsetpink);
 }
 
 p,

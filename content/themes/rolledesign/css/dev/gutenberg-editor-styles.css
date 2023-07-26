@@ -43,7 +43,7 @@
   --color-twitter: #1da1f2;
   --color-mastodon: #595aff;
   --color-mastodon-lighten: #8c8dff;
-  --color-links: var(--color-synthwavedarkblue);
+  --color-links: var(--color-main);
   --color-hover: var(--color-dark);
   --color-blockquotes: #666;
   --color-code-blocks: #c7254e;
