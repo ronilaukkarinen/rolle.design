@@ -49,8 +49,8 @@
   --color-twitter: #1da1f2;
 
   // Element text and background colors
-  --color-links: --color-main;
-  --color-hover: --color-dark;
+  --color-links: var(--color-main);
+  --color-hover: var(--color-dark);
   --color-blockquotes: #666;
   --color-code-blocks: #c7254e;
   --color-code-blocks-background: #f9f2f4;
