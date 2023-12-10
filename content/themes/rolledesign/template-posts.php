@@ -51,7 +51,7 @@ get_header(); ?>
 			      <?php while ( $query->have_posts() ) {
 				      $query->the_post(); ?>
 			          <li>
-                  <a href="<?php echo esc_url( get_the_permalink() ); ?>">
+                  <a data-no-swup href="<?php echo esc_url( get_the_permalink() ); ?>">
                     <?php echo esc_html( get_the_title() ); ?>
                   </a>
                   <span class="date">

@@ -18,6 +18,7 @@
   --color-shade: #03061b;
   --color-faded: #757684;
   --color-alt-grey: #333;
+  --color-dim: rgba(0, 0, 0, .05);
   --color-toggled: #fff;
   --color-pattens-blue: #eaf1f8;
   --color-lynch: #677287;
@@ -1807,6 +1808,8 @@ kbd {
   display: none;
 }
 
+.editor-styles-wrapper .fediverse-info a,
+.editor-styles-wrapper .comments main a,
 .editor-styles-wrapper [data-type="core/paragraph"] > a,
 .editor-styles-wrapper li > a,
 .editor-styles-wrapper p > strong > a,
@@ -1818,6 +1821,8 @@ kbd {
 .editor-styles-wrapper p.has-small-font-size > a,
 .editor-styles-wrapper figcaption > a,
 .editor-styles-wrapper p:not([class]) > a.is-external-link,
+.gutenberg-content .fediverse-info a,
+.gutenberg-content .comments main a,
 .gutenberg-content [data-type="core/paragraph"] > a,
 .gutenberg-content li > a,
 .gutenberg-content p > strong > a,
@@ -1836,6 +1841,8 @@ kbd {
   transition: border-color 0.33s cubic-bezier(0.19, 1, 0.22, 1), color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+.editor-styles-wrapper .fediverse-info a::after,
+.editor-styles-wrapper .comments main a::after,
 .editor-styles-wrapper [data-type="core/paragraph"] > a::after,
 .editor-styles-wrapper li > a::after,
 .editor-styles-wrapper p > strong > a::after,
@@ -1847,6 +1854,8 @@ kbd {
 .editor-styles-wrapper p.has-small-font-size > a::after,
 .editor-styles-wrapper figcaption > a::after,
 .editor-styles-wrapper p:not([class]) > a.is-external-link::after,
+.gutenberg-content .fediverse-info a::after,
+.gutenberg-content .comments main a::after,
 .gutenberg-content [data-type="core/paragraph"] > a::after,
 .gutenberg-content li > a::after,
 .gutenberg-content p > strong > a::after,
@@ -1861,6 +1870,8 @@ kbd {
   background-image: url("../../svg/external-link-fuchsia.svg");
 }
 
+.editor-styles-wrapper .fediverse-info a:focus,
+.editor-styles-wrapper .comments main a:focus,
 .editor-styles-wrapper [data-type="core/paragraph"] > a:focus,
 .editor-styles-wrapper li > a:focus,
 .editor-styles-wrapper p > strong > a:focus,
@@ -1872,6 +1883,8 @@ kbd {
 .editor-styles-wrapper p.has-small-font-size > a:focus,
 .editor-styles-wrapper figcaption > a:focus,
 .editor-styles-wrapper p:not([class]) > a.is-external-link:focus,
+.gutenberg-content .fediverse-info a:focus,
+.gutenberg-content .comments main a:focus,
 .gutenberg-content [data-type="core/paragraph"] > a:focus,
 .gutenberg-content li > a:focus,
 .gutenberg-content p > strong > a:focus,
@@ -1888,6 +1901,8 @@ kbd {
   text-decoration: none;
 }
 
+.editor-styles-wrapper .fediverse-info a:focus::after,
+.editor-styles-wrapper .comments main a:focus::after,
 .editor-styles-wrapper [data-type="core/paragraph"] > a:focus::after,
 .editor-styles-wrapper li > a:focus::after,
 .editor-styles-wrapper p > strong > a:focus::after,
@@ -1899,6 +1914,8 @@ kbd {
 .editor-styles-wrapper p.has-small-font-size > a:focus::after,
 .editor-styles-wrapper figcaption > a:focus::after,
 .editor-styles-wrapper p:not([class]) > a.is-external-link:focus::after,
+.gutenberg-content .fediverse-info a:focus::after,
+.gutenberg-content .comments main a:focus::after,
 .gutenberg-content [data-type="core/paragraph"] > a:focus::after,
 .gutenberg-content li > a:focus::after,
 .gutenberg-content p > strong > a:focus::after,

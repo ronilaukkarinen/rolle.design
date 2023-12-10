@@ -13,7 +13,7 @@ const {
 function watchfiles() {
   bs.init(config.browsersync.src, config.browsersync.opts);
   watch(config.styles.watch, series('styles', 'scsslint')).on('error', handleError('styles'));
-  watch(config.php.src, series('phpcs')).on('change', bs.reload);
+  // watch(config.php.src, series('phpcs')).on('change', bs.reload);
   watch(config.js.watch).on('change', series('js'));
   watch(config.js.watch).on('change', bs.reload);
 };

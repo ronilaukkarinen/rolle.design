@@ -26,7 +26,7 @@ namespace Air_Light;
 
   <?php wp_head(); ?>
 
-  <script defer data-domain="rolle.design" src="https://analytics.dude.fi/js/plausible.js"></script>
+  <script defer data-swup-ignore-script data-domain="rolle.design" src="https://analytics.dude.fi/js/plausible.js"></script>
 </head>
 
 <body <?php body_class( 'no-js' ); ?>>

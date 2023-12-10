@@ -294,6 +294,7 @@ template {
   --color-shade: #03061b;
   --color-faded: #757684;
   --color-alt-grey: #333;
+  --color-dim: rgba(0, 0, 0, .05);
   --color-toggled: #fff;
   --color-pattens-blue: #eaf1f8;
   --color-lynch: #677287;
@@ -2062,6 +2063,7 @@ div.lazy {
   --color-shade: #fff;
   --color-faded: rgba(255, 255, 255, .8);
   --color-alt-grey: rgba(255, 255, 255, .8);
+  --color-dim: rgba(255, 255, 255, .05);
   --color-toggled: #414850;
   --color-pattens-blue: #222324;
   --color-lynch: #677287;
@@ -2561,6 +2563,157 @@ span.inline-color {
   /* To prevent visual glitches again */
   height: 120%;
   width: 120%;
+}
+
+.gutenberg-content > .comments,
+.comments {
+  padding-top: 4rem;
+  margin-top: 2rem;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  border-top: 1px solid rgba(117, 117, 117, 0.5);
+}
+
+@media (max-width: 767px) {
+  .gutenberg-content > .comments,
+  .comments {
+    max-width: calc(100% - 4rem);
+  }
+}
+
+.gutenberg-content > .comments #mastodon-comments-list,
+.comments #mastodon-comments-list {
+  order: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.gutenberg-content > .comments #comments-wrapper,
+.comments #comments-wrapper {
+  order: 2;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.gutenberg-content > .comments .fediverse-info,
+.comments .fediverse-info {
+  border: 1px solid rgba(117, 117, 117, 0.5);
+  border-radius: 10px;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  padding: 3.2rem;
+  order: 3;
+}
+
+.gutenberg-content > .comments .fediverse-info h2,
+.comments .fediverse-info h2 {
+  font-size: 18px;
+  margin: 0 0 2rem;
+}
+
+@media (max-width: 767px) {
+  .gutenberg-content > .comments .fediverse-info,
+  .comments .fediverse-info {
+    padding: 2rem;
+  }
+}
+
+.gutenberg-content > .comments .fediverse-info .comment-description,
+.comments .fediverse-info .comment-description {
+  font-size: 15px;
+  margin: 0;
+  opacity: .8;
+}
+
+.gutenberg-content > .comments .comment,
+.comments .comment {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: .5rem;
+  display: grid;
+  grid-template-areas: "avatar name" "avatar time" "avatar post" "...... interactions";
+  grid-template-columns: min-content;
+  justify-items: start;
+  margin: 0 auto 0 -1em;
+  padding: 1rem;
+}
+
+.gutenberg-content > .comments .avatar-link,
+.comments .avatar-link {
+  grid-area: avatar;
+  height: 4.8rem;
+  position: relative;
+  width: 4.8rem;
+}
+
+.gutenberg-content > .comments .author,
+.comments .author {
+  font-size: 16px;
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-area: name;
+  font-weight: 600;
+  grid-template-columns: minmax(0, 1fr) min-content;
+}
+
+.gutenberg-content > .comments .author .display,
+.comments .author .display {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.gutenberg-content > .comments .instance,
+.comments .instance {
+  font-weight: 400;
+  background-color: var(--color-dim);
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+.gutenberg-content > .comments footer,
+.comments footer {
+  grid-area: interactions;
+}
+
+.gutenberg-content > .comments main,
+.comments main {
+  grid-area: post;
+}
+
+.gutenberg-content > .comments main p,
+.comments main p {
+  font-size: 17px;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.gutenberg-content > .comments main p:last-child,
+.comments main p:last-child {
+  margin-bottom: 0;
+}
+
+.gutenberg-content > .comments time,
+.comments time {
+  grid-area: time;
+  opacity: .8;
+  font-size: 14px;
+}
+
+.gutenberg-content > .comments .avatar,
+.comments .avatar {
+  background-position: 50%;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 2px var(--neutral);
+  margin: 0;
+  overflow: hidden;
 }
 
 .block-error-404 .container {
@@ -4883,6 +5036,8 @@ kbd {
   display: none;
 }
 
+.editor-styles-wrapper .fediverse-info a,
+.editor-styles-wrapper .comments main a,
 .editor-styles-wrapper [data-type="core/paragraph"] > a,
 .editor-styles-wrapper li > a,
 .editor-styles-wrapper p > strong > a,
@@ -4894,6 +5049,8 @@ kbd {
 .editor-styles-wrapper p.has-small-font-size > a,
 .editor-styles-wrapper figcaption > a,
 .editor-styles-wrapper p:not([class]) > a.is-external-link,
+.gutenberg-content .fediverse-info a,
+.gutenberg-content .comments main a,
 .gutenberg-content [data-type="core/paragraph"] > a,
 .gutenberg-content li > a,
 .gutenberg-content p > strong > a,
@@ -4912,6 +5069,8 @@ kbd {
   transition: border-color 0.33s cubic-bezier(0.19, 1, 0.22, 1), color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+.editor-styles-wrapper .fediverse-info a::after,
+.editor-styles-wrapper .comments main a::after,
 .editor-styles-wrapper [data-type="core/paragraph"] > a::after,
 .editor-styles-wrapper li > a::after,
 .editor-styles-wrapper p > strong > a::after,
@@ -4923,6 +5082,8 @@ kbd {
 .editor-styles-wrapper p.has-small-font-size > a::after,
 .editor-styles-wrapper figcaption > a::after,
 .editor-styles-wrapper p:not([class]) > a.is-external-link::after,
+.gutenberg-content .fediverse-info a::after,
+.gutenberg-content .comments main a::after,
 .gutenberg-content [data-type="core/paragraph"] > a::after,
 .gutenberg-content li > a::after,
 .gutenberg-content p > strong > a::after,
@@ -4937,6 +5098,8 @@ kbd {
   background-image: url("../../svg/external-link-fuchsia.svg");
 }
 
+.editor-styles-wrapper .fediverse-info a:focus,
+.editor-styles-wrapper .comments main a:focus,
 .editor-styles-wrapper [data-type="core/paragraph"] > a:focus,
 .editor-styles-wrapper li > a:focus,
 .editor-styles-wrapper p > strong > a:focus,
@@ -4948,6 +5111,8 @@ kbd {
 .editor-styles-wrapper p.has-small-font-size > a:focus,
 .editor-styles-wrapper figcaption > a:focus,
 .editor-styles-wrapper p:not([class]) > a.is-external-link:focus,
+.gutenberg-content .fediverse-info a:focus,
+.gutenberg-content .comments main a:focus,
 .gutenberg-content [data-type="core/paragraph"] > a:focus,
 .gutenberg-content li > a:focus,
 .gutenberg-content p > strong > a:focus,
@@ -4964,6 +5129,8 @@ kbd {
   text-decoration: none;
 }
 
+.editor-styles-wrapper .fediverse-info a:focus::after,
+.editor-styles-wrapper .comments main a:focus::after,
 .editor-styles-wrapper [data-type="core/paragraph"] > a:focus::after,
 .editor-styles-wrapper li > a:focus::after,
 .editor-styles-wrapper p > strong > a:focus::after,
@@ -4975,6 +5142,8 @@ kbd {
 .editor-styles-wrapper p.has-small-font-size > a:focus::after,
 .editor-styles-wrapper figcaption > a:focus::after,
 .editor-styles-wrapper p:not([class]) > a.is-external-link:focus::after,
+.gutenberg-content .fediverse-info a:focus::after,
+.gutenberg-content .comments main a:focus::after,
 .gutenberg-content [data-type="core/paragraph"] > a:focus::after,
 .gutenberg-content li > a:focus::after,
 .gutenberg-content p > strong > a:focus::after,
