@@ -1,28 +1,30 @@
 .gutenberg-content > .comments,
 .comments {
-  padding-top: 4rem;
+  border-top: 1px solid rgba(117, 117, 117, .5);
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 2rem;
   padding-left: 0;
   padding-right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  border-top: 1px solid rgba(117, 117, 117, .5);
+  padding-top: 4rem;
 
-  @media (max-width: 767px) {
-    max-width: calc(100% - 4rem);
+  &.has-no-comments {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
   }
 
   #mastodon-comments-list {
-    order: 1;
     margin: 0;
+    order: 1;
     padding: 0;
   }
 
   #comments-wrapper {
-    order: 2;
     display: grid;
     gap: 1.2rem;
+    order: 2;
   }
 
   .fediverse-info {
@@ -30,8 +32,8 @@
     border-radius: 10px;
     margin-bottom: 4rem;
     margin-top: 4rem;
-    padding: 3.2rem;
     order: 3;
+    padding: 3.2rem;
 
     h2 {
       font-size: 18px;
@@ -51,7 +53,6 @@
 
   .comment {
     column-gap: 2rem;
-    row-gap: .5rem;
     display: grid;
     grid-template-areas:
         "avatar name"
@@ -62,6 +63,7 @@
     justify-items: start;
     margin: 0 auto 0 -1em;
     padding: 1rem;
+    row-gap: .5rem;
   }
 
   .avatar-link {
@@ -72,29 +74,28 @@
   }
 
   .author {
-    font-size: 16px;
     align-items: center;
     display: grid;
+    font-size: 16px;
+    font-weight: 600;
     gap: 1rem;
     grid-area: name;
-    font-weight: 600;
     grid-template-columns: minmax(0, 1fr) min-content;
 
     .display {
+      overflow: hidden;
+      text-overflow: ellipsis;
       white-space: nowrap;
-
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+      white-space: nowrap;
     }
   }
 
   .instance {
-    font-weight: 400;
     background-color: var(--color-dim);
-    padding: 2px 10px;
     border-radius: 12px;
     font-size: 13px;
+    font-weight: 400;
+    padding: 2px 10px;
   }
 
   footer {
@@ -106,7 +107,6 @@
 
     p {
       font-size: 17px;
-
       margin-bottom: 1rem;
       margin-top: 0;
     }
@@ -117,9 +117,9 @@
   }
 
   time {
+    font-size: 14px;
     grid-area: time;
     opacity: .8;
-    font-size: 14px;
   }
 
   .avatar {
@@ -129,5 +129,9 @@
     box-shadow: 0 0 2px var(--neutral);
     margin: 0;
     overflow: hidden;
+  }
+
+  @media (max-width: 767px) {
+    max-width: calc(100% - 4rem);
   }
 }

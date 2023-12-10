@@ -98,12 +98,19 @@ get_header(); ?>
               function loadComments() {
                 let commentsWrapper = document.getElementById("comments-wrapper");
                 document.getElementById("load-comment").innerHTML = "Loading";
+
                 fetch('https://' + instanceHost + '/api/v1/statuses/' + postID + '/context')
                   .then(function(response) {
                     return response.json();
                   })
                   .then(function(data) {
                     let descendants = data['descendants'];
+
+                    // If no comments, add has-no-comments to #comments
+                    if( descendants.length === 0 ) {
+                      document.getElementById("comments").classList.add("has-no-comments");
+                    }
+
                     if(
                       descendants &&
                       Array.isArray(descendants) &&
