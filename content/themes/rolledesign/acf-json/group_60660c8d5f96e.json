@@ -1,11 +1,12 @@
 {
     "key": "group_60660c8d5f96e",
-    "title": "Url to tweet",
+    "title": "Url to post",
     "fields": [
         {
             "key": "field_60660c9d52550",
-            "label": "Url to tweet",
+            "label": "Url to Mastodon post",
             "name": "url_to_tweet",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -36,5 +37,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1617300643
+    "show_in_rest": 0,
+    "modified": 1702214681
 }
