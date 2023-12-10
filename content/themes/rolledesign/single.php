@@ -40,7 +40,7 @@ get_header(); ?>
           <section id="comments" class="article-content comments">
             <div class="fediverse-info">
               <h2>Comments</h2>
-              <p class="comment-description">With an account on the <a href="https://jointhefediverse.ent">Fediverse</a> or <a href="https://mementomori.social">Mastodon</a>, you can respond to this <a href="<?php echo esc_url( $url_to_tweet ); ?>">post</a>. Since Mastodon is decentralized, you can use your existing account hosted by another Mastodon server or compatible platform if you don't have an account on this one. Known non-private replies are displayed below.</p>
+              <p class="comment-description">With an account on the <a href="https://jointhefediverse.net">Fediverse</a> or <a href="https://mementomori.social">Mastodon</a>, you can respond to this <a href="<?php echo esc_url( $url_to_tweet ); ?>">post</a>. Since Mastodon is decentralized, you can use your existing account hosted by another Mastodon server or compatible platform if you don't have an account on this one. Known non-private replies are displayed below.</p>
             </div>
 
             <p id="mastodon-comments-list"><button id="load-comment">Load comments</button></p>
