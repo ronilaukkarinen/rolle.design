@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2021-09-01 11:55:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-10-06 22:57:34
+ * @Last Modified time: 2024-01-09 19:15:11
  */
 /**
  * Style external links
@@ -18,6 +18,7 @@ function isLinkExternal(link, localDomains) {
   }
 
   const exceptions = [
+    'rolle.design',
     '#',
     'tel:',
     'mailto:',
@@ -112,7 +113,8 @@ export function styleExternalLinks() {
       'button',
     ];
 
-    if (!classExceptions.some((className) => externalLink.classList.contains(className))) {
+    // If doesn't have class or [role]
+    if (! classExceptions.some((className) => externalLink.classList.contains(className)) || ! externalLink.hasAttribute('role')) {
       // Add SVG arrow icon
       externalLink.insertAdjacentHTML('beforeend', '<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 9 9"><path d="M4.499 1.497h4v4m0-4l-7 7" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
     }

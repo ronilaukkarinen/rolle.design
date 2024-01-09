@@ -5,8 +5,8 @@
  * @package rolle
  * @Author: Niku Hietanen
  * @Date: 2020-02-20 13:46:50
- * @Last Modified by: Roni Laukkarinen
- * @Last Modified time: 2021-04-01 21:08:50
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2024-01-09 19:12:33
  */
 
 namespace Air_Light;
@@ -68,6 +68,7 @@ function enqueue_theme_scripts() {
       'localhost:3000',
       'rolledesign.test',
       'rolle.design',
+      'now.rolle.design',
     ]
   );
 } // end rolle_scripts

@@ -1,5 +1,19 @@
 <?php
 /**
+ * File: hooks.php
+ *
+ * Description: hooks
+ *
+ * @Author:		Roni Laukkarinen
+ * @Date:   		2022-12-15 10:54:27
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2024-01-09 19:30:35
+ *
+ * @package rolle.design
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ */
+
+/**
  * All hooks that are run in the theme are listed here
  *
  * @package rolle

@@ -783,6 +783,10 @@ html.is-animating .transition-fade {
   color: var(--color-wordpress);
 }
 
+.menu-item .external-link-icon {
+  display: none;
+}
+
 /* stylelint-disable property-disallowed-list, sh-waqar/declaration-use-variable, a11y/no-outline-none, a11y/no-display-none, no-descending-specificity */
 .block {
   background-color: transparent;
