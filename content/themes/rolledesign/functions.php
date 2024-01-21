@@ -113,3 +113,7 @@ require get_theme_file_path( '/inc/template-tags.php' );
 // Run theme setup
 add_action( 'init', __NAMESPACE__ . '\theme_setup' );
 add_action( 'after_setup_theme', __NAMESPACE__ . '\build_theme_support' );
+
+// Disable email delivery nag
+add_filter( 'air_helper_mail_delivery', '__return_false' );
+
