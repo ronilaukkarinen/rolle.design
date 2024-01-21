@@ -143,3 +143,18 @@ Config::define( 'WP_REDIS_MAXTTL', 43200 ); // max cache half day
 if ( 'development' !== WP_ENV ) {
   Config::define( 'WP_REDIS_PASSWORD', getenv( 'REDIS_PASSWORD' ) );
 }
+
+/**
+ *  Redis object cache settings for
+ *  https://wordpress.org/plugins/redis-cache/
+ */
+define( 'WP_REDIS_PREFIX', getenv( 'DB_NAME' ) );
+define( 'WP_REDIS_SELECTIVE_FLUSH', true );
+define( 'WP_REDIS_MAXTTL', 43200 ); // max cache half day
+
+if ( 'development' !== WP_ENV ) {
+  define( 'WP_REDIS_PASSWORD', getenv( 'REDIS_PASSWORD' ) );
+}
+
+define( 'WP_CACHE', true );
+
