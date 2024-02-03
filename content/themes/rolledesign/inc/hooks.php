@@ -29,7 +29,7 @@ namespace Air_Light;
 /**
  * Enable author view for ActivityPub
  */
-add_filter( 'air_helper_disable_views_author', '__return_false' );
+// add_filter( 'air_helper_disable_views_author', '__return_false' );
 
 /**
  * Breadcrumb
