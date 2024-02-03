@@ -32,6 +32,11 @@ namespace Air_Light;
 // add_filter( 'air_helper_disable_views_author', '__return_false' );
 
 /**
+ * Enable users endpoint view for ActivityPub
+ */
+remove_filter( 'rest_endpoints', __NAMESPACE__ . '\air_helper_disable_rest_endpoints' );
+
+/**
  * Breadcrumb
  */
 // require get_theme_file_path( 'inc/hooks/breadcrumb.php' );
