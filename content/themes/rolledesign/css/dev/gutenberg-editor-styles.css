@@ -1204,14 +1204,32 @@ pre code {
   margin-right: auto;
 }
 
+.editor-styles-wrapper ul.wp-block-list,
+.editor-styles-wrapper ol.wp-block-list,
 .editor-styles-wrapper .wp-block-categories-list,
 .editor-styles-wrapper ol:not([class]),
 .editor-styles-wrapper ul:not([class]),
+.gutenberg-content ul.wp-block-list,
+.gutenberg-content ol.wp-block-list,
 .gutenberg-content .wp-block-categories-list,
 .gutenberg-content ol:not([class]),
 .gutenberg-content ul:not([class]) {
-  padding-left: 2.2rem;
-  width: calc((100% - calc(var(--padding-container-horizontal) * 2)) - calc(2rem + var(--margin-between-paragraphs)));
+  padding-left: 4.2rem;
+}
+
+@media (min-width: 855px) {
+  .editor-styles-wrapper ul.wp-block-list,
+  .editor-styles-wrapper ol.wp-block-list,
+  .editor-styles-wrapper .wp-block-categories-list,
+  .editor-styles-wrapper ol:not([class]),
+  .editor-styles-wrapper ul:not([class]),
+  .gutenberg-content ul.wp-block-list,
+  .gutenberg-content ol.wp-block-list,
+  .gutenberg-content .wp-block-categories-list,
+  .gutenberg-content ol:not([class]),
+  .gutenberg-content ul:not([class]) {
+    width: calc((100% - calc(var(--padding-container-horizontal) * 2)) - calc(2rem + var(--margin-between-paragraphs)));
+  }
 }
 
 .editor-styles-wrapper p,
