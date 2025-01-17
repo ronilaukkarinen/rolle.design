@@ -34,13 +34,13 @@ get_header(); ?>
         // If URL contains twitter.com
         if ( strpos( $url_to_tweet, 'twitter.com' ) !== false ) : ?>
           <p class="comment-on-twitter"><a class="no-external-link-icon" href="<?php echo esc_url( $url_to_tweet ); ?>">Comment on Twitter <?php include get_theme_file_path( '/svg/twitter.svg' ); ?></a></p>
-        <?php else : ?>
+																	<?php else : ?>
           <p class="comment-on-mastodon" style="display: none;"><a class="no-external-link-icon" href="<?php echo esc_url( $url_to_tweet ); ?>">Comment on Mastodon <?php include get_theme_file_path( '/svg/mastodon.svg' ); ?></a></p>
 
           <section id="comments" class="article-content comments">
             <div class="fediverse-info">
               <h2>Comments</h2>
-              <p class="comment-description">With an account on the <a href="https://jointhefediverse.net">Fediverse</a> or <a href="https://mementomori.social">Mastodon</a>, you can respond to this <a href="<?php echo esc_url( $url_to_tweet ); ?>">post</a>. Since Mastodon is decentralized, you can use your existing account hosted by another Mastodon server or compatible platform if you don't have an account on this one. Known non-private replies are displayed below.</p>
+              <p class="comment-description">With an account on the <a href="https://jointhefediverse.net">Fediverse</a> or <a href="https://mementomori.social">Mastodon</a>, you can respond to this <a href="<?php echo esc_url( $url_to_tweet ); ?>">post</a>. Since Mastodon is decentralized, you can use your existing account hosted by any Fediverse compatible platform or create a new one. Known non-private replies are displayed above.</p>
             </div>
 
             <p id="mastodon-comments-list"><button id="load-comment">Load comments</button></p>
@@ -254,7 +254,7 @@ get_header(); ?>
       <?php endif; ?>
 
       <?php if ( get_edit_post_link() ) {
-        edit_post_link( sprintf( __( '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg><span class="screen-reader-text">%s</span>', 'rolle' ), [ 'span' => [ 'class' => [] ] ], get_the_title() ), '<p class="edit-link">', '</p>' ); // phps:ignore
+        edit_post_link( sprintf( __( '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg><span class="screen-reader-text">%s</span>', 'rolle' ), array( 'span' => array( 'class' => array() ) ), get_the_title() ), '<p class="edit-link">', '</p>' ); // phps:ignore
       } ?>
 
     </div>
